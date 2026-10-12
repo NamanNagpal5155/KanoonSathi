@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KanoonSaathi | RTI Crafter (सूचना का अधिकार)</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,900;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration verbatim -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary-fixed": "#ffdbcc",
+            "inverse-surface": "#32302a",
+            "surface-container-lowest": "#ffffff",
+            "on-background": "#1d1c16",
+            "outline": "#75777e",
+            "error": "#ba1a1a",
+            "surface-variant": "#e7e2d9",
+            "surface-dim": "#ded9d1",
+            "background": "#fef9f0",
+            "on-error": "#ffffff",
+            "on-surface-variant": "#45464d",
+            "on-primary": "#ffffff",
+            "on-primary-fixed-variant": "#3a4665",
+            "on-secondary-fixed-variant": "#7b2f00",
+            "secondary": "#a23f00",
+            "tertiary": "#1a1100",
+            "secondary-fixed-dim": "#ffb695",
+            "surface": "#fef9f0",
+            "on-primary-container": "#828eb1",
+            "tertiary-container": "#342500",
+            "on-tertiary-fixed-variant": "#59440e",
+            "on-secondary-container": "#692700",
+            "surface-container-highest": "#e7e2d9",
+            "primary-fixed": "#d9e2ff",
+            "surface-container-low": "#f8f3ea",
+            "on-tertiary": "#ffffff",
+            "on-secondary": "#ffffff",
+            "on-secondary-fixed": "#351000",
+            "on-tertiary-fixed": "#251a00",
+            "tertiary-fixed-dim": "#e2c381",
+            "inverse-on-surface": "#f5f0e7",
+            "primary-fixed-dim": "#b9c6eb",
+            "inverse-primary": "#b9c6eb",
+            "tertiary-fixed": "#ffdf9b",
+            "on-surface": "#1d1c16",
+            "primary": "#04122e",
+            "on-primary-fixed": "#0d1b37",
+            "surface-tint": "#515e7e",
+            "surface-bright": "#fef9f0",
+            "error-container": "#ffdad6",
+            "on-error-container": "#93000a",
+            "surface-container": "#f2ede4",
+            "primary-container": "#1a2744",
+            "surface-container-high": "#ece8df",
+            "on-tertiary-container": "#a68b4f",
+            "outline-variant": "#c5c6ce",
+            "secondary-container": "#ff8345"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "margin": "3rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem",
+            "margin-mobile": "1rem",
+            "gutter": "1.5rem",
+            "margin-tablet": "2rem",
+            "gutter-mobile": "1rem",
+            "space-lg": "1.5rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "title-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Playfair Display"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "display-lg": ["Playfair Display"],
+            "title-md": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Playfair Display"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-sm": ["Playfair Display"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"]
+          },
+          "fontSize": {
+            "title-lg": ["18px", {"lineHeight": "26px", "fontWeight": "700"}],
+            "headline-md": ["26px", {"lineHeight": "34px", "fontWeight": "600"}],
+            "body-sm": ["13px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+            "label-sm": ["10px", {"lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700"}],
+            "body-md": ["15px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "label-lg": ["14px", {"lineHeight": "18px", "letterSpacing": "0.03em", "fontWeight": "600"}],
+            "display-lg": ["52px", {"lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+            "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+            "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+            "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "body-lg": ["18px", {"lineHeight": "30px", "fontWeight": "400"}],
+            "headline-lg": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .vakalatnama-border {
+      border: 1px solid rgba(197, 168, 105, 0.45);
+      position: relative;
+    }
+    .vakalatnama-border::before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      right: 3px;
+      bottom: 3px;
+      border: 1px dashed rgba(197, 168, 105, 0.3);
+      pointer-events: none;
+    }
+    .watermark-seal {
+      background-image: radial-gradient(circle at center, rgba(162, 63, 0, 0.03) 0%, transparent 70%);
+    }
+    .paper-shadow {
+      box-shadow: 0 4px 20px -2px rgba(26, 39, 68, 0.08), 0 12px 32px -4px rgba(17, 19, 23, 0.06);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col font-body-md antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- ================= TOPNAVBAR (Shared Component: Editorial Sovereign) ================= -->
+<header class="sticky top-0 z-50 bg-surface border-b border-outline-variant shadow-sm">
+<div class="w-full max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+<!-- Brand Logo Anchor -->
+<div class="flex items-center space-x-3">
+<div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary border border-tertiary-fixed-dim/40 shadow-inner">
+<span class="material-symbols-outlined text-secondary-container" data-icon="balance">balance</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold tracking-wide text-primary">कानूनसाथी | KanoonSaathi</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Sovereign Citizen Legal Aid Portal</span>
+</div>
+</div>
+<!-- Desktop Nav Links with Active State Mapping (RTI Crafter is ACTIVE) -->
+<nav class="hidden lg:flex items-center space-x-7">
+<a class="text-on-surface-variant font-medium pb-1 hover:text-secondary hover:bg-surface-container transition-colors duration-150" href="#dossier">Legal Dossier</a>
+<a class="text-on-surface-variant font-medium pb-1 hover:text-secondary hover:bg-surface-container transition-colors duration-150" href="#notice">Notice Generator</a>
+<a class="text-secondary border-b-2 border-secondary pb-1 font-semibold flex items-center space-x-1" href="#rti">
+<span>RTI Crafter</span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</a>
+<a class="text-on-surface-variant font-medium pb-1 hover:text-secondary hover:bg-surface-container transition-colors duration-150" href="#court">Court Process</a>
+<a class="text-on-surface-variant font-medium pb-1 hover:text-secondary hover:bg-surface-container transition-colors duration-150" href="#nalsa">NALSA Locator</a>
+<a class="text-on-surface-variant font-medium pb-1 hover:text-secondary hover:bg-surface-container transition-colors duration-150" href="#vault">Case Vault</a>
+</nav>
+<!-- Trailing Primary & Secondary Actions -->
+<div class="flex items-center space-x-4">
+<!-- Bilingual Action Button -->
+<button class="flex items-center space-x-1.5 px-3 py-1.5 text-xs font-semibold rounded border border-outline-variant text-on-surface bg-surface-container-low hover:bg-surface-container transition-colors" title="Bilingual Toggle">
+<span class="material-symbols-outlined text-base" data-icon="translate">translate</span>
+<span class="font-label-md text-label-md">हिन्दी / EN</span>
+</button>
+<!-- Helpline Badge CTA -->
+<a class="hidden sm:flex items-center space-x-2 px-3.5 py-1.5 rounded bg-primary-container text-on-primary hover:bg-primary transition-all duration-150 text-xs font-semibold border border-tertiary-fixed-dim/30 shadow-sm" href="tel:15100" title="National Legal Aid Helpline">
+<span class="material-symbols-outlined text-secondary-container text-sm" data-icon="gavel">gavel</span>
+<span class="font-label-md text-label-md">Emergency Helpline 15100</span>
+</a>
+<!-- Icons cluster -->
+<div class="flex items-center space-x-1 border-l border-outline-variant pl-3 text-on-surface-variant">
+<button class="p-1.5 hover:text-secondary hover:bg-surface-container rounded transition" title="Notifications">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-1.5 hover:text-secondary hover:bg-surface-container rounded transition" title="Certified Registry Emblem">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- ================= MAIN CANVAS ================= -->
+<main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 py-6 md:py-8 space-y-6">
+<!-- COMPACT CIVIC HERO -->
+<section class="relative bg-surface-container-low rounded-lg p-6 sm:p-8 border border-outline-variant/60 overflow-hidden shadow-sm">
+<div class="absolute right-0 top-0 bottom-0 w-1/3 opacity-10 pointer-events-none flex items-center justify-end pr-8">
+<span class="material-symbols-outlined text-[180px] text-primary" data-icon="balance">balance</span>
+</div>
+<div class="relative z-10 max-w-3xl space-y-3">
+<div class="inline-flex items-center space-x-2 px-2.5 py-1 rounded bg-secondary/10 border border-secondary/20 text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="assignment">assignment</span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wide">STATUTORY APPLICATION GENERATOR</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg font-bold text-primary tracking-tight">
+          Ask. Understand. Get Information. <span class="font-serif italic font-normal text-secondary block sm:inline text-headline-md sm:text-headline-lg">(सूचना का अधिकार - RTI Crafter)</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Turn your citizen query into a legally rigorous, section 6(1) RTI application under the Right to Information Act, 2005. No legal jargon required.
+        </p>
+<!-- Trust tags -->
+<div class="pt-2 flex flex-wrap gap-2.5">
+<span class="inline-flex items-center space-x-1.5 px-3 py-1 bg-surface-container-highest rounded text-on-surface font-label-md text-label-md border border-outline-variant/50">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="verified">verified</span>
+<span>Section 6(1) Mandate</span>
+</span>
+<span class="inline-flex items-center space-x-1.5 px-3 py-1 bg-surface-container-highest rounded text-on-surface font-label-md text-label-md border border-outline-variant/50">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="account_balance">account_balance</span>
+<span>Central &amp; State Public Authorities Covered</span>
+</span>
+<span class="inline-flex items-center space-x-1.5 px-3 py-1 bg-surface-container-highest rounded text-on-surface font-label-md text-label-md border border-outline-variant/50">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="payments">payments</span>
+<span>Nominal ₹10 Filing Fee Guidance</span>
+</span>
+<span class="inline-flex items-center space-x-1.5 px-3 py-1 bg-surface-container-highest rounded text-on-surface font-label-md text-label-md border border-outline-variant/50">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="translate">translate</span>
+<span>Bilingual Support (द्विभाषी)</span>
+</span>
+</div>
+</div>
+</section>
+<!-- 6-STEP RTI WORKFLOW STEPPER -->
+<section class="bg-surface-container-lowest rounded-lg p-4 border border-outline-variant/60 shadow-sm overflow-x-auto">
+<div class="min-w-[760px] flex items-center justify-between">
+<!-- Step 1 -->
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-bold text-xs border border-primary/20">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="check">check</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Step 1</div>
+<div class="font-title-md text-title-md text-on-surface">Information Needed</div>
+</div>
+</div>
+<div class="h-0.5 w-8 bg-outline-variant"></div>
+<!-- Step 2 -->
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-bold text-xs border border-primary/20">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="check">check</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Step 2</div>
+<div class="font-title-md text-title-md text-on-surface">Department Selection</div>
+</div>
+</div>
+<div class="h-0.5 w-8 bg-secondary"></div>
+<!-- Step 3 (Active) -->
+<div class="flex items-center space-x-3 bg-secondary-fixed/30 px-3 py-1.5 rounded border border-secondary/30">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-xs shadow-sm">
+            3
+          </div>
+<div>
+<div class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">In Progress</div>
+<div class="font-title-md text-title-md text-primary font-bold">Question Framing</div>
+</div>
+</div>
+<div class="h-0.5 w-8 bg-outline-variant"></div>
+<!-- Step 4 -->
+<div class="flex items-center space-x-3 opacity-90">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-bold text-xs border border-primary/20">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="check">check</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Step 4</div>
+<div class="font-title-md text-title-md text-on-surface">Applicant Details</div>
+</div>
+</div>
+<div class="h-0.5 w-8 bg-outline-variant"></div>
+<!-- Step 5 -->
+<div class="flex items-center space-x-3 opacity-60">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-bold text-xs">
+            5
+          </div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Step 5</div>
+<div class="font-title-md text-title-md text-on-surface-variant">Review</div>
+</div>
+</div>
+<div class="h-0.5 w-8 bg-outline-variant"></div>
+<!-- Step 6 -->
+<div class="flex items-center space-x-3 opacity-60">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-bold text-xs">
+            6
+          </div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Step 6</div>
+<div class="font-title-md text-title-md text-on-surface-variant">Generated RTI</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SPLIT-SCREEN RTI DRAFTING STUDIO -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- ================= LEFT PANE: GUIDED INPUTS & REFINEMENT ================= -->
+<section class="lg:col-span-6 space-y-6">
+<!-- Target Public Authority Card -->
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant/70 p-5 shadow-sm space-y-4">
+<div class="flex items-center justify-between border-b border-surface-container-high pb-3">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-secondary" data-icon="account_balance">account_balance</span>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">1. Target Public Authority (विभाग)</h2>
+</div>
+<button class="font-label-md text-label-md text-secondary hover:underline flex items-center space-x-1">
+<span class="material-symbols-outlined text-sm" data-icon="edit">edit</span>
+<span>Change</span>
+</button>
+</div>
+<!-- Active Authority Chip -->
+<div class="p-3 bg-surface-container-low rounded border border-tertiary-fixed-dim/40 flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary text-on-primary font-semibold">Selected Nodal Body</span>
+<p class="font-title-md text-title-md text-primary mt-1 font-bold">Municipal Corporation of Delhi (MCD) / PWD</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ward 14 Road Repair, Engineering Wing &amp; Budget Allocation Cell</p>
+</div>
+<span class="material-symbols-outlined text-secondary" data-icon="verified_user">verified_user</span>
+</div>
+<!-- Quick Department Selector Badges -->
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider block mb-2">Switch Authority Category:</span>
+<div class="flex flex-wrap gap-2">
+<button class="px-3 py-1 rounded bg-secondary-fixed/50 text-secondary border border-secondary/30 font-label-md text-label-md font-semibold">
+                Municipal Corporation
+              </button>
+<button class="px-3 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md">
+                Police / Home Dept
+              </button>
+<button class="px-3 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md">
+                Revenue &amp; Land Records
+              </button>
+<button class="px-3 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md">
+                Public Works Dept
+              </button>
+<button class="px-3 py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md">
+                Education Dept
+              </button>
+</div>
+</div>
+</div>
+<!-- Conversational Citizen Raw Query -->
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant/70 p-5 shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<label class="flex items-center space-x-2 font-headline-sm text-headline-sm text-primary font-bold" for="citizen-query">
+<span class="material-symbols-outlined text-secondary" data-icon="record_voice_over">record_voice_over</span>
+<span>2. Citizen's Issue in Plain Words</span>
+</label>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">Plain Citizen Hindi/English</span>
+</div>
+<div class="relative">
+<textarea class="w-full bg-surface-container-low border border-outline-variant/60 rounded p-3 font-body-md text-body-md text-on-surface focus:ring-2 focus:ring-primary focus:border-primary resize-none leading-relaxed" id="citizen-query" rows="3">The main road in our sector was rebuilt 3 months ago and is already full of potholes. I want to know who got the contract, how much public money was spent, and copy of quality testing reports.</textarea>
+</div>
+<div class="flex items-center justify-between text-xs text-on-surface-variant pt-1">
+<span class="flex items-center space-x-1">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="auto_awesome">auto_awesome</span>
+<span>Structured into 4 legal clauses below</span>
+</span>
+<button class="text-secondary font-semibold hover:underline">Re-parse Query</button>
+</div>
+</div>
+<!-- Generated & Editable RTI Questions -->
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant/70 p-5 shadow-sm space-y-4">
+<div class="flex items-center justify-between border-b border-surface-container-high pb-3">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-secondary" data-icon="format_list_numbered">format_list_numbered</span>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">3. Formulated RTI Questions (§ 6(1))</h2>
+</div>
+<button class="flex items-center space-x-1 px-2.5 py-1 text-xs font-semibold rounded bg-surface-container hover:bg-surface-container-high text-primary border border-outline-variant/50">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+<span>Add Query</span>
+</button>
+</div>
+<!-- Enhancement Action Chips -->
+<div class="flex flex-wrap gap-2">
+<button class="px-2.5 py-1 text-xs rounded-full bg-secondary text-on-secondary font-medium flex items-center space-x-1 shadow-sm hover:opacity-90">
+<span class="material-symbols-outlined text-xs" data-icon="auto_fix_high">auto_fix_high</span>
+<span>✨ Make questions legally sharper</span>
+</button>
+<button class="px-2.5 py-1 text-xs rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-medium flex items-center space-x-1 border border-outline-variant/40">
+<span class="material-symbols-outlined text-xs text-secondary" data-icon="rule">rule</span>
+<span>Add inspection request (Sec 2(j)(i))</span>
+</button>
+<button class="px-2.5 py-1 text-xs rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-medium flex items-center space-x-1 border border-outline-variant/40">
+<span class="material-symbols-outlined text-xs text-primary" data-icon="currency_rupee">currency_rupee</span>
+<span>Add BPL fee-exemption clause</span>
+</button>
+</div>
+<!-- Question Items Container -->
+<div class="space-y-3">
+<!-- Item Q1 -->
+<div class="p-3.5 bg-surface-container-low rounded border-l-4 border-primary border-t border-r border-b border-outline-variant/40 space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary uppercase tracking-wider">Item 1 • Contract &amp; Work Order</span>
+<div class="flex items-center space-x-2 text-on-surface-variant">
+<button class="hover:text-secondary p-1" title="Refine clause"><span class="material-symbols-outlined text-sm" data-icon="edit_note">edit_note</span></button>
+<button class="hover:text-error p-1" title="Delete"><span class="material-symbols-outlined text-sm" data-icon="delete">delete</span></button>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium">
+                Certified copy of the work order, notice inviting tender (NIT), and final agreement awarded for the resurfacing of Road No. 4, Sector 12 during Financial Year 2024-25.
+              </p>
+<div class="flex items-center space-x-2 text-xs text-on-surface-variant">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-mono text-[11px]">Rule: Certified Copies</span>
+<span>• Section 2(j)(ii) compliant</span>
+</div>
+</div>
+<!-- Item Q2 -->
+<div class="p-3.5 bg-surface-container-low rounded border-l-4 border-primary border-t border-r border-b border-outline-variant/40 space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary uppercase tracking-wider">Item 2 • Financial Sanction &amp; Payments</span>
+<div class="flex items-center space-x-2 text-on-surface-variant">
+<button class="hover:text-secondary p-1" title="Refine clause"><span class="material-symbols-outlined text-sm" data-icon="edit_note">edit_note</span></button>
+<button class="hover:text-error p-1" title="Delete"><span class="material-symbols-outlined text-sm" data-icon="delete">delete</span></button>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium">
+                Total sanctioned expenditure and verified details of final payment released to the contractor, including measurement book (MB) entries and formal completion certificate.
+              </p>
+<div class="flex items-center space-x-2 text-xs text-on-surface-variant">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-mono text-[11px]">Financial Disclosures</span>
+<span>• Fiscal Transparency Clause</span>
+</div>
+</div>
+<!-- Item Q3 -->
+<div class="p-3.5 bg-surface-container-low rounded border-l-4 border-secondary border-t border-r border-b border-outline-variant/40 space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-secondary uppercase tracking-wider">Item 3 • Quality Testing &amp; Bitumen Audit</span>
+<div class="flex items-center space-x-2 text-on-surface-variant">
+<button class="hover:text-secondary p-1" title="Refine clause"><span class="material-symbols-outlined text-sm" data-icon="edit_note">edit_note</span></button>
+<button class="hover:text-error p-1" title="Delete"><span class="material-symbols-outlined text-sm" data-icon="delete">delete</span></button>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium">
+                Certified copies of bitumen quality test, core test, and technical inspection reports conducted by the Executive Engineer / Quality Control Division prior to invoice clearing.
+              </p>
+<div class="flex items-center space-x-2 text-xs text-on-surface-variant">
+<span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-mono text-[11px]">High Scrutiny Clause</span>
+<span>• Material sample inspection request</span>
+</div>
+</div>
+<!-- Item Q4 -->
+<div class="p-3.5 bg-surface-container-low rounded border-l-4 border-primary border-t border-r border-b border-outline-variant/40 space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary uppercase tracking-wider">Item 4 • Accountability &amp; Officer Details</span>
+<div class="flex items-center space-x-2 text-on-surface-variant">
+<button class="hover:text-secondary p-1" title="Refine clause"><span class="material-symbols-outlined text-sm" data-icon="edit_note">edit_note</span></button>
+<button class="hover:text-error p-1" title="Delete"><span class="material-symbols-outlined text-sm" data-icon="delete">delete</span></button>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium">
+                Name, official designation, and contact coordinates of the Junior Engineer and Executive Engineer tasked with on-site inspection and formal clearance of the work.
+              </p>
+<div class="flex items-center space-x-2 text-xs text-on-surface-variant">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-mono text-[11px]">Section 4(1)(b) Officer Registry</span>
+</div>
+</div>
+</div>
+<!-- Add custom manual question field -->
+<div class="pt-2">
+<button class="w-full py-2.5 px-4 rounded border-2 border-dashed border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary flex items-center justify-center space-x-2 transition-colors">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="font-title-md text-title-md">Add Another Point / विशिष्ट प्रश्न जोड़ें</span>
+</button>
+</div>
+</div>
+<!-- Reference Guide Card: Classical Indian Law Heritage -->
+<div class="vakalatnama-border bg-surface-container-low p-5 rounded-lg space-y-3 relative overflow-hidden">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-secondary" data-icon="library_books">library_books</span>
+<h3 class="font-title-lg text-title-lg text-primary">Bar Registry Guideline: Avoiding 8(1) Rejections</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Under Section 6(1), always ask for concrete *recorded material* (e.g. "certified copies of letters, vouchers, logs") rather than interrogative questions like "Why was the road not built?". PIOs are only mandated to provide existing records, not opinions.
+          </p>
+<div class="flex items-center space-x-4 pt-1 font-label-sm text-label-sm text-secondary font-bold">
+<span class="flex items-center space-x-1"><span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span><span>Certified Records</span></span>
+<span class="flex items-center space-x-1"><span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span><span>Logbook Excerpts</span></span>
+<span class="flex items-center space-x-1"><span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span><span>Tender Files</span></span>
+</div>
+</div>
+</section>
+<!-- ================= RIGHT PANE: LIVE A4 LEGAL DOCUMENT PREVIEW ================= -->
+<section class="lg:col-span-6 space-y-4">
+<!-- Live Preview Header & Toolbar -->
+<div class="bg-surface-container-lowest p-3 rounded-lg border border-outline-variant/70 flex flex-wrap items-center justify-between gap-2 shadow-sm">
+<div class="flex items-center space-x-2">
+<span class="inline-flex w-3 h-3 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-title-md text-title-md text-primary font-bold">Live A4 Affidavit Preview</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-semibold">FORM A (§ 6(1))</span>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center space-x-1.5">
+<button class="px-3 py-1.5 rounded bg-primary text-on-primary text-xs font-semibold hover:bg-primary-container flex items-center space-x-1 shadow-sm transition" title="Generate PDF Document">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+<span>PDF</span>
+</button>
+<button class="px-3 py-1.5 rounded bg-surface-container text-on-surface text-xs font-semibold hover:bg-surface-container-high flex items-center space-x-1 border border-outline-variant/50 transition" title="Direct Print">
+<span class="material-symbols-outlined text-sm" data-icon="print">print</span>
+<span>Print</span>
+</button>
+<button class="p-1.5 rounded bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high border border-outline-variant/50 transition" title="Copy Raw Text">
+<span class="material-symbols-outlined text-sm" data-icon="content_copy">content_copy</span>
+</button>
+<button class="p-1.5 rounded bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high border border-outline-variant/50 transition" title="Save to Vault">
+<span class="material-symbols-outlined text-sm" data-icon="bookmark_add">bookmark_add</span>
+</button>
+</div>
+</div>
+<!-- The Formal A4 Parchment Sheet -->
+<div class="bg-surface-container-lowest border-2 border-outline-variant/80 rounded shadow-md p-7 sm:p-10 relative watermark-seal space-y-6 text-on-surface leading-relaxed text-sm">
+<!-- Sovereign Manuscript Header Banner -->
+<div class="border-b-2 border-tertiary-fixed-dim/50 pb-5 text-center space-y-1 relative">
+<div class="w-10 h-10 mx-auto rounded-full border border-primary/30 flex items-center justify-center text-primary mb-1">
+<span class="material-symbols-outlined text-xl" data-icon="account_balance">account_balance</span>
+</div>
+<div class="font-label-sm text-label-sm tracking-widest text-secondary font-bold uppercase">
+              REPUBLIC OF INDIA • STATUTORY CITIZEN APPLICATION
+            </div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-primary tracking-wide">
+              FORM 'A'
+            </h2>
+<div class="font-serif italic text-xs text-on-surface-variant">
+              [Application for Seeking Information under Section 6(1) of Right to Information Act, 2005]
+            </div>
+</div>
+<!-- Addressed To Public Authority -->
+<div class="space-y-1 text-xs">
+<span class="font-bold text-primary uppercase tracking-wider block font-label-md">To,</span>
+<div class="pl-4 border-l-2 border-primary/30 space-y-0.5 font-body-sm text-body-sm">
+<p class="font-bold text-primary">The Central / State Public Information Officer (PIO),</p>
+<p>Office of the Superintending Engineer,</p>
+<p>Municipal Corporation of Delhi (MCD), Civil Lines Zone,</p>
+<p>16, Rajpur Road, Civil Lines, Delhi - 110054.</p>
+</div>
+</div>
+<!-- Subject Line -->
+<div class="bg-surface-container-low p-3 rounded border border-outline-variant/40 space-y-1">
+<div class="font-bold text-primary text-xs uppercase tracking-wider font-label-sm">
+              Subject:
+            </div>
+<p class="font-body-md text-body-md font-semibold text-primary">
+              Application seeking certified information regarding road resurfacing work order, tender specs, expenditure, and quality test inspection under the Right to Information Act, 2005.
+            </p>
+</div>
+<!-- Applicant Particulars Block -->
+<div class="space-y-1 text-xs border-y border-outline-variant/40 py-3">
+<span class="font-bold text-primary uppercase font-label-sm">1. Particulars of the Applicant:</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pl-4 pt-1 font-body-sm text-body-sm">
+<div><span class="text-on-surface-variant">Full Name:</span> <span class="font-semibold text-primary">Rajesh V. Sharma</span></div>
+<div><span class="text-on-surface-variant">Citizenship:</span> <span class="font-semibold text-primary">Citizen of India</span></div>
+<div class="sm:col-span-2"><span class="text-on-surface-variant">Address for Correspondence:</span> <span class="font-semibold text-primary">Flat No. B-402, Prerna Apartments, Sector 12, Dwarka, New Delhi - 110078</span></div>
+<div><span class="text-on-surface-variant">Contact:</span> <span class="font-semibold text-primary">+91 9811X XXXXX</span></div>
+<div><span class="text-on-surface-variant">Email:</span> <span class="font-semibold text-primary">r.sharma.citizen@gov-mail.in</span></div>
+</div>
+</div>
+<!-- Particulars of Information Sought -->
+<div class="space-y-3 text-xs">
+<div class="flex items-center justify-between">
+<span class="font-bold text-primary uppercase font-label-sm">2. Particulars of Information Sought under Section 6(1):</span>
+<span class="font-mono text-[10px] text-on-surface-variant">Period: FY 2024-2025</span>
+</div>
+<ol class="list-decimal list-outside pl-5 space-y-2.5 font-body-sm text-body-sm text-on-surface">
+<li class="pl-1">
+<span class="font-medium text-primary">Certified copy of the work order, tender agreement,</span> and approved Bill of Quantities (BOQ) awarded for the resurfacing of Road No. 4, Sector 12, Ward 14 during FY 2024-25.
+              </li>
+<li class="pl-1">
+<span class="font-medium text-primary">Total financial expenditure sanctioned</span> and ledger entries reflecting final disbursement made to the contractor, alongside certified copies of the Measurement Book (MB) recordings and completion certificate.
+              </li>
+<li class="pl-1">
+<span class="font-medium text-primary">Certified copies of laboratory test reports</span> pertaining to bitumen penetration, thickness, and material durability conducted by the Quality Control Division or designated third-party auditor before sign-off.
+              </li>
+<li class="pl-1">
+<span class="font-medium text-primary">Names, designations, and official contact credentials</span> of the inspecting engineers (Junior Engineer &amp; Assistant/Executive Engineer) who supervised and certified the construction quality.
+              </li>
+</ol>
+</div>
+<!-- Life & Liberty Clause Indicator (Unchecked standard 30 days) -->
+<div class="p-2.5 rounded bg-surface-container border border-outline-variant/40 flex items-center justify-between text-xs">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="schedule">schedule</span>
+<span class="font-medium text-on-surface">Statutory Response Period:</span>
+</div>
+<span class="font-bold text-primary">Standard 30 Days (§ 7(1))</span>
+</div>
+<!-- Application Fee Declaration -->
+<div class="space-y-1 text-xs border-t border-outline-variant/40 pt-3">
+<span class="font-bold text-primary uppercase font-label-sm">3. Application Fee Details:</span>
+<p class="font-body-sm text-body-sm pl-4 pt-0.5 text-on-surface">
+              An application fee of <strong class="text-primary">₹10 (Rupees Ten Only)</strong> is enclosed herewith vide <span class="bg-surface-container-high px-1.5 py-0.5 rounded font-mono font-semibold text-primary">Indian Postal Order (IPO) No. 45G-902188</span> payable in favor of <em>"Accounts Officer, Municipal Corporation of Delhi"</em>.
+            </p>
+</div>
+<!-- Declaration & Signature -->
+<div class="pt-4 border-t border-dashed border-outline-variant/60 space-y-4">
+<p class="text-[12px] italic text-on-surface-variant text-justify leading-relaxed">
+              "I hereby declare that I am a citizen of India and the information sought does not fall within the exemptions contained in Section 8 or 9 of the RTI Act, 2005. To the best of my knowledge, it pertains to your office."
+            </p>
+<div class="flex items-end justify-between pt-2">
+<div class="text-xs space-y-1">
+<div><span class="text-on-surface-variant">Place:</span> <strong class="text-primary">New Delhi</strong></div>
+<div><span class="text-on-surface-variant">Date:</span> <strong class="text-primary">24th October, 2025</strong></div>
+</div>
+<!-- Stamp / Signature Block -->
+<div class="text-right space-y-2">
+<div class="inline-block border-b border-primary/50 w-36 pb-1 text-center font-serif italic text-primary text-xs">
+                  [ Rajesh V. Sharma ]
+                </div>
+<div class="text-[11px] text-on-surface-variant uppercase tracking-wider font-semibold">
+                  Signature of the Applicant
+                </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Submission Guidance Quick Drawer -->
+<div class="bg-surface-container-low rounded-lg p-4 border border-outline-variant/60 flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 rounded bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" data-icon="local_post_office">local_post_office</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-primary font-bold">Filing via Speed Post or Online?</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Both methods valid. Speed post receipt serves as legal proof of dispatch.</p>
+</div>
+</div>
+<button class="px-3.5 py-1.5 bg-surface-container-highest text-primary font-label-md text-label-md font-semibold rounded hover:bg-outline-variant/40 border border-outline-variant transition">
+            Dispatch Instructions
+          </button>
+</div>
+</section>
+</div>
+<!-- CIVIC DISCLAIMER & SUBMISSION GUIDE -->
+<section class="bg-surface-container-low rounded-lg p-6 border border-outline-variant/60 space-y-4">
+<div class="flex items-center space-x-2 border-b border-outline-variant/40 pb-3">
+<span class="material-symbols-outlined text-secondary" data-icon="policy">policy</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Citizen Rights Protocol: Timeline &amp; Escalation Matrix</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+<!-- Pillar 1 -->
+<div class="space-y-2">
+<div class="flex items-center space-x-2">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-xs">₹10</span>
+<h4 class="font-title-md text-title-md text-primary font-bold">Fee &amp; IPO Details</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Purchase a ₹10 Indian Postal Order (IPO) or Court Fee stamp from any Indian Post Office. If you possess a valid BPL (Below Poverty Line) card, you are 100% exempt from all RTI fees under Section 7(5).
+          </p>
+</div>
+<!-- Pillar 2 -->
+<div class="space-y-2">
+<div class="flex items-center space-x-2">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xs">30d</span>
+<h4 class="font-title-md text-title-md text-primary font-bold">30-Day Response Mandate</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            The Public Information Officer (PIO) is statutorily bound to provide information within 30 days of receipt. If the matter concerns life or liberty, the deadline shrinks to <strong>48 hours</strong> under Section 7(1).
+          </p>
+</div>
+<!-- Pillar 3 -->
+<div class="space-y-2">
+<div class="flex items-center space-x-2">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-xs">§19</span>
+<h4 class="font-title-md text-title-md text-primary font-bold">First Appeal Protocol</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            If no reply is received within 30 days, or if unsatisfactory information is supplied, file a First Appeal under Section 19(1) to the designated First Appellate Authority (FAA) within 30 days without fee.
+          </p>
+</div>
+</div>
+<!-- Quick Registry Search Strip -->
+<div class="pt-4 border-t border-outline-variant/40 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center space-x-2 text-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-base text-primary" data-icon="language">language</span>
+<span>Central RTI Online Portal: <strong class="text-primary">rtionline.gov.in</strong> • MCD Portal: <strong class="text-primary">mcdonline.nic.in</strong></span>
+</div>
+<div class="flex items-center space-x-3">
+<button class="px-4 py-2 bg-primary text-on-primary font-label-md text-label-md font-semibold rounded hover:bg-primary-container transition shadow-sm">
+            Save Draft in Vault
+          </button>
+<button class="px-4 py-2 bg-secondary text-on-secondary font-label-md text-label-md font-semibold rounded hover:opacity-90 transition shadow-sm">
+            Print &amp; File Application →
+          </button>
+</div>
+</div>
+</section>
+</main>
+<!-- ================= FOOTER (Shared Component: Institutional Sovereign) ================= -->
+<footer class="mt-12 bg-surface-container-high border-t border-outline-variant">
+<div class="w-full max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-xs text-on-surface-variant">
+<!-- Institutional Copyright & Act Reference -->
+<div class="max-w-xl space-y-1">
+<div class="font-headline-sm text-headline-sm font-semibold text-primary">कानूनसाथी | KanoonSaathi</div>
+<p class="font-body-sm text-body-sm leading-relaxed">
+          © 2025 KanoonSaathi Sovereign Legal Portal. In accordance with Legal Services Authorities Act, 1987 &amp; Article 39A of the Constitution of India. NALSA National Tollfree: 15100.
+        </p>
+</div>
+<!-- Compliance Links Grid -->
+<div class="flex flex-wrap gap-x-6 gap-y-2 font-label-md text-label-md items-center">
+<a class="hover:text-secondary transition-colors duration-150 underline" href="#mandate">Constitutional Mandate</a>
+<a class="hover:text-secondary transition-colors duration-150 underline" href="#ecourts">e-Courts Integration</a>
+<a class="hover:text-secondary transition-colors duration-150 underline" href="#bns">BNS/IPC Cross-Reference</a>
+<a class="hover:text-secondary transition-colors duration-150 underline" href="#privacy">Privacy &amp; Privilege</a>
+<a class="hover:text-secondary transition-colors duration-150 underline" href="#bar">Bar Council Compliance</a>
+<a class="hover:text-secondary transition-colors duration-150 underline" href="#grievance">Grievance Redressal</a>
+</div>
+</div>
+</footer>
+<!-- Subtle Administrative Toast/Status Indicator Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Micro-interactions: question item editing state toggles
+      const editButtons = document.querySelectorAll('[title="Refine clause"]');
+      editButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const card = e.target.closest('.border-l-4');
+          if (card) {
+            card.classList.toggle('ring-2');
+            card.classList.toggle('ring-secondary');
+          }
+        });
+      });
+    });
+  </script>
+</body></html>

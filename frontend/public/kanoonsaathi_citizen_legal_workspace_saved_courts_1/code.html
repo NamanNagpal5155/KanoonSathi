@@ -1,0 +1,760 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>कानूनसाथी | KanoonSaathi - Citizen Legal Workspace &amp; Saved Courts Dashboard</title>
+<!-- Material Symbols Outlined font -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Editorial & Sovereign Google Fonts: Playfair Display & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS with Forms and Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-bright": "#fef9f0",
+            "outline-variant": "#c5c6ce",
+            "on-primary": "#ffffff",
+            "secondary-container": "#ff8345",
+            "secondary-fixed": "#ffdbcc",
+            "on-primary-container": "#828eb1",
+            "surface-dim": "#ded9d1",
+            "on-tertiary-fixed": "#251a00",
+            "on-error-container": "#93000a",
+            "surface-container": "#f2ede4",
+            "background": "#fef9f0",
+            "primary-fixed-dim": "#b9c6eb",
+            "tertiary-fixed": "#ffdf9b",
+            "surface-container-low": "#f8f3ea",
+            "surface-variant": "#e7e2d9",
+            "surface-tint": "#515e7e",
+            "primary-container": "#1a2744",
+            "primary-fixed": "#d9e2ff",
+            "surface-container-lowest": "#ffffff",
+            "primary": "#04122e",
+            "surface-container-high": "#ece8df",
+            "on-primary-fixed-variant": "#3a4665",
+            "outline": "#75777e",
+            "on-secondary-container": "#692700",
+            "tertiary": "#1a1100",
+            "inverse-primary": "#b9c6eb",
+            "on-secondary-fixed": "#351000",
+            "tertiary-fixed-dim": "#e2c381",
+            "secondary-fixed-dim": "#ffb695",
+            "on-secondary": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "surface-container-highest": "#e7e2d9",
+            "on-tertiary-fixed-variant": "#59440e",
+            "on-surface": "#1d1c16",
+            "on-secondary-fixed-variant": "#7b2f00",
+            "on-primary-fixed": "#0d1b37",
+            "on-surface-variant": "#45464d",
+            "on-background": "#1d1c16",
+            "error-container": "#ffdad6",
+            "on-tertiary-container": "#a68b4f",
+            "on-error": "#ffffff",
+            "secondary": "#a23f00",
+            "inverse-on-surface": "#f5f0e7",
+            "error": "#ba1a1a",
+            "surface": "#fef9f0",
+            "tertiary-container": "#342500",
+            "inverse-surface": "#32302a"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "space-xs": "0.25rem",
+            "gutter-mobile": "1rem",
+            "gutter": "1.5rem",
+            "margin": "3rem",
+            "margin-tablet": "2rem",
+            "space-md": "1rem",
+            "margin-mobile": "1rem",
+            "space-xl": "2.5rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "label-sm": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"],
+            "title-md": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "display-lg": ["Playfair Display"],
+            "headline-sm": ["Playfair Display"],
+            "title-lg": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Playfair Display"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Playfair Display"]
+          },
+          "fontSize": {
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+            "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+            "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.03em", "fontWeight": "600" }],
+            "display-lg": ["52px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "title-lg": ["18px", { "lineHeight": "26px", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "30px", "fontWeight": "400" }],
+            "headline-md": ["26px", { "lineHeight": "34px", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    /* Architectural Parchment Rules & Blind Emboss Tokens */
+    .antique-double-border {
+      border: 1px solid rgba(197, 168, 105, 0.45);
+      position: relative;
+    }
+    .antique-double-border::before {
+      content: '';
+      position: absolute;
+      inset: 3px;
+      border: 1px solid rgba(197, 168, 105, 0.25);
+      pointer-events: none;
+    }
+    .court-card-shadow {
+      box-shadow: 0 2px 12px -2px rgba(26, 39, 68, 0.05), 0 8px 24px -4px rgba(17, 19, 23, 0.04);
+    }
+    .embossed-seal {
+      box-shadow: inset 0 1px 2px rgba(17, 19, 23, 0.06), 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+    .subtle-parchment-pattern {
+      background-image: radial-gradient(rgba(197, 168, 105, 0.08) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+    .sovereign-ribbon {
+      background: repeating-linear-gradient(45deg, #1a2744, #1a2744 12px, #04122e 12px, #04122e 24px);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col font-body-md text-body-md antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- ================= TOP APP BAR (Shared Component: TopNavBar Anchor) ================= -->
+<header class="bg-surface dark:bg-primary-container border-b border-outline-variant dark:border-outline shadow-sm dark:shadow-none sticky top-0 z-50">
+<!-- Sovereign Top Notification Strip -->
+<div class="bg-primary-container text-surface-bright py-1 px-4 text-center border-b border-outline-variant/20 flex justify-between items-center text-xs">
+<div class="flex items-center space-x-2 mx-auto sm:mx-0">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-md text-label-md tracking-wider">सत्यमेव जयते • CITIZEN RIGHT TO JUSTICE PORTAL • ARTICLE 39A CONSTITUTION OF INDIA</span>
+</div>
+<div class="hidden sm:flex items-center space-x-4">
+<span class="text-tertiary-fixed font-medium">NALSA e-Service 24x7</span>
+<a class="hover:text-secondary-fixed transition-colors font-bold text-secondary-fixed flex items-center gap-1" href="tel:15100">
+<span class="material-symbols-outlined text-sm" data-icon="phone_in_talk">phone_in_talk</span> Tele-Law: 15100
+        </a>
+</div>
+</div>
+<!-- Main Navigation Bar -->
+<div class="w-full max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+<!-- Brand & Sovereign Seal Emblem -->
+<div class="flex items-center space-x-4">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-surface-bright flex items-center justify-center border border-tertiary-fixed-dim/40 shadow-sm relative overflow-hidden">
+<span class="material-symbols-outlined text-2xl text-tertiary-fixed" data-icon="balance" data-weight="fill" style="font-variation-settings: 'FILL' 1;">balance</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm font-semibold tracking-wide text-primary dark:text-primary-fixed block leading-tight">
+            कानूनसाथी | KanoonSaathi
+          </span>
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase block">
+            National Citizen Legal Workspace • e-Courts Registry
+          </span>
+</div>
+</div>
+<!-- Center Navigation Links (Editorial sovereign styling from anchor) -->
+<nav class="hidden lg:flex items-center space-x-6 text-sm">
+<a class="text-on-surface-variant dark:text-outline-variant font-medium pb-1 hover:text-secondary transition-colors duration-150" href="#dossier">
+          Legal Dossier
+        </a>
+<a class="text-secondary dark:text-secondary-fixed border-b-2 border-secondary dark:border-secondary-fixed pb-1 font-semibold flex items-center gap-1" href="#saved-courts">
+<span class="material-symbols-outlined text-base" data-icon="account_balance">account_balance</span>
+          Saved Courts (3)
+        </a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium pb-1 hover:text-secondary transition-colors duration-150" href="#notice">
+          Notice Generator
+        </a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium pb-1 hover:text-secondary transition-colors duration-150" href="#rti">
+          RTI Crafter
+        </a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium pb-1 hover:text-secondary transition-colors duration-150" href="#process">
+          Court Process
+        </a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium pb-1 hover:text-secondary transition-colors duration-150" href="#vault">
+          Case Vault
+        </a>
+</nav>
+<!-- Trailing Sovereign Actions & Litigant Profile -->
+<div class="flex items-center space-x-3">
+<!-- Language Switcher -->
+<button class="px-2.5 py-1.5 rounded-lg border border-outline-variant hover:bg-surface-container text-xs font-semibold text-primary flex items-center space-x-1.5 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="translate">translate</span>
+<span class="font-label-md text-label-md">हिन्दी / EN</span>
+</button>
+<!-- Helpline Badge (Desktop) -->
+<a class="hidden md:inline-flex items-center space-x-1.5 bg-secondary text-on-secondary px-3 py-1.5 rounded-lg font-label-md text-label-md hover:bg-on-secondary-container transition-all shadow-xs" href="tel:15100">
+<span class="material-symbols-outlined text-sm" data-icon="support_agent">support_agent</span>
+<span>Emergency Helpline 15100</span>
+</a>
+<!-- Litigant Profile Badge -->
+<div class="flex items-center space-x-2.5 pl-2 border-l border-outline-variant/60">
+<div class="text-right hidden sm:block">
+<span class="block font-label-md text-label-md text-primary font-bold">Adv. Rajesh Sharma</span>
+<span class="block font-label-sm text-label-sm text-outline">Verified Litigant • DL-8849</span>
+</div>
+<div class="w-9 h-9 rounded-full bg-surface-container-high border-2 border-tertiary-fixed-dim/60 flex items-center justify-center text-primary shadow-inner">
+<span class="material-symbols-outlined text-lg" data-icon="verified_user" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- ================= HERO EDITORIAL COMMAND HEADER ================= -->
+<section class="bg-surface-container-low border-b border-outline-variant/50 subtle-parchment-pattern py-8 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col lg:flex-row justify-between lg:items-end gap-6">
+<div>
+<!-- Breadcrumb & Badge -->
+<div class="flex flex-wrap items-center gap-2 mb-3">
+<span class="inline-flex items-center space-x-1 bg-surface-container-highest px-2.5 py-1 rounded text-primary font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-xs text-secondary" data-icon="security">security</span>
+<span>DigiLocker Synced • Article 39A Protective Custody</span>
+</span>
+<span class="text-outline text-xs">•</span>
+<span class="font-label-sm text-label-sm text-outline-variant text-on-surface-variant">Last Docket Sync: Today, 09:42 AM IST</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight mb-2">
+            सुप्रभात, Rajesh Sharma <span class="text-outline font-normal text-headline-sm">• Citizen Legal Workspace</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+            Central repository for your personal litigation proceedings, statutory notices under RPAD dispatch, and saved judicial court complexes across the National Capital Territory.
+          </p>
+</div>
+<!-- Action Ribbon CTAs -->
+<div class="flex items-center space-x-3 shrink-0">
+<button class="bg-surface-container-lowest border border-outline-variant px-4 py-2.5 rounded-lg text-primary font-label-md text-label-md hover:bg-surface-container transition-all flex items-center space-x-2 shadow-xs">
+<span class="material-symbols-outlined text-base" data-icon="file_download">file_download</span>
+<span>Export Judicial Dossier</span>
+</button>
+<button class="bg-secondary text-on-secondary px-5 py-2.5 rounded-lg font-label-md text-label-md hover:bg-on-secondary-container transition-all flex items-center space-x-2 shadow-sm">
+<span class="material-symbols-outlined text-base" data-icon="add_circle">add_circle</span>
+<span>File New Legal Notice</span>
+</button>
+</div>
+</div>
+<!-- Quick Judicial Metric Chips -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-6 border-t border-outline-variant/40">
+<!-- Metric 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-lg border border-outline-variant/50 court-card-shadow flex items-start space-x-3.5">
+<div class="w-10 h-10 rounded bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl" data-icon="gavel">gavel</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline uppercase">Active Court Matters</div>
+<div class="font-title-lg text-title-lg text-primary font-bold mt-0.5">2 Active Filings</div>
+<div class="font-label-sm text-label-sm text-secondary mt-0.5 flex items-center gap-0.5">
+<span>Next hearing in 12 days</span>
+</div>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-lg border border-outline-variant/50 court-card-shadow flex items-start space-x-3.5">
+<div class="w-10 h-10 rounded bg-secondary-fixed/50 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl" data-icon="location_city">location_city</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline uppercase">Saved Courts &amp; Forums</div>
+<div class="font-title-lg text-title-lg text-primary font-bold mt-0.5">3 Mapped Benches</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Delhi &amp; NCR Jurisdiction</div>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-lowest p-4 rounded-lg border border-outline-variant/50 court-card-shadow flex items-start space-x-3.5">
+<div class="w-10 h-10 rounded bg-tertiary-fixed/50 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl" data-icon="edit_document">edit_document</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline uppercase">Drafts &amp; Notices</div>
+<div class="font-title-lg text-title-lg text-primary font-bold mt-0.5">1 Notice, 1 RTI</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Ready for postal stamp</div>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface-container-lowest p-4 rounded-lg border border-outline-variant/50 court-card-shadow flex items-start space-x-3.5">
+<div class="w-10 h-10 rounded bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl" data-icon="verified" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline uppercase">Free Legal Aid (NALSA)</div>
+<div class="font-title-lg text-title-lg text-primary font-bold mt-0.5">DLSA Qualified</div>
+<div class="font-label-sm text-label-sm text-outline mt-0.5">Cat-A Legal Aid Entitlement</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= MAIN ASYMMETRIC GRID CANVAS ================= -->
+<main class="w-full max-w-7xl mx-auto px-6 py-10 flex-1">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- ================= LEFT COLUMN (2/3 width - 8 Cols): SAVED COURTS & DOCKETS ================= -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Header with Filter Controls -->
+<div class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant/60 court-card-shadow">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-outline-variant/40">
+<div>
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-secondary" data-icon="account_balance">account_balance</span>
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight">
+                  Your Saved Courts <span class="font-title-md text-title-md font-normal text-on-surface-variant">(संरक्षित न्यायालय व फोरम)</span>
+</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Direct access to e-Courts cause lists, filing counters, certified copy rooms, and DLSA facilitation desks.
+              </p>
+</div>
+<!-- Filter Tabs -->
+<div class="inline-flex p-1 bg-surface-container rounded-lg border border-outline-variant/50 text-xs font-semibold self-start sm:self-auto">
+<button class="bg-surface-container-lowest text-primary shadow-xs px-3 py-1.5 rounded font-label-md text-label-md">
+                All Saved (3)
+              </button>
+<button class="text-on-surface-variant hover:text-primary px-3 py-1.5 rounded transition-colors font-label-md text-label-md">
+                District Courts (2)
+              </button>
+<button class="text-on-surface-variant hover:text-primary px-3 py-1.5 rounded transition-colors font-label-md text-label-md">
+                Consumer Forums (1)
+              </button>
+</div>
+</div>
+<!-- SAVED COURT CARD 1: Tis Hazari Court Complex -->
+<article class="mt-6 border border-outline-variant/80 rounded-lg bg-surface-bright relative overflow-hidden transition-all hover:border-primary/50 court-card-shadow">
+<!-- Left Dignity Indigo Bar Accent -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary-container"></div>
+<div class="p-6 pl-8">
+<!-- Top Row Metadata -->
+<div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+<div>
+<div class="flex items-center space-x-2">
+<span class="bg-primary-container text-surface-bright text-[11px] font-label-sm px-2 py-0.5 rounded tracking-wide uppercase">
+                      Primary District Court • 2.4 km
+                    </span>
+<span class="bg-surface-container-high text-primary text-[11px] font-label-sm px-2 py-0.5 rounded border border-outline-variant/40">
+                      Central &amp; West Delhi
+                    </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mt-1.5">
+                    Tis Hazari Court Complex, Delhi
+                  </h3>
+<p class="font-label-sm text-label-sm text-outline-variant text-on-surface-variant mt-0.5">
+                    Malka Ganj, Old Delhi, Delhi, 110054 • Metro: Tis Hazari (Red Line, Gate No. 2)
+                  </p>
+</div>
+<button class="text-outline hover:text-secondary p-1 rounded hover:bg-surface-container transition-colors" title="Remove from saved">
+<span class="material-symbols-outlined text-lg" data-icon="bookmark_remove">bookmark_remove</span>
+</button>
+</div>
+<!-- Jurisdiction & Active CNR Box -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4 p-4 rounded bg-surface-container-low border border-outline-variant/40">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase block">Judicial Jurisdiction:</span>
+<p class="font-body-sm text-body-sm text-primary font-medium mt-0.5">
+                    Civil Suits, Criminal Sessions, Motor Accident Claims Tribunal (MACT), Rent Control
+                  </p>
+</div>
+<div class="border-t md:border-t-0 md:border-l border-outline-variant/50 md:pl-4 pt-2 md:pt-0">
+<span class="font-label-sm text-label-sm text-secondary uppercase block font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="assignment_late">assignment_late</span>
+                    Linked CNR Number: DLCT01-004921-2025
+                  </span>
+<p class="font-body-sm text-body-sm text-on-surface font-semibold mt-0.5">
+                    Next Hearing: 14 Nov 2025 • Courtroom 214 (Sr. Civil Judge)
+                  </p>
+<span class="text-xs text-on-surface-variant">Stage: Framing of Preliminary Issues</span>
+</div>
+</div>
+<!-- Action Bar -->
+<div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+<div class="flex flex-wrap items-center gap-2">
+<a class="inline-flex items-center space-x-1.5 bg-surface-container-lowest border border-outline-variant px-3 py-1.5 rounded text-xs font-semibold text-primary hover:bg-surface-container transition-colors" href="https://maps.google.com" target="_blank">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="directions">directions</span>
+<span>Get Directions</span>
+</a>
+<button class="inline-flex items-center space-x-1.5 bg-surface-container-lowest border border-outline-variant px-3 py-1.5 rounded text-xs font-semibold text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="description">description</span>
+<span>View Full Court Dossier</span>
+</button>
+<button class="inline-flex items-center space-x-1.5 bg-surface-container-lowest border border-outline-variant px-3 py-1.5 rounded text-xs font-semibold text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="support">support</span>
+<span>DLSA Aid Counter (Room 18)</span>
+</button>
+</div>
+<div class="text-xs text-outline flex items-center space-x-1">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="access_time">access_time</span>
+<span>Filing Counters: 10:00 AM - 03:30 PM</span>
+</div>
+</div>
+</div>
+</article>
+<!-- SAVED COURT CARD 2: District Consumer Forum -->
+<article class="mt-4 border border-outline-variant/80 rounded-lg bg-surface-bright relative overflow-hidden transition-all hover:border-primary/50 court-card-shadow">
+<!-- Left Terracotta Bar Accent -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="p-6 pl-8">
+<div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+<div>
+<div class="flex items-center space-x-2">
+<span class="bg-secondary text-on-secondary text-[11px] font-label-sm px-2 py-0.5 rounded tracking-wide uppercase">
+                      Consumer Forum • 3.1 km
+                    </span>
+<span class="bg-surface-container-high text-primary text-[11px] font-label-sm px-2 py-0.5 rounded border border-outline-variant/40">
+                      North District Bench
+                    </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mt-1.5">
+                    District Consumer Disputes Redressal Commission (DCDRC), Bench-II
+                  </h3>
+<p class="font-label-sm text-label-sm text-outline-variant text-on-surface-variant mt-0.5">
+                    Vikas Bhawan, 5th Floor, I.P. Estate, New Delhi, 110002
+                  </p>
+</div>
+<button class="text-outline hover:text-secondary p-1 rounded hover:bg-surface-container transition-colors" title="Remove from saved">
+<span class="material-symbols-outlined text-lg" data-icon="bookmark_remove">bookmark_remove</span>
+</button>
+</div>
+<!-- Jurisdiction / Pecuniary Limit -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4 p-4 rounded bg-surface-container-low border border-outline-variant/40">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase block">Pecuniary Limit &amp; Statute:</span>
+<p class="font-body-sm text-body-sm text-primary font-medium mt-0.5">
+                    Consumer Protection Act, 2019 • Claims up to ₹50 Lakhs (Zero court fee up to ₹5 Lakhs)
+                  </p>
+</div>
+<div class="border-t md:border-t-0 md:border-l border-outline-variant/50 md:pl-4 pt-2 md:pt-0">
+<span class="font-label-sm text-label-sm text-primary uppercase block font-bold">
+                    Linked Citizen Dispute:
+                  </span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5 font-medium">
+                    Security Deposit Dispute <span class="text-xs text-secondary font-mono">(Ref: KS-LEG/2025/NOTICE/481)</span>
+</p>
+<span class="text-xs text-on-surface-variant">Notice cure period under scrutiny</span>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+<div class="flex flex-wrap items-center gap-2">
+<button class="inline-flex items-center space-x-1.5 bg-surface-container-lowest border border-outline-variant px-3 py-1.5 rounded text-xs font-semibold text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="map">map</span>
+<span>Download Route Map</span>
+</button>
+<button class="inline-flex items-center space-x-1.5 bg-surface-container-lowest border border-outline-variant px-3 py-1.5 rounded text-xs font-semibold text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="checklist">checklist</span>
+<span>Filing Counter Guidelines (4 Sets)</span>
+</button>
+</div>
+<div class="text-xs text-outline flex items-center space-x-1">
+<span class="material-symbols-outlined text-sm text-tertiary" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span>Demand Draft payable to: Registrar, DCDRC Bench-II</span>
+</div>
+</div>
+</div>
+</article>
+<!-- SAVED COURT CARD 3: Subordinate Judiciary Ghaziabad -->
+<article class="mt-4 border border-outline-variant/60 rounded-lg bg-surface-bright/70 relative overflow-hidden transition-all hover:border-primary/50">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-outline-variant"></div>
+<div class="p-5 pl-7 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<div class="flex items-center space-x-2">
+<span class="bg-surface-container-high text-on-surface-variant text-[11px] font-label-sm px-2 py-0.5 rounded tracking-wide uppercase">
+                    Subordinate Judiciary • 6.8 km
+                  </span>
+<span class="text-xs text-outline">Uttar Pradesh Jurisdiction</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary font-bold mt-1">
+                  District &amp; Sessions Court, Ghaziabad
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Raj Nagar District Centre, Sector 10, Ghaziabad, UP 201002
+                </p>
+</div>
+<div class="flex items-center space-x-2 shrink-0">
+<button class="px-3 py-1.5 bg-surface-container border border-outline-variant rounded text-xs font-semibold text-primary hover:bg-surface-container-high transition-colors flex items-center space-x-1">
+<span class="material-symbols-outlined text-sm" data-icon="directions">directions</span>
+<span>Directions</span>
+</button>
+<button class="px-3 py-1.5 bg-surface-container-lowest border border-outline-variant rounded text-xs font-semibold text-primary hover:bg-surface-container transition-colors">
+                  View Details
+                </button>
+<button class="text-outline hover:text-secondary p-1" title="Remove">
+<span class="material-symbols-outlined text-lg" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Search History Strip -->
+<div class="mt-6 pt-4 border-t border-outline-variant/40 flex flex-wrap items-center justify-between gap-3 text-xs">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-base text-outline" data-icon="history">history</span>
+<span class="font-label-sm text-label-sm text-outline uppercase">Recently Viewed Complexes:</span>
+<span class="bg-surface-container px-2 py-0.5 rounded text-on-surface font-medium">Patiala House Courts (Yesterday)</span>
+<span class="bg-surface-container px-2 py-0.5 rounded text-on-surface font-medium">Delhi High Court, Sher Shah Road (3 days ago)</span>
+</div>
+<a class="text-secondary font-semibold hover:underline flex items-center gap-0.5" href="#browse-courts">
+<span>Browse All Delhi Judicial Complexes</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- ================= JUDICIAL ARCHITECTURE & ARCHIVAL VAULT SHOWCASE ================= -->
+<section class="bg-surface-container-lowest rounded-lg border border-outline-variant/60 p-6 court-card-shadow">
+<div class="flex items-center justify-between mb-4 pb-3 border-b border-outline-variant/40">
+<div class="flex items-center space-x-2.5">
+<div class="w-8 h-8 rounded bg-primary-container text-surface-bright flex items-center justify-center">
+<span class="material-symbols-outlined text-base" data-icon="folder_supervised">folder_supervised</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">
+                  Certified Legal Documents &amp; Vault Storage
+                </h3>
+<p class="font-label-sm text-label-sm text-outline">
+                  Section 65B Indian Evidence Act / BSA Compliant Digital Record Custody
+                </p>
+</div>
+</div>
+<span class="bg-surface-container px-3 py-1 rounded text-xs font-semibold text-primary border border-outline-variant/40">
+              4 Certified Files Protected
+            </span>
+</div>
+<!-- Teakwood High Court Library Image Banner -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+<div class="md:col-span-5 relative rounded overflow-hidden border border-outline-variant/80 group">
+<img alt="Teakwood Law Library Hall in Indian High Court" class="w-full h-52 object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1XA9cH1hiT7JO7bNvjl7T2IZWjIvmdFVCvqPYZvarQ0uFS2Aj_B7361ddGr3_Q3_bV3oVlyrNwVvACN7ZXMJVmxN1GSPiOAQZkk_v3IZn3jIY2vwnqWo18x8Kn9QibgVToC22YuYirOcMVZpLpf5pWoEA-0xAH9WDCa8pXpWUcvRE_eylcLaCmGi95jfOH1s2DsBf95d7urT_pzO5ITFnh3-cOFj435dfzr-AlMA6slWg">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-3">
+<span class="text-surface-bright text-xs font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-tertiary-fixed" data-icon="verified">verified</span>
+                  National Judicial Library Protocol Verified
+                </span>
+</div>
+</div>
+<!-- Authentic Legal Document Stamp Card Preview -->
+<div class="md:col-span-7 bg-surface-container-low p-5 rounded-lg border border-outline-variant/60 relative subtle-parchment-pattern">
+<!-- Digital Vakalatnama Ribbon Header -->
+<div class="flex items-center justify-between border-b border-outline-variant/50 pb-2 mb-3">
+<div class="flex items-center space-x-2">
+<span class="text-xs font-mono font-bold text-primary tracking-widest uppercase">REG. NO: DL/VAULT/2025/0819</span>
+</div>
+<div class="flex items-center space-x-1 text-xs text-secondary font-bold">
+<span class="material-symbols-outlined text-sm" data-icon="lock">lock</span>
+<span>Tamper-Proof SHA-256</span>
+</div>
+</div>
+<!-- Content Simulation of Legal Draft -->
+<div class="space-y-2 text-xs">
+<div class="flex justify-between items-center">
+<span class="font-semibold text-primary">Document: Certified Legal Demand Notice</span>
+<span class="text-outline">File: Notice_Deposit_Landlord.pdf</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Statutory Section: §106 Transfer of Property Act</span>
+<span class="text-on-surface font-medium">Stamp Duty: ₹100 e-Stamp Paid</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Speed Post RPAD Tracking ID:</span>
+<span class="font-mono text-secondary font-bold">ED918274619IN</span>
+</div>
+</div>
+<!-- Blind Embossed Stamp Representation -->
+<div class="mt-4 pt-3 border-t border-outline-variant/40 flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<div class="w-8 h-8 rounded-full border border-tertiary-fixed-dim bg-surface-container-highest flex items-center justify-center embossed-seal">
+<span class="material-symbols-outlined text-xs text-tertiary" data-icon="approval">approval</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase block">Notary &amp; Bar Registry</span>
+<span class="text-[11px] text-outline">Bar Council of Delhi • Validated</span>
+</div>
+</div>
+<button class="bg-primary-container text-surface-bright px-3 py-1.5 rounded text-xs font-semibold hover:bg-primary transition-colors flex items-center space-x-1.5 shadow-xs">
+<span class="material-symbols-outlined text-xs" data-icon="visibility">visibility</span>
+<span>View Certified Vault Copy</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- ================= RIGHT COLUMN (1/3 width - 4 Cols): ACTION STREAM & AID ================= -->
+<aside class="lg:col-span-4 space-y-6">
+<!-- Continue Where You Left Off Card -->
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant/60 p-5 court-card-shadow">
+<div class="flex items-center space-x-2 pb-3 border-b border-outline-variant/40">
+<span class="material-symbols-outlined text-secondary" data-icon="pending_actions">pending_actions</span>
+<h3 class="font-title-lg text-title-lg text-primary font-bold">
+              Continue Where You Left Off
+            </h3>
+</div>
+<div class="mt-4 bg-surface-bright p-4 rounded border border-outline-variant/70">
+<div class="flex justify-between items-start">
+<span class="bg-secondary-fixed text-on-secondary-fixed text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
+                RPAD Dispatch Active
+              </span>
+<span class="text-xs text-outline font-medium">11 Days Left</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary font-semibold mt-2 leading-snug">
+              Legal Demand Notice to Landlord
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Refund of security deposit (₹45,000) for Flat 302, Mayur Vihar Phase-I.
+            </p>
+<div class="mt-3 bg-surface-container-low p-2.5 rounded text-xs border border-outline-variant/40 space-y-1">
+<div class="flex justify-between">
+<span class="text-outline">Consignment:</span>
+<span class="font-mono font-bold text-primary">ED918274619IN</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">Status:</span>
+<span class="text-secondary font-semibold">Delivered at Addressee Hub</span>
+</div>
+</div>
+<a class="mt-4 w-full bg-secondary text-on-secondary py-2.5 rounded text-xs font-bold flex items-center justify-center space-x-2 hover:bg-on-secondary-container transition-all shadow-xs" href="https://www.indiapost.gov.in" target="_blank">
+<span class="material-symbols-outlined text-sm" data-icon="local_shipping">local_shipping</span>
+<span>Track Speed Post (India Post)</span>
+</a>
+</div>
+</div>
+<!-- Upcoming Hearing & Procedural Checklist -->
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant/60 p-5 court-card-shadow">
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant/40">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary" data-icon="checklist">checklist</span>
+<h3 class="font-title-lg text-title-lg text-primary font-bold">
+                Hearing &amp; Filing Checklist
+              </h3>
+</div>
+<span class="text-xs font-semibold text-secondary">3 Tasks</span>
+</div>
+<ul class="mt-4 space-y-3">
+<!-- Step 1 -->
+<li class="p-3 bg-surface-bright rounded border border-outline-variant/50 flex items-start space-x-3">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5" data-icon="check_circle">check_circle</span>
+<div class="text-xs">
+<span class="font-bold text-primary block">Lok Adalat Pre-Litigation Mediation</span>
+<span class="text-on-surface-variant mt-0.5 block">Notice verification form downloaded. Ready to submit to Secretary, DLSA.</span>
+</div>
+</li>
+<!-- Step 2 -->
+<li class="p-3 bg-surface-bright rounded border border-outline-variant/50 flex items-start space-x-3">
+<span class="material-symbols-outlined text-outline text-lg mt-0.5" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+<div class="text-xs">
+<span class="font-bold text-primary block">Purchase Vakalatnama Welfare Stamp</span>
+<span class="text-on-surface-variant mt-0.5 block">Required ₹10 advocate welfare ticket from Tis Hazari Bar Counter No. 4.</span>
+</div>
+</li>
+<!-- Step 3 -->
+<li class="p-3 bg-surface-bright rounded border border-outline-variant/50 flex items-start space-x-3">
+<span class="material-symbols-outlined text-outline text-lg mt-0.5" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+<div class="text-xs">
+<span class="font-bold text-primary block">Print 3 Sets of A4 Legal Demand Notice</span>
+<span class="text-on-surface-variant mt-0.5 block">Must include postal receipt &amp; electronic delivery acknowledgment copy.</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- Free Legal Aid & DLSA Assistance Section -->
+<div class="bg-primary-container text-surface-bright rounded-lg p-5 border border-tertiary-fixed-dim/30 shadow-md relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-surface-tint/20 pointer-events-none"></div>
+<div class="flex items-center justify-between pb-3 border-b border-surface-tint/30">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-tertiary-fixed text-lg" data-icon="handshake">handshake</span>
+<h3 class="font-title-lg text-title-lg text-surface-bright font-bold">
+                Free Legal Aid (DLSA / NALSA)
+              </h3>
+</div>
+<span class="text-[11px] bg-tertiary-fixed text-on-tertiary-fixed font-bold px-2 py-0.5 rounded">
+              Art. 39A
+            </span>
+</div>
+<div class="mt-4 space-y-3 text-xs">
+<div>
+<span class="text-outline-variant text-[11px] uppercase block tracking-wider">Appointed Legal Aid Counsel:</span>
+<span class="font-title-md text-title-md text-surface-bright font-bold block mt-0.5">Adv. Naman Sharma</span>
+<span class="text-surface-variant text-[11px]">Enrolment: D/4921/2016 • Civil &amp; Tenancy Panel</span>
+</div>
+<div class="p-3 rounded bg-primary/40 border border-outline/30 space-y-1.5">
+<div class="flex items-center justify-between">
+<span class="text-outline-variant">Tele-Law Consultation:</span>
+<span class="text-tertiary-fixed font-semibold">Tomorrow, 11:30 AM</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline-variant">Direct Extension:</span>
+<span class="font-mono text-surface-bright">DLSA West Ext. 104</span>
+</div>
+</div>
+<div class="pt-2 flex items-center space-x-2">
+<a class="flex-1 bg-secondary text-on-secondary text-center py-2 rounded font-bold hover:bg-on-secondary-container transition-all flex items-center justify-center space-x-1.5" href="tel:15100">
+<span class="material-symbols-outlined text-sm" data-icon="call">call</span>
+<span>Dial NALSA 15100</span>
+</a>
+<button class="bg-surface-container-highest/20 hover:bg-surface-container-highest/30 text-surface-bright border border-outline/50 px-3 py-2 rounded font-semibold transition-colors">
+                Reschedule
+              </button>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- ================= INSTITUTIONAL CONSTITUTIONAL FOOTER (Shared Component: Footer Anchor) ================= -->
+<footer class="bg-surface-container-high dark:bg-primary-container border-t border-outline-variant dark:border-outline mt-16">
+<div class="w-full max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+<!-- Left Copyright & Sovereign Directive Text -->
+<div class="space-y-1 text-center md:text-left">
+<div class="flex items-center justify-center md:justify-start space-x-2">
+<span class="material-symbols-outlined text-base text-primary" data-icon="account_balance">account_balance</span>
+<span class="font-headline-sm text-headline-sm font-semibold text-primary dark:text-primary-fixed">
+            कानूनसाथी | KanoonSaathi
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-outline-variant max-w-2xl">
+          © 2025 KanoonSaathi Sovereign Legal Portal. In accordance with Legal Services Authorities Act, 1987 &amp; Article 39A of the Constitution of India. NALSA National Tollfree: 15100.
+        </p>
+</div>
+<!-- Institutional Statutory Links -->
+<nav class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs">
+<a class="text-on-surface-variant dark:text-outline-variant font-label-md text-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 underline" href="#mandate">
+          Constitutional Mandate
+        </a>
+<a class="text-on-surface-variant dark:text-outline-variant font-label-md text-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 underline" href="#ecourts">
+          e-Courts Integration
+        </a>
+<a class="text-on-surface-variant dark:text-outline-variant font-label-md text-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 underline" href="#bns">
+          BNS/IPC Cross-Reference
+        </a>
+<a class="text-on-surface-variant dark:text-outline-variant font-label-md text-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 underline" href="#privacy">
+          Privacy &amp; Privilege
+        </a>
+<a class="text-on-surface-variant dark:text-outline-variant font-label-md text-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 underline" href="#compliance">
+          Bar Council Compliance
+        </a>
+<a class="text-on-surface-variant dark:text-outline-variant font-label-md text-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 underline" href="#grievance">
+          Grievance Redressal
+        </a>
+</nav>
+</div>
+</footer>
+</body></html>

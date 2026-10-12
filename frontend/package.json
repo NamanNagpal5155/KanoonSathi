@@ -1,0 +1,17 @@
+{
+  "name": "kanoonsaathi-frontend",
+  "version": "1.0.0",
+  "description": "KanoonSaathi Sovereign Legal Aid Platform Frontend",
+  "main": "server.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next build"
+  },
+  "dependencies": {
+    "next": "^16.4.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  }
+}

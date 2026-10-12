@@ -1,0 +1,1009 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>कानूनसाथी | KanoonSaathi - Citizen Legal Aid Companion</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&amp;family=Plus Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#ffffff",
+            "background": "#fef9f0",
+            "on-tertiary-fixed": "#251a00",
+            "surface": "#fef9f0",
+            "on-secondary-fixed-variant": "#7b2f00",
+            "secondary-container": "#ff8345",
+            "surface-dim": "#ded9d1",
+            "error-container": "#ffdad6",
+            "primary-fixed": "#d9e2ff",
+            "tertiary-fixed-dim": "#e2c381",
+            "outline-variant": "#c5c6ce",
+            "on-primary-fixed": "#0d1b37",
+            "on-primary": "#ffffff",
+            "on-tertiary-container": "#a68b4f",
+            "surface-container-low": "#f8f3ea",
+            "surface-tint": "#515e7e",
+            "inverse-surface": "#32302a",
+            "surface-container-high": "#ece8df",
+            "on-background": "#1d1c16",
+            "on-tertiary": "#ffffff",
+            "surface-container": "#f2ede4",
+            "primary-container": "#1a2744",
+            "secondary": "#a23f00",
+            "inverse-on-surface": "#f5f0e7",
+            "primary-fixed-dim": "#b9c6eb",
+            "on-secondary-container": "#692700",
+            "error": "#ba1a1a",
+            "on-error": "#ffffff",
+            "tertiary-container": "#342500",
+            "on-surface": "#1d1c16",
+            "on-surface-variant": "#45464d",
+            "tertiary": "#1a1100",
+            "surface-variant": "#e7e2d9",
+            "surface-container-highest": "#e7e2d9",
+            "on-tertiary-fixed-variant": "#59440e",
+            "on-primary-container": "#828eb1",
+            "inverse-primary": "#b9c6eb",
+            "on-error-container": "#93000a",
+            "surface-bright": "#fef9f0",
+            "on-primary-fixed-variant": "#3a4665",
+            "outline": "#75777e",
+            "on-secondary": "#ffffff",
+            "tertiary-fixed": "#ffdf9b",
+            "secondary-fixed": "#ffdbcc",
+            "on-secondary-fixed": "#351000",
+            "primary": "#04122e",
+            "secondary-fixed-dim": "#ffb695"
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          spacing: {
+            "gutter": "1.5rem",
+            "margin": "3rem",
+            "margin-tablet": "2rem",
+            "margin-mobile": "1rem",
+            "space-xl": "2.5rem",
+            "gutter-mobile": "1rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem"
+          },
+          fontFamily: {
+            "headline-lg": ["Playfair Display"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-md": ["Playfair Display"],
+            "title-md": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Playfair Display"],
+            "title-lg": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "display-lg": ["Playfair Display"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Playfair Display"],
+            "body-lg": ["Plus Jakarta Sans"]
+          },
+          fontSize: {
+            "headline-lg": ["36px", { lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "600" }],
+            "body-md": ["15px", { lineHeight: "24px", fontWeight: "400" }],
+            "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600" }],
+            "headline-md": ["26px", { lineHeight: "34px", fontWeight: "600" }],
+            "title-md": ["16px", { lineHeight: "24px", fontWeight: "600" }],
+            "display-lg-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "700" }],
+            "title-lg": ["18px", { lineHeight: "26px", fontWeight: "700" }],
+            "body-sm": ["13px", { lineHeight: "20px", fontWeight: "400" }],
+            "label-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "700" }],
+            "headline-lg-mobile": ["28px", { lineHeight: "36px", fontWeight: "600" }],
+            "display-lg": ["52px", { lineHeight: "60px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "label-lg": ["14px", { lineHeight: "18px", letterSpacing: "0.03em", fontWeight: "600" }],
+            "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "600" }],
+            "body-lg": ["18px", { lineHeight: "30px", fontWeight: "400" }]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scroll-hidden::-webkit-scrollbar {
+      display: none;
+    }
+    .custom-scroll-hidden {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    /* Sovereign Parchment Texture subtle overlay */
+    .sovereign-parchment {
+      background-color: #fef9f0;
+      background-image: radial-gradient(rgba(197, 168, 105, 0.08) 1px, transparent 0);
+      background-size: 16px 16px;
+    }
+    .court-seal-ring {
+      border: 1.5px solid rgba(162, 63, 0, 0.35);
+      outline: 1px dashed rgba(162, 63, 0, 0.2);
+      outline-offset: 2px;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed min-h-screen flex justify-center items-start">
+<!-- Mobile Viewport Container (Locked at 390px responsive canvas) -->
+<div class="w-full max-w-[390px] min-h-screen bg-surface flex flex-col relative sovereign-parchment shadow-2xl border-x border-outline-variant/30 overflow-x-hidden pb-24">
+<!-- Constitutional Mandate Sovereign Top Ribbon -->
+<header class="bg-primary-container text-surface-container-lowest px-4 py-1.5 flex items-center justify-between text-[11px] font-label-md tracking-wider">
+<div class="flex items-center space-x-1.5">
+<span class="text-tertiary-fixed-dim font-bold tracking-tight">भारत का संविधान</span>
+<span class="opacity-40">|</span>
+<span class="text-primary-fixed text-[10px]">Article 39A Free Legal Aid</span>
+</div>
+<div class="flex items-center space-x-1 text-secondary-fixed font-semibold">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span>NALSA</span>
+</div>
+</header>
+<!-- Top Sovereign Header Bar -->
+<nav class="bg-surface px-4 py-3 border-b border-outline-variant/40 flex items-center justify-between sticky top-0 z-40 bg-surface/95 backdrop-blur-md">
+<!-- Brand & Ashok Chakra Emblem -->
+<div class="flex items-center space-x-2.5">
+<div class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-tertiary-fixed shadow-sm relative">
+<!-- Ashoka Chakra geometric representation -->
+<span class="material-symbols-outlined text-[22px]">balance</span>
+<div class="absolute -top-0.5 -right-0.5 w-3 h-3 bg-secondary rounded-full border border-surface"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[17px] font-bold text-primary tracking-tight leading-tight">कानूनसाथी</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant font-medium tracking-wide">KanoonSaathi Sovereign Portal</span>
+</div>
+</div>
+<!-- Action Group: Emergency Helpline, Lang Toggle, User Avatar -->
+<div class="flex items-center space-x-2">
+<!-- Emergency Helpline 15100 -->
+<a class="flex items-center space-x-1 px-2.5 py-1.5 bg-secondary text-surface-container-lowest rounded-lg shadow-sm hover:opacity-95 active:scale-95 transition-all" href="tel:15100">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">phone_in_talk</span>
+<span class="font-label-sm text-[11px] font-bold">15100</span>
+</a>
+<!-- Language Modal Trigger Button -->
+<button class="px-2 py-1.5 border border-outline-variant/60 rounded bg-surface-container-low text-primary font-label-md text-[11px] font-semibold flex items-center space-x-0.5 hover:bg-surface-container" id="langToggleBtn" onclick="toggleLanguageModal()">
+<span id="currentLangLabel">हिन्दी</span>
+<span class="material-symbols-outlined text-[13px]">expand_more</span>
+</button>
+<!-- Citizen Avatar: Rajesh Sharma -->
+<div class="relative cursor-pointer" onclick="setActiveNav('profile')">
+<div class="w-8 h-8 rounded-full bg-primary-container text-tertiary-fixed font-bold text-xs flex items-center justify-center ring-2 ring-secondary/40 shadow-sm">
+            RS
+          </div>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-600 rounded-full border-2 border-surface"></span>
+</div>
+</div>
+</nav>
+<!-- Welcome Citizen Micro Banner -->
+<div class="px-4 py-2 bg-surface-container-low border-b border-outline-variant/20 flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">shield_person</span>
+<span class="font-label-md text-on-surface text-[12px]">Litigant: <strong class="text-primary font-semibold">Rajesh Sharma</strong></span>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant bg-surface px-2 py-0.5 rounded border border-outline-variant/40">UIDAI Verified</span>
+</div>
+<!-- Core Citizen Tools Switcher Tab -->
+<section class="px-3 pt-3 pb-2">
+<div class="bg-surface-container-high/70 p-1 rounded-xl flex items-center border border-outline-variant/40 shadow-inner">
+<button class="flex-1 py-2 px-1 rounded-lg text-center font-label-md text-[11px] font-bold transition-all duration-150 flex items-center justify-center space-x-1 bg-primary-container text-surface-container-lowest shadow-sm" id="tab-notice" onclick="switchCoreTab('notice')">
+<span class="material-symbols-outlined text-[15px]">description</span>
+<span class="whitespace-nowrap">Notice Generator</span>
+</button>
+<button class="flex-1 py-2 px-1 rounded-lg text-center font-label-md text-[11px] font-semibold text-on-surface-variant transition-all duration-150 flex items-center justify-center space-x-1 hover:text-on-surface" id="tab-court" onclick="switchCoreTab('court')">
+<span class="material-symbols-outlined text-[15px]">location_on</span>
+<span class="whitespace-nowrap">Find a Court</span>
+</button>
+<button class="flex-1 py-2 px-1 rounded-lg text-center font-label-md text-[11px] font-semibold text-on-surface-variant transition-all duration-150 flex items-center justify-center space-x-1 hover:text-on-surface" id="tab-vault" onclick="switchCoreTab('vault')">
+<span class="material-symbols-outlined text-[15px]">folder_supervised</span>
+<span class="whitespace-nowrap">Cause Vault</span>
+</button>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 1: NOTICE GENERATOR (ACTIVE BY DEFAULT) -->
+<!-- ========================================================================= -->
+<main class="flex-1 px-4 space-y-4" id="section-notice">
+<!-- Stepper Progress Header -->
+<div class="bg-surface-container-lowest p-3 rounded-lg border border-outline-variant/40 shadow-sm space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-secondary font-bold tracking-wide">6-STEP SOVEREIGN DRAFTER</span>
+<span class="font-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded text-[10px]">Step 1 of 6</span>
+</div>
+<!-- 6-step compact horizontal bar -->
+<div class="grid grid-cols-6 gap-1 pt-1">
+<div class="h-1.5 rounded-full bg-secondary"></div>
+<div class="h-1.5 rounded-full bg-surface-container-high"></div>
+<div class="h-1.5 rounded-full bg-surface-container-high"></div>
+<div class="h-1.5 rounded-full bg-surface-container-high"></div>
+<div class="h-1.5 rounded-full bg-surface-container-high"></div>
+<div class="h-1.5 rounded-full bg-surface-container-high"></div>
+</div>
+<!-- Stepper Label Pills -->
+<div class="flex justify-between items-center text-[9px] font-label-sm text-on-surface-variant pt-1 overflow-x-auto custom-scroll-hidden">
+<span class="text-secondary font-bold">1. Situation</span>
+<span>•</span>
+<span>2. Parties</span>
+<span>•</span>
+<span>3. Facts</span>
+<span>•</span>
+<span>4. Relief</span>
+<span>•</span>
+<span>5. Review</span>
+<span>•</span>
+<span>6. Notice</span>
+</div>
+</div>
+<!-- Segmented View Toggle: Form (प्रपत्र) vs Preview (A4 विधिक नोटिस) -->
+<div class="flex items-center justify-between border-b border-outline-variant/40 pb-2">
+<div class="flex items-center space-x-1 bg-surface-container p-0.5 rounded-lg border border-outline-variant/40">
+<button class="px-3 py-1 rounded text-[11px] font-label-md font-bold transition-all bg-surface text-primary shadow-xs" id="view-form-btn" onclick="toggleNoticeSubView('form')">
+            Form (प्रपत्र)
+          </button>
+<button class="px-3 py-1 rounded text-[11px] font-label-md font-medium text-on-surface-variant hover:text-on-surface" id="view-preview-btn" onclick="toggleNoticeSubView('preview')">
+            Preview (A4 विधिक नोटिस)
+          </button>
+</div>
+<span class="text-[11px] font-body-sm text-on-surface-variant flex items-center">
+<span class="material-symbols-outlined text-[14px] text-emerald-700 mr-0.5">verified_user</span>
+          Sec. 106 TPA Ready
+        </span>
+</div>
+<!-- SUBVIEW 1.A: FORM VIEW -->
+<div class="space-y-4" id="notice-form-view">
+<!-- Bilingual Voice Prompt Card -->
+<div class="p-3 bg-secondary-fixed/30 rounded-lg border border-secondary-fixed-dim/60 space-y-2">
+<div class="flex items-start justify-between">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">mic</span>
+<div>
+<p class="font-title-md text-[13px] text-on-secondary-fixed leading-tight font-bold">Bilingual Voice Intake / बोलकर बताएं</p>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Tap microphone to dictate in Hindi or English</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-secondary text-surface-container-lowest flex items-center justify-center shadow-md active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]">graphic_eq</span>
+</button>
+</div>
+<div class="flex items-center space-x-1.5 text-[10px] text-on-secondary-fixed-variant bg-surface/70 px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[13px]">lightbulb</span>
+<span>Example: "मकान मालिक ने 45 दिन से सिक्योरिटी डिपोज़िट नहीं लौटाया है..."</span>
+</div>
+</div>
+<!-- Step 1: Situation Description -->
+<div class="space-y-1.5">
+<label class="font-label-md text-primary text-[12px] font-bold flex items-center justify-between">
+<span>Describe the Dispute / समस्या का विवरण</span>
+<span class="text-[10px] font-normal text-on-surface-variant">280 words remaining</span>
+</label>
+<div class="relative">
+<textarea class="w-full bg-surface-container-lowest border border-outline-variant/60 rounded-lg p-3 text-[13px] font-body-sm text-on-surface placeholder:text-outline focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none leading-relaxed resize-none shadow-xs" placeholder="State facts: tenancy commencement, unpaid security deposit of ₹85,000, key handover on 30 Sept 2025 without claim..." rows="4"></textarea>
+<div class="absolute bottom-2 right-2 flex items-center space-x-1">
+<span class="text-[9px] bg-surface-container px-1.5 py-0.5 rounded text-on-surface-variant border border-outline-variant/30">Auto-BNS Match</span>
+</div>
+</div>
+</div>
+<!-- Opposite Party (प्रतिवादी) Details -->
+<div class="p-3 bg-surface-container-lowest rounded-lg border border-outline-variant/40 space-y-3 shadow-xs">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-2">
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">person_alert</span>
+<h3 class="font-title-md text-[13px] text-primary font-bold">Opposite Party (प्रतिवादी)</h3>
+</div>
+<span class="font-label-sm text-[10px] text-secondary font-bold">Addressee</span>
+</div>
+<div class="space-y-2">
+<div>
+<label class="block font-label-sm text-[11px] text-on-surface-variant mb-1">Full Legal Name</label>
+<input class="w-full bg-surface border border-outline-variant/50 rounded p-2 text-[13px] font-body-sm text-primary focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none" type="text" value="Mr. Vikas Goel">
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div>
+<label class="block font-label-sm text-[11px] text-on-surface-variant mb-1">Phone / Mobile</label>
+<input class="w-full bg-surface border border-outline-variant/50 rounded p-2 text-[13px] font-body-sm text-primary focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none" type="text" value="+91 98110 XXXXX">
+</div>
+<div>
+<label class="block font-label-sm text-[11px] text-on-surface-variant mb-1">Email (Optional)</label>
+<input class="w-full bg-surface border border-outline-variant/50 rounded p-2 text-[13px] font-body-sm text-primary focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none" placeholder="vgoel@domain.com" type="email">
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-[11px] text-on-surface-variant mb-1">Registered Residence / Postal Address</label>
+<input class="w-full bg-surface border border-outline-variant/50 rounded p-2 text-[13px] font-body-sm text-primary focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none" type="text" value="H-42, Model Town III, New Delhi 110009">
+</div>
+</div>
+</div>
+<!-- Statutory Relief Chips & Clauses Selection -->
+<div class="p-3 bg-surface-container-lowest rounded-lg border border-outline-variant/40 space-y-2 shadow-xs">
+<label class="font-label-md text-primary text-[12px] font-bold flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">gavel</span>
+<span>Statutory Relief Sought (§ Statute Invocations)</span>
+</label>
+<div class="space-y-2 pt-1">
+<!-- Chip 1: Section 106 TPA -->
+<label class="flex items-start space-x-2.5 p-2 rounded bg-surface border border-outline-variant/40 cursor-pointer hover:bg-surface-container-low">
+<input checked="" class="mt-0.5 rounded text-primary-container focus:ring-primary-container" type="checkbox">
+<div>
+<span class="font-title-md text-[12px] text-primary block leading-tight font-bold">Transfer of Property Act, 1882 (§106)</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Statutory 15 days notice for determination of lease &amp; refund of caution money.</span>
+</div>
+</label>
+<!-- Chip 2: Consumer Protection Act -->
+<label class="flex items-start space-x-2.5 p-2 rounded bg-surface border border-outline-variant/40 cursor-pointer hover:bg-surface-container-low">
+<input checked="" class="mt-0.5 rounded text-primary-container focus:ring-primary-container" type="checkbox">
+<div>
+<span class="font-title-md text-[12px] text-primary block leading-tight font-bold">Consumer Protection Act, 2019 (§2(11))</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Deficiency in housing service &amp; unfair trade practice retention of funds.</span>
+</div>
+</label>
+<!-- Chip 3: Bharatiya Nyaya Sanhita 316 / 318 -->
+<label class="flex items-start space-x-2.5 p-2 rounded bg-surface border border-outline-variant/40 cursor-pointer hover:bg-surface-container-low">
+<input class="mt-0.5 rounded text-primary-container focus:ring-primary-container" type="checkbox">
+<div>
+<span class="font-title-md text-[12px] text-primary block leading-tight font-bold">BNS 2023 §316 / §318 (Criminal Breach of Trust)</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Dishonest misappropriation of entrusted refundable security deposit.</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Form Action CTA -->
+<div class="flex items-center space-x-2 pt-2">
+<button class="flex-1 py-2.5 px-3 rounded border border-outline text-primary font-label-md text-[12px] font-semibold bg-surface-container hover:bg-surface-container-high transition-colors flex items-center justify-center space-x-1">
+<span class="material-symbols-outlined text-[16px]">save</span>
+<span>Save Draft</span>
+</button>
+<button class="flex-[1.5] py-2.5 px-4 rounded bg-primary-container text-surface-container-lowest font-label-md text-[12px] font-bold shadow-md hover:bg-primary transition-all flex items-center justify-center space-x-1.5" onclick="toggleNoticeSubView('preview')">
+<span>Continue to Preview</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- SUBVIEW 1.B: A4 PREVIEW VIEW (Parchment Styled Legal Notice) -->
+<div class="hidden space-y-3" id="notice-preview-view">
+<!-- A4 Parchment Visual Container -->
+<div class="bg-[#fcfaf5] p-4 rounded-md border-2 border-[#c5a869]/50 shadow-md relative overflow-hidden court-seal-ring">
+<!-- Top Watermark Bar / Ribbon -->
+<div class="text-center pb-3 border-b border-dashed border-[#c5a869]/60">
+<p class="font-headline-sm text-[15px] font-bold text-primary tracking-tight uppercase">LEGAL NOTICE / विधिक सूचना</p>
+<p class="font-label-sm text-[9px] text-on-surface-variant tracking-wider uppercase">Served Under Registered Post A.D. &amp; Hand Delivery</p>
+<div class="flex items-center justify-center space-x-2 mt-1">
+<span class="text-[9px] font-body-sm text-secondary font-semibold">Ref: KS/DL/2025/NOTICE-0491</span>
+<span class="text-[9px] text-outline">|</span>
+<span class="text-[9px] font-body-sm text-on-surface-variant">Dated: 03 November 2025</span>
+</div>
+</div>
+<!-- Notice Content Body -->
+<div class="py-3 space-y-3 text-[12px] font-body-sm text-on-surface leading-relaxed border-b border-dashed border-[#c5a869]/60">
+<div>
+<p class="font-label-sm text-[10px] text-on-surface-variant font-bold">TO (THE NOTICEE):</p>
+<p class="font-semibold text-primary">Mr. Vikas Goel, Landlord</p>
+<p class="text-[11px] text-on-surface-variant">House No. 42, Model Town III, New Delhi 110009</p>
+</div>
+<div>
+<p class="font-label-sm text-[10px] text-on-surface-variant font-bold">UNDER INSTRUCTIONS FROM MY CLIENT:</p>
+<p class="font-semibold text-primary">Shri Rajesh Sharma (Former Tenant)</p>
+<p class="text-[11px] text-on-surface-variant">R/o Flat 204, Rosewood Enclave, Rohini Sector 13, Delhi</p>
+</div>
+<div class="p-2 bg-surface-container-low/80 rounded border border-[#c5a869]/30 text-[11px]">
+<strong class="text-primary font-bold block mb-1">SUBJECT MATTER:</strong>
+              Demand for immediate return of non-refunded Security Deposit amounting to <strong>₹85,000/- (Rupees Eighty-Five Thousand only)</strong> with accrued interest at 12% p.a. as per Section 106, Transfer of Property Act, 1882.
+            </div>
+<p class="text-[11px]">
+              Take note that upon peaceable handover of premises on 30.09.2025, you are unlawfully withholding client funds. You are hereby called upon to remit ₹85,000/- within <strong>fifteen (15) days</strong> of receipt of this statutory notice, failing which legal proceedings before the Competent Civil Court and District Consumer Commission will ensue at your sole risk and costs.
+            </p>
+<!-- Signature block with National Emblem Watermark -->
+<div class="pt-3 flex justify-between items-end">
+<div>
+<span class="material-symbols-outlined text-[#c5a869] text-[36px] opacity-70">shield</span>
+<p class="text-[9px] text-on-surface-variant mt-0.5">Hash: BSA-65B-992F01</p>
+</div>
+<div class="text-right">
+<p class="font-headline-sm text-[11px] text-primary italic font-bold">Rajesh Sharma</p>
+<p class="text-[10px] font-label-md text-on-surface-variant">Citizen Litigant in Person</p>
+<p class="text-[9px] text-secondary font-semibold">Self-Certified Legal Draft</p>
+</div>
+</div>
+</div>
+<!-- Bottom Micro Stamp -->
+<div class="pt-2 flex justify-between items-center text-[9px] font-label-sm text-on-surface-variant">
+<span>कानूनसाथी विधिक दस्तावेज भंडार</span>
+<span class="text-emerald-800 font-semibold flex items-center">
+<span class="material-symbols-outlined text-[11px] mr-0.5">lock</span> Digitally Locked
+            </span>
+</div>
+</div>
+<!-- Document Preview Toolbar Actions -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="py-2.5 px-3 rounded bg-surface-container-highest text-primary font-label-md text-[11px] font-bold border border-outline-variant/60 flex items-center justify-center space-x-1 hover:bg-surface-variant" onclick="saveNoticeToVault()">
+<span class="material-symbols-outlined text-[16px]">save</span>
+<span>Save to Cause Vault</span>
+</button>
+<button class="py-2.5 px-3 rounded bg-secondary text-surface-container-lowest font-label-md text-[11px] font-bold shadow-md hover:opacity-90 flex items-center justify-center space-x-1">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>Download PDF (A4)</span>
+</button>
+</div>
+</div>
+</main>
+<!-- ========================================================================= -->
+<!-- SECTION 2: FIND A COURT (CONTAINED MAP & BOTTOM SHEET) -->
+<!-- ========================================================================= -->
+<main class="hidden flex-1 px-4 space-y-4" id="section-court">
+<!-- Search Court Input Bar -->
+<div class="space-y-2">
+<label class="font-label-md text-primary text-[12px] font-bold block">Locate Competent Judicial Forum</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full pl-9 pr-8 py-2 bg-surface-container-lowest border border-outline-variant/60 rounded-lg text-[13px] font-body-sm text-primary focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none shadow-xs" type="text" value="Tis Hazari Courts, Central Delhi">
+<button class="absolute right-2.5 top-2.5 text-on-surface-variant hover:text-primary">
+<span class="material-symbols-outlined text-[16px]">my_location</span>
+</button>
+</div>
+<!-- Radius Filter Chips -->
+<div class="flex items-center space-x-2 pt-1">
+<span class="font-label-sm text-[10px] text-on-surface-variant">Radius:</span>
+<button class="px-2.5 py-1 rounded-full text-[10px] font-label-sm bg-primary-container text-surface-container-lowest font-bold">5 km</button>
+<button class="px-2.5 py-1 rounded-full text-[10px] font-label-sm bg-surface-container border border-outline-variant/50 text-on-surface-variant">15 km</button>
+<button class="px-2.5 py-1 rounded-full text-[10px] font-label-sm bg-surface-container border border-outline-variant/50 text-on-surface-variant">25 km</button>
+<button class="px-2.5 py-1 rounded-full text-[10px] font-label-sm bg-surface-container border border-outline-variant/50 text-on-surface-variant">All Delhi</button>
+</div>
+</div>
+<!-- Interactive Map Overview Card (Architectural Judicial Representation) -->
+<div class="relative rounded-xl overflow-hidden border border-outline-variant/60 shadow-md h-44 bg-surface-container">
+<!-- High-contrast stylized map representation with SVG grid and pin -->
+<div class="absolute inset-0 bg-[#e8e4db] opacity-80" style="background-image: linear-gradient(#c5c6ce 1px, transparent 1px), linear-gradient(90deg, #c5c6ce 1px, transparent 1px); background-size: 24px 24px;"></div>
+<!-- District outlines & road styling lines -->
+<svg class="absolute inset-0 w-full h-full stroke-on-surface/20 fill-none" stroke-width="2">
+<path d="M-10,50 Q120,40 180,90 T390,70" stroke="#75777e" stroke-width="3"></path>
+<path d="M80,-10 L160,190" stroke="#c5a869" stroke-dasharray="4 2" stroke-width="2"></path>
+<path d="M220,0 L200,180" stroke="#1a2744" stroke-width="2"></path>
+</svg>
+<!-- Current User Position Pin -->
+<div class="absolute top-24 left-20 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="w-3.5 h-3.5 bg-blue-600 rounded-full border-2 border-surface animate-ping absolute"></div>
+<div class="w-3.5 h-3.5 bg-blue-700 rounded-full border-2 border-surface shadow-sm"></div>
+<span class="text-[9px] font-bold text-on-surface bg-surface/90 px-1 rounded shadow-xs mt-0.5">Your Location</span>
+</div>
+<!-- Tis Hazari Judicial Marker (Target) -->
+<div class="absolute top-12 left-48 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center cursor-pointer group">
+<div class="w-8 h-8 rounded-full bg-primary-container text-tertiary-fixed flex items-center justify-center shadow-lg border border-tertiary-fixed ring-2 ring-primary/20">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+</div>
+<div class="bg-primary text-surface px-1.5 py-0.5 rounded text-[9px] font-bold shadow-md mt-1 whitespace-nowrap">
+            Tis Hazari Courts (4.2 km)
+          </div>
+</div>
+<!-- Secondary Marker (Rouse Avenue) -->
+<div class="absolute bottom-6 right-16 flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-secondary text-surface flex items-center justify-center shadow">
+<span class="material-symbols-outlined text-[13px]">account_balance</span>
+</div>
+<span class="text-[8px] bg-surface/90 px-1 rounded text-primary font-semibold mt-0.5">Rouse Avenue (7.8 km)</span>
+</div>
+<!-- GPS Status Badge -->
+<div class="absolute top-2 left-2 bg-surface/90 backdrop-blur-xs px-2 py-0.5 rounded text-[10px] font-label-sm font-semibold text-primary border border-outline-variant/40 flex items-center space-x-1">
+<span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+<span>Delhi Central Jurisdiction</span>
+</div>
+</div>
+<!-- Active Court Card -->
+<div class="p-3 bg-surface-container-lowest rounded-xl border-l-4 border-l-primary border border-outline-variant/40 shadow-sm space-y-2">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center space-x-1.5">
+<span class="font-headline-sm text-[15px] font-bold text-primary">Tis Hazari District Court Complex</span>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant flex items-center mt-0.5">
+<span class="material-symbols-outlined text-[13px] mr-1 text-secondary">pin_drop</span>
+              Courtroom 214, West Wing, Near Mori Gate, Delhi
+            </p>
+</div>
+<span class="px-2 py-0.5 bg-secondary-fixed/50 text-on-secondary-fixed font-bold text-[10px] rounded-full">
+            4.2 km away
+          </span>
+</div>
+<!-- Fast Meta Row -->
+<div class="grid grid-cols-2 gap-2 text-[11px] font-body-sm bg-surface-container-low p-2 rounded">
+<div>
+<span class="text-on-surface-variant block text-[10px]">Senior Civil Judge / CJM:</span>
+<span class="font-semibold text-primary">Court of Sh. A. K. Garg</span>
+</div>
+<div>
+<span class="text-on-surface-variant block text-[10px]">Filing Counter Timings:</span>
+<span class="font-semibold text-primary">10:00 AM – 3:30 PM</span>
+</div>
+</div>
+<!-- Expand Details Bottom Sheet Trigger -->
+<button class="w-full py-2 bg-surface border border-outline-variant/60 rounded text-center text-primary font-label-md text-[11px] font-bold flex items-center justify-center space-x-1 hover:bg-surface-container" onclick="toggleCourtDetailsSheet()">
+<span class="material-symbols-outlined text-[15px]">info</span>
+<span>View Court Dossier &amp; Checklist</span>
+<span class="material-symbols-outlined text-[15px]" id="sheetArrow">expand_more</span>
+</button>
+</div>
+<!-- Expandable Court Details & 'What to Bring' Checklist -->
+<div class="p-3 bg-surface-container-lowest rounded-xl border border-outline-variant/50 shadow-sm space-y-3" id="court-details-sheet">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-2">
+<span class="font-title-md text-[13px] text-primary font-bold">Litigant Entrance Protocol</span>
+<span class="text-[10px] font-label-sm text-emerald-800 bg-emerald-100 px-1.5 py-0.5 rounded font-semibold">Security Gate 3 Litigant Pass</span>
+</div>
+<!-- What to Bring Checklist -->
+<div class="space-y-1.5">
+<p class="font-label-sm text-[11px] text-secondary font-bold uppercase tracking-wider">What to Bring (अनिवार्य दस्तावेज):</p>
+<label class="flex items-center space-x-2 text-[12px] font-body-sm text-on-surface bg-surface p-1.5 rounded border border-outline-variant/30">
+<input checked="" class="rounded text-primary focus:ring-primary" type="checkbox">
+<span>2 Physical copies of Signed Notice with Postal Slips</span>
+</label>
+<label class="flex items-center space-x-2 text-[12px] font-body-sm text-on-surface bg-surface p-1.5 rounded border border-outline-variant/30">
+<input checked="" class="rounded text-primary focus:ring-primary" type="checkbox">
+<span>Original Government ID (Aadhaar / Voter Card)</span>
+</label>
+<label class="flex items-center space-x-2 text-[12px] font-body-sm text-on-surface bg-surface p-1.5 rounded border border-outline-variant/30">
+<input class="rounded text-primary focus:ring-primary" type="checkbox">
+<span>Court Fee Stamp (Available at Counter 4, Central Hall)</span>
+</label>
+</div>
+<!-- Action Row -->
+<div class="flex items-center space-x-2 pt-1">
+<button class="flex-1 py-2 rounded bg-primary-container text-surface-container-lowest font-label-md text-[11px] font-bold flex items-center justify-center space-x-1">
+<span class="material-symbols-outlined text-[15px]">directions</span>
+<span>Get Directions</span>
+</button>
+<button class="flex-1 py-2 rounded border border-outline text-primary font-label-md text-[11px] font-bold flex items-center justify-center space-x-1 hover:bg-surface-container">
+<span class="material-symbols-outlined text-[15px]">bookmark_add</span>
+<span>Save Court</span>
+</button>
+</div>
+</div>
+</main>
+<!-- ========================================================================= -->
+<!-- SECTION 3: CAUSE VAULT (DOCKET & SEC. 65B EVIDENCE VAULT) -->
+<!-- ========================================================================= -->
+<main class="hidden flex-1 px-4 space-y-4" id="section-vault">
+<!-- Vault Sub-Switcher: [ Docket View ] [ Documents & Evidence ] -->
+<div class="flex items-center justify-between border-b border-outline-variant/40 pb-2">
+<div class="flex items-center space-x-1 bg-surface-container p-0.5 rounded-lg border border-outline-variant/40 w-full">
+<button class="flex-1 py-1.5 rounded text-[11px] font-label-md font-bold transition-all bg-surface text-primary shadow-xs" id="vault-docket-btn" onclick="toggleVaultSubView('docket')">
+            Docket View (वाद सूची)
+          </button>
+<button class="flex-1 py-1.5 rounded text-[11px] font-label-md font-medium text-on-surface-variant hover:text-on-surface" id="vault-docs-btn" onclick="toggleVaultSubView('docs')">
+            Documents &amp; Evidence (§65B)
+          </button>
+</div>
+</div>
+<!-- SUBVIEW 3.A: DOCKET VIEW -->
+<div class="space-y-3" id="vault-docket-view">
+<!-- Active Case Card: Sharma v. Goel -->
+<div class="p-3.5 bg-surface-container-lowest rounded-xl border border-outline-variant/50 shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-6 bg-secondary/10 flex items-center justify-center text-[10px] font-label-sm font-bold text-secondary rounded-bl-lg">
+            PRE-LITIGATION
+          </div>
+<div class="pr-20 space-y-1">
+<span class="font-label-sm text-[10px] text-on-surface-variant font-bold tracking-wider">CNR: DLCT01-008921-2025</span>
+<h3 class="font-headline-sm text-[16px] text-primary font-bold leading-snug">Sharma v. Vikas Goel</h3>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Security Deposit Non-Refund Recovery (₹85,000)</p>
+</div>
+<div class="my-3 p-2.5 bg-surface-container-low rounded-lg border border-outline-variant/30 grid grid-cols-2 gap-2 text-[11px]">
+<div>
+<span class="text-on-surface-variant block text-[10px]">Statutory Cure Period:</span>
+<span class="font-bold text-secondary flex items-center">
+<span class="material-symbols-outlined text-[13px] mr-1">timer</span> 11 Days Remaining
+              </span>
+</div>
+<div>
+<span class="text-on-surface-variant block text-[10px]">Next Scheduled Action:</span>
+<span class="font-bold text-primary">Filing at Tis Hazari (14 Nov)</span>
+</div>
+</div>
+<!-- Timeline Milestone Mini Track -->
+<div class="space-y-1.5 pt-1">
+<div class="flex items-center justify-between text-[10px] font-label-sm text-on-surface-variant">
+<span>Notice Dispatched</span>
+<span>Speed Post Tracking</span>
+<span>15-Day Cure</span>
+</div>
+<div class="grid grid-cols-3 gap-1">
+<div class="h-1.5 rounded-full bg-emerald-700"></div>
+<div class="h-1.5 rounded-full bg-emerald-700"></div>
+<div class="h-1.5 rounded-full bg-secondary animate-pulse"></div>
+</div>
+</div>
+<!-- Quick Case Action Buttons -->
+<div class="flex items-center space-x-2 pt-3 border-t border-outline-variant/30 mt-3">
+<button class="flex-1 py-1.5 rounded bg-surface border border-outline-variant/60 text-primary text-[11px] font-label-md font-bold hover:bg-surface-container">
+              Track Consignment
+            </button>
+<button class="flex-1 py-1.5 rounded bg-primary-container text-surface-container-lowest text-[11px] font-label-md font-bold shadow-xs">
+              Open Full Docket
+            </button>
+</div>
+</div>
+<!-- Archival / Settled Micro Docket Item -->
+<div class="p-3 bg-surface-container-low/70 rounded-lg border border-outline-variant/30 flex items-center justify-between opacity-85">
+<div class="flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-outline text-[20px]">archive</span>
+<div>
+<p class="font-title-md text-[12px] text-primary font-semibold">Sharma v. BSES Rajdhani</p>
+<p class="font-body-sm text-[10px] text-on-surface-variant">Meter Surcharge Adjustment • Disposed Dec 2024</p>
+</div>
+</div>
+<span class="text-[10px] font-label-sm text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded font-bold">SETTLED</span>
+</div>
+</div>
+<!-- SUBVIEW 3.B: DOCUMENTS & EVIDENCE (§65B BSA SEALED) -->
+<div class="hidden space-y-3" id="vault-docs-view">
+<!-- Certificate of Digital Integrity Banner -->
+<div class="p-2.5 bg-surface-container-lowest rounded-lg border border-secondary/30 flex items-center space-x-2 text-[11px]">
+<span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+<div>
+<span class="font-bold text-primary block leading-tight">Bharatiya Sakshya Adhiniyam, 2023 (§65B Compliant)</span>
+<span class="text-[10px] text-on-surface-variant">All uploads are cryptographic SHA-256 hashed and court-admissible.</span>
+</div>
+</div>
+<!-- Document Item 1: Tenancy Agreement -->
+<div class="p-3 bg-surface-container-lowest rounded-lg border border-outline-variant/40 space-y-2 shadow-xs">
+<div class="flex items-start justify-between">
+<div class="flex items-start space-x-2">
+<span class="material-symbols-outlined text-red-700 text-[22px]">picture_as_pdf</span>
+<div>
+<p class="font-title-md text-[12px] text-primary font-bold">Registered_Tenancy_Agreement.pdf</p>
+<p class="text-[10px] text-on-surface-variant">4.1 MB • Executed 12 Oct 2023 • Sub-Registrar VI</p>
+</div>
+</div>
+<span class="text-[9px] font-label-sm px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-800 font-bold border border-emerald-200">
+              §65B SEALED
+            </span>
+</div>
+<div class="flex items-center justify-between text-[10px] font-label-sm text-on-surface-variant bg-surface p-1 rounded border border-outline-variant/30">
+<span class="truncate max-w-[180px]">Hash: 8b04a919e9...e5910</span>
+<button class="text-secondary font-bold hover:underline">Attach to Dossier</button>
+</div>
+</div>
+<!-- Document Item 2: Security Deposit Bank Transfer Receipt -->
+<div class="p-3 bg-surface-container-lowest rounded-lg border border-outline-variant/40 space-y-2 shadow-xs">
+<div class="flex items-start justify-between">
+<div class="flex items-start space-x-2">
+<span class="material-symbols-outlined text-blue-800 text-[22px]">receipt_long</span>
+<div>
+<p class="font-title-md text-[12px] text-primary font-bold">NEFT_SecurityDeposit_85K_Advice.pdf</p>
+<p class="text-[10px] text-on-surface-variant">320 KB • UTR: SBIN23091102941 • SBI Rohini</p>
+</div>
+</div>
+<span class="text-[9px] font-label-sm px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-800 font-bold border border-emerald-200">
+              §65B SEALED
+            </span>
+</div>
+<div class="flex items-center justify-between text-[10px] font-label-sm text-on-surface-variant bg-surface p-1 rounded border border-outline-variant/30">
+<span class="truncate max-w-[180px]">Hash: 4cf81001a4...bc291</span>
+<button class="text-secondary font-bold hover:underline">Attach to Dossier</button>
+</div>
+</div>
+<!-- Document Item 3: WhatsApp Chat Export with Handover Photos -->
+<div class="p-3 bg-surface-container-lowest rounded-lg border border-outline-variant/40 space-y-2 shadow-xs">
+<div class="flex items-start justify-between">
+<div class="flex items-start space-x-2">
+<span class="material-symbols-outlined text-emerald-700 text-[22px]">chat</span>
+<div>
+<p class="font-title-md text-[12px] text-primary font-bold">Key_Handover_WhatsApp_Ledger.zip</p>
+<p class="text-[10px] text-on-surface-variant">12.4 MB • Complete Chat Transcript &amp; Meta Exif</p>
+</div>
+</div>
+<span class="text-[9px] font-label-sm px-1.5 py-0.5 rounded bg-amber-50 text-amber-800 font-bold border border-amber-200">
+              HASH PENDING
+            </span>
+</div>
+<div class="flex items-center justify-between text-[10px] font-label-sm text-on-surface-variant bg-surface p-1 rounded border border-outline-variant/30">
+<span>Certify under Section 65B</span>
+<button class="text-primary font-bold underline">Generate Hash</button>
+</div>
+</div>
+<!-- Upload New Evidence CTA -->
+<button class="w-full py-2.5 border-2 border-dashed border-outline-variant rounded-lg text-on-surface-variant font-label-md text-[11px] font-semibold flex items-center justify-center space-x-1 hover:border-primary hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px]">upload_file</span>
+<span>Upload Affidavit / Evidence Voucher</span>
+</button>
+</div>
+</main>
+<!-- ========================================================================= -->
+<!-- GLOBAL SOVEREIGN BOTTOM NAVIGATION BAR (MOBILE CANONICAL) -->
+<!-- ========================================================================= -->
+<footer class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[390px] bg-surface-container-lowest border-t border-outline-variant/40 shadow-2xl z-50 px-2 py-1.5 flex justify-around items-center">
+<!-- Nav 1: Home (गृह) -->
+<button class="flex flex-col items-center justify-center py-1 px-2 rounded-lg text-on-surface-variant hover:text-primary transition-colors min-w-[54px] min-h-[44px]" id="nav-btn-home" onclick="setActiveNav('home')">
+<span class="material-symbols-outlined text-[20px]">home</span>
+<span class="text-[10px] font-label-sm mt-0.5">गृह (Home)</span>
+</button>
+<!-- Nav 2: Tools Modal / Dropdown -->
+<button class="flex flex-col items-center justify-center py-1 px-2 rounded-lg text-secondary font-bold min-w-[54px] min-h-[44px]" id="nav-btn-tools" onclick="openToolsModal()">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">handyman</span>
+<span class="text-[10px] font-label-sm mt-0.5">Tools</span>
+</button>
+<!-- Nav 3: Legal Dossier -->
+<button class="flex flex-col items-center justify-center py-1 px-2 rounded-lg text-on-surface-variant hover:text-primary transition-colors min-w-[54px] min-h-[44px]" id="nav-btn-dossier" onclick="setActiveNav('dossier')">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+<span class="text-[10px] font-label-sm mt-0.5">Dossier</span>
+</button>
+<!-- Nav 4: Vault (Cause Vault) -->
+<button class="flex flex-col items-center justify-center py-1 px-2 rounded-lg text-on-surface-variant hover:text-primary transition-colors min-w-[54px] min-h-[44px]" id="nav-btn-vault" onclick="setActiveNav('vault')">
+<span class="material-symbols-outlined text-[20px]">folder_supervised</span>
+<span class="text-[10px] font-label-sm mt-0.5">Vault</span>
+</button>
+<!-- Nav 5: Profile (Rajesh Sharma) -->
+<button class="flex flex-col items-center justify-center py-1 px-2 rounded-lg text-on-surface-variant hover:text-primary transition-colors min-w-[54px] min-h-[44px]" id="nav-btn-profile" onclick="setActiveNav('profile')">
+<span class="material-symbols-outlined text-[20px]">person</span>
+<span class="text-[10px] font-label-sm mt-0.5">Profile</span>
+</button>
+</footer>
+<!-- ========================================================================= -->
+<!-- OVERLAYS & MODALS -->
+<!-- ========================================================================= -->
+<!-- Modal 1: Legal Tools Sovereign Drawer Modal -->
+<div class="fixed inset-0 bg-primary/60 backdrop-blur-xs z-50 hidden flex-col justify-end max-w-[390px] mx-auto" id="toolsModal">
+<div class="bg-surface-container-lowest rounded-t-2xl p-4 space-y-3 shadow-2xl border-t border-outline-variant/60 max-h-[751px] overflow-y-auto">
+<div class="flex items-center justify-between pb-2 border-b border-outline-variant/30">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">auto_stories</span>
+<h2 class="font-headline-sm text-[16px] text-primary font-bold">Citizen Legal Tools Hub</h2>
+</div>
+<button class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface" onclick="closeToolsModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-2 text-left">
+<!-- Tool A -->
+<div class="p-2.5 rounded-lg bg-surface hover:bg-surface-container border border-outline-variant/40 cursor-pointer space-y-1" onclick="selectTool('notice')">
+<span class="material-symbols-outlined text-secondary text-[20px]">description</span>
+<p class="font-title-md text-[12px] text-primary font-bold">Notice Generator</p>
+<p class="font-body-sm text-[10px] text-on-surface-variant">Statutory drafting under TPA &amp; Consumer Act</p>
+</div>
+<!-- Tool B -->
+<div class="p-2.5 rounded-lg bg-surface hover:bg-surface-container border border-outline-variant/40 cursor-pointer space-y-1" onclick="selectTool('court')">
+<span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
+<p class="font-title-md text-[12px] text-primary font-bold">Find a Court</p>
+<p class="font-body-sm text-[10px] text-on-surface-variant">District courts, courtroom locator &amp; protocols</p>
+</div>
+<!-- Tool C -->
+<div class="p-2.5 rounded-lg bg-surface hover:bg-surface-container border border-outline-variant/40 cursor-pointer space-y-1" onclick="alert('Opening RTI Crafter Sovereign Module'); closeToolsModal();">
+<span class="material-symbols-outlined text-emerald-800 text-[20px]">assignment</span>
+<p class="font-title-md text-[12px] text-primary font-bold">RTI Crafter</p>
+<p class="font-body-sm text-[10px] text-on-surface-variant">RTI Section 6(1) Public Authority filings</p>
+</div>
+<!-- Tool D -->
+<div class="p-2.5 rounded-lg bg-surface hover:bg-surface-container border border-outline-variant/40 cursor-pointer space-y-1" onclick="alert('Opening Legal Analysis Engine'); closeToolsModal();">
+<span class="material-symbols-outlined text-purple-800 text-[20px]">cognition</span>
+<p class="font-title-md text-[12px] text-primary font-bold">Legal Analysis</p>
+<p class="font-body-sm text-[10px] text-on-surface-variant">AI Merits check with BNS/IPC mapping</p>
+</div>
+<!-- Tool E -->
+<div class="p-2.5 rounded-lg bg-surface hover:bg-surface-container border border-outline-variant/40 cursor-pointer space-y-1" onclick="alert('Navigating to Judicial Timeline Tracker'); closeToolsModal();">
+<span class="material-symbols-outlined text-amber-800 text-[20px]">account_tree</span>
+<p class="font-title-md text-[12px] text-primary font-bold">Court Process</p>
+<p class="font-body-sm text-[10px] text-on-surface-variant">From summons to decree execution steps</p>
+</div>
+<!-- Tool F -->
+<div class="p-2.5 rounded-lg bg-surface hover:bg-surface-container border border-outline-variant/40 cursor-pointer space-y-1" onclick="alert('Calling NALSA Legal Aid Cell'); closeToolsModal();">
+<span class="material-symbols-outlined text-secondary text-[20px]">support_agent</span>
+<p class="font-title-md text-[12px] text-primary font-bold">Free Legal Help</p>
+<p class="font-body-sm text-[10px] text-on-surface-variant">Connect with DLSA assigned legal advocate</p>
+</div>
+</div>
+<div class="p-2.5 bg-surface-container rounded-lg flex items-center justify-between text-[11px]">
+<span class="text-on-surface-variant">Need emergency legal counsel?</span>
+<a class="text-secondary font-bold flex items-center space-x-1" href="tel:15100">
+<span class="material-symbols-outlined text-[14px]">call</span>
+<span>Dial 15100</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Modal 2: Language Selector Modal -->
+<div class="fixed inset-0 bg-primary/60 backdrop-blur-xs z-50 hidden flex-col justify-end max-w-[390px] mx-auto" id="languageModal">
+<div class="bg-surface-container-lowest rounded-t-2xl p-4 space-y-3 shadow-2xl border-t border-outline-variant/60">
+<div class="flex items-center justify-between pb-1 border-b border-outline-variant/30">
+<h3 class="font-headline-sm text-[15px] text-primary font-bold">Choose Official Language / भाषा</h3>
+<button class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center text-on-surface" onclick="toggleLanguageModal()">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<div class="space-y-1 pt-1">
+<button class="w-full p-2.5 rounded-lg bg-surface-container-high/60 flex items-center justify-between text-left font-semibold text-[13px] text-primary border border-secondary/40" onclick="setLanguage('हिन्दी')">
+<span>हिन्दी (Hindi)</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+</button>
+<button class="w-full p-2.5 rounded-lg bg-surface flex items-center justify-between text-left text-[13px] text-on-surface hover:bg-surface-container border border-outline-variant/30" onclick="setLanguage('English')">
+<span>English (Official Gazette Format)</span>
+<span class="text-[11px] text-on-surface-variant">Constitutional</span>
+</button>
+<button class="w-full p-2.5 rounded-lg bg-surface flex items-center justify-between text-left text-[13px] text-on-surface hover:bg-surface-container border border-outline-variant/30" onclick="setLanguage('मराठी')">
+<span>मराठी (Marathi)</span>
+</button>
+<button class="w-full p-2.5 rounded-lg bg-surface flex items-center justify-between text-left text-[13px] text-on-surface hover:bg-surface-container border border-outline-variant/30" onclick="setLanguage('বাংলা')">
+<span>বাংলা (Bengali)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Inline Micro-Interactions JavaScript Engine -->
+<script>
+    // Tab State Management
+    function switchCoreTab(tabKey) {
+      // Sections
+      const secNotice = document.getElementById('section-notice');
+      const secCourt = document.getElementById('section-court');
+      const secVault = document.getElementById('section-vault');
+
+      // Buttons
+      const btnNotice = document.getElementById('tab-notice');
+      const btnCourt = document.getElementById('tab-court');
+      const btnVault = document.getElementById('tab-vault');
+
+      // Reset
+      secNotice.classList.add('hidden');
+      secCourt.classList.add('hidden');
+      secVault.classList.add('hidden');
+
+      [btnNotice, btnCourt, btnVault].forEach(btn => {
+        btn.className = "flex-1 py-2 px-1 rounded-lg text-center font-label-md text-[11px] font-semibold text-on-surface-variant transition-all duration-150 flex items-center justify-center space-x-1 hover:text-on-surface";
+      });
+
+      const activeClass = "flex-1 py-2 px-1 rounded-lg text-center font-label-md text-[11px] font-bold transition-all duration-150 flex items-center justify-center space-x-1 bg-primary-container text-surface-container-lowest shadow-sm";
+
+      if (tabKey === 'notice') {
+        secNotice.classList.remove('hidden');
+        btnNotice.className = activeClass;
+      } else if (tabKey === 'court') {
+        secCourt.classList.remove('hidden');
+        btnCourt.className = activeClass;
+      } else if (tabKey === 'vault') {
+        secVault.classList.remove('hidden');
+        btnVault.className = activeClass;
+      }
+    }
+
+    // Notice Generator Subview (Form vs Preview)
+    function toggleNoticeSubView(viewKey) {
+      const formView = document.getElementById('notice-form-view');
+      const previewView = document.getElementById('notice-preview-view');
+      const formBtn = document.getElementById('view-form-btn');
+      const previewBtn = document.getElementById('view-preview-btn');
+
+      if (viewKey === 'preview') {
+        formView.classList.add('hidden');
+        previewView.classList.remove('hidden');
+        previewBtn.className = "px-3 py-1 rounded text-[11px] font-label-md font-bold transition-all bg-surface text-primary shadow-xs";
+        formBtn.className = "px-3 py-1 rounded text-[11px] font-label-md font-medium text-on-surface-variant hover:text-on-surface";
+      } else {
+        previewView.classList.add('hidden');
+        formView.classList.remove('hidden');
+        formBtn.className = "px-3 py-1 rounded text-[11px] font-label-md font-bold transition-all bg-surface text-primary shadow-xs";
+        previewBtn.className = "px-3 py-1 rounded text-[11px] font-label-md font-medium text-on-surface-variant hover:text-on-surface";
+      }
+    }
+
+    // Vault Subview (Docket vs Docs)
+    function toggleVaultSubView(subKey) {
+      const docketView = document.getElementById('vault-docket-view');
+      const docsView = document.getElementById('vault-docs-view');
+      const docketBtn = document.getElementById('vault-docket-btn');
+      const docsBtn = document.getElementById('vault-docs-btn');
+
+      if (subKey === 'docs') {
+        docketView.classList.add('hidden');
+        docsView.classList.remove('hidden');
+        docsBtn.className = "flex-1 py-1.5 rounded text-[11px] font-label-md font-bold transition-all bg-surface text-primary shadow-xs";
+        docketBtn.className = "flex-1 py-1.5 rounded text-[11px] font-label-md font-medium text-on-surface-variant hover:text-on-surface";
+      } else {
+        docsView.classList.add('hidden');
+        docketView.classList.remove('hidden');
+        docketBtn.className = "flex-1 py-1.5 rounded text-[11px] font-label-md font-bold transition-all bg-surface text-primary shadow-xs";
+        docsBtn.className = "flex-1 py-1.5 rounded text-[11px] font-label-md font-medium text-on-surface-variant hover:text-on-surface";
+      }
+    }
+
+    // Court Details Bottom Sheet Collapse/Expand
+    function toggleCourtDetailsSheet() {
+      const sheet = document.getElementById('court-details-sheet');
+      const arrow = document.getElementById('sheetArrow');
+      if (sheet.classList.contains('hidden')) {
+        sheet.classList.remove('hidden');
+        arrow.textContent = 'expand_less';
+      } else {
+        sheet.classList.add('hidden');
+        arrow.textContent = 'expand_more';
+      }
+    }
+
+    // Tools Drawer Modal Handlers
+    function openToolsModal() {
+      document.getElementById('toolsModal').classList.remove('hidden');
+      document.getElementById('toolsModal').classList.add('flex');
+    }
+
+    function closeToolsModal() {
+      document.getElementById('toolsModal').classList.add('hidden');
+      document.getElementById('toolsModal').classList.remove('flex');
+    }
+
+    function selectTool(toolKey) {
+      closeToolsModal();
+      switchCoreTab(toolKey);
+    }
+
+    // Language Toggle Modal Handlers
+    function toggleLanguageModal() {
+      const modal = document.getElementById('languageModal');
+      if (modal.classList.contains('hidden')) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      } else {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    function setLanguage(lang) {
+      document.getElementById('currentLangLabel').textContent = lang;
+      toggleLanguageModal();
+    }
+
+    // Global Bottom Nav Active Item Management
+    function setActiveNav(navKey) {
+      const navIds = ['home', 'tools', 'dossier', 'vault', 'profile'];
+      navIds.forEach(id => {
+        const btn = document.getElementById('nav-btn-' + id);
+        if (btn) {
+          btn.className = "flex flex-col items-center justify-center py-1 px-2 rounded-lg text-on-surface-variant hover:text-primary transition-colors min-w-[54px] min-h-[44px]";
+        }
+      });
+
+      const activeBtn = document.getElementById('nav-btn-' + navKey);
+      if (activeBtn) {
+        activeBtn.className = "flex flex-col items-center justify-center py-1 px-2 rounded-lg text-secondary font-bold min-w-[54px] min-h-[44px]";
+      }
+
+      if (navKey === 'vault') {
+        switchCoreTab('vault');
+      } else if (navKey === 'home') {
+        switchCoreTab('notice');
+      } else if (navKey === 'profile') {
+        alert('Advocate Registry & Citizen Profile for Rajesh Sharma (UIDAI Verified)');
+      } else if (navKey === 'dossier') {
+        switchCoreTab('vault');
+        toggleVaultSubView('docs');
+      }
+    }
+
+    // Save Notice to Vault Simulation
+    function saveNoticeToVault() {
+      alert(' विधिक नोटिस सहेजा गया! Notice Ref KS/DL/2025/NOTICE-0491 successfully saved to Cause Vault with SHA-256 seal.');
+      switchCoreTab('vault');
+      toggleVaultSubView('docs');
+    }
+  </script>
+</body></html>

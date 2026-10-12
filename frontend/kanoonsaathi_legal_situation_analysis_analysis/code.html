@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>कानूनसाथी | KanoonSaathi - Legal Situation Analysis (अपनी समस्या बताएं)</title>
+<!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration matching theme -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "background": "#fef9f0",
+            "on-secondary-fixed-variant": "#7b2f00",
+            "secondary-fixed-dim": "#ffb695",
+            "on-error": "#ffffff",
+            "on-primary-fixed-variant": "#3a4665",
+            "tertiary-container": "#342500",
+            "inverse-surface": "#32302a",
+            "surface-tint": "#515e7e",
+            "error": "#ba1a1a",
+            "surface-container": "#f2ede4",
+            "primary-fixed-dim": "#b9c6eb",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-container": "#a68b4f",
+            "error-container": "#ffdad6",
+            "tertiary-fixed": "#ffdf9b",
+            "surface-container-high": "#ece8df",
+            "on-surface": "#1d1c16",
+            "on-primary-fixed": "#0d1b37",
+            "on-tertiary": "#ffffff",
+            "secondary": "#a23f00",
+            "surface-container-highest": "#e7e2d9",
+            "surface-dim": "#ded9d1",
+            "on-background": "#1d1c16",
+            "on-surface-variant": "#45464d",
+            "outline-variant": "#c5c6ce",
+            "primary-container": "#1a2744",
+            "on-tertiary-fixed-variant": "#59440e",
+            "on-primary": "#ffffff",
+            "surface-variant": "#e7e2d9",
+            "surface-container-low": "#f8f3ea",
+            "surface": "#fef9f0",
+            "primary": "#04122e",
+            "outline": "#75777e",
+            "on-tertiary-fixed": "#251a00",
+            "inverse-on-surface": "#f5f0e7",
+            "secondary-fixed": "#ffdbcc",
+            "on-secondary": "#ffffff",
+            "primary-fixed": "#d9e2ff",
+            "on-secondary-fixed": "#351000",
+            "secondary-container": "#ff8345",
+            "tertiary-fixed-dim": "#e2c381",
+            "surface-bright": "#fef9f0",
+            "tertiary": "#1a1100",
+            "on-primary-container": "#828eb1",
+            "on-secondary-container": "#692700",
+            "inverse-primary": "#b9c6eb",
+            "on-error-container": "#93000a"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "margin-tablet": "2rem",
+            "space-xl": "2.5rem",
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "margin": "3rem",
+            "space-md": "1rem",
+            "gutter-mobile": "1rem",
+            "margin-mobile": "1rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Playfair Display", "serif"],
+            "display-lg-mobile": ["Playfair Display", "serif"],
+            "label-md": ["Plus Jakarta Sans", "sans-serif"],
+            "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-sm": ["Playfair Display", "serif"],
+            "headline-lg-mobile": ["Playfair Display", "serif"],
+            "headline-md": ["Playfair Display", "serif"],
+            "body-md": ["Plus Jakarta Sans", "sans-serif"],
+            "display-lg": ["Playfair Display", "serif"],
+            "body-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "title-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "title-md": ["Plus Jakarta Sans", "sans-serif"],
+            "label-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "label-lg": ["Plus Jakarta Sans", "sans-serif"]
+          },
+          "fontSize": {
+            "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "30px", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+            "headline-md": ["26px", { "lineHeight": "34px", "fontWeight": "600" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "display-lg": ["52px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "title-lg": ["18px", { "lineHeight": "26px", "fontWeight": "700" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" }],
+            "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.03em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .parchment-border {
+      border: 1px solid rgba(197, 168, 105, 0.4);
+    }
+    .vakalatnama-ribbon {
+      background: linear-gradient(90deg, #1a2744 0%, #2b3b5e 50%, #1a2744 100%);
+      position: relative;
+    }
+    .vakalatnama-ribbon::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #c5a869, #e2c381, #c5a869, transparent);
+    }
+    .gold-double-border {
+      border: 1px solid rgba(197, 168, 105, 0.35);
+      outline: 1px solid rgba(197, 168, 105, 0.15);
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col font-body-md text-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TOP SOVEREIGN DIRECTIVE BAR (Civic Header) -->
+<div class="vakalatnama-ribbon text-surface py-1.5 px-4 text-xs tracking-wide">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center space-x-3">
+<span class="inline-flex items-center space-x-1.5 font-semibold text-tertiary-fixed">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">balance</span>
+<span class="font-label-sm text-label-sm tracking-wider">DIRECTIVE PRINCIPLE • ARTICLE 39A</span>
+</span>
+<span class="text-outline-variant opacity-40">|</span>
+<span class="font-body-sm text-body-sm text-primary-fixed">National Equal Justice &amp; Free Legal Aid Sovereign Grid</span>
+</div>
+<div class="flex items-center space-x-4 font-label-sm text-label-sm">
+<span class="inline-flex items-center space-x-1 text-tertiary-fixed">
+<span class="material-symbols-outlined text-[15px]">verified_user</span>
+<span>e-Courts 3.0 Interoperable</span>
+</span>
+<span class="bg-secondary px-2 py-0.5 rounded text-on-secondary font-bold">24x7 NALSA Helpline: 15100</span>
+</div>
+</div>
+</div>
+<!-- CANONICAL TOP APP BAR (Editorial Sovereign) -->
+<header class="bg-surface border-b border-outline-variant shadow-sm sticky top-0 z-40">
+<div class="w-full max-w-7xl mx-auto px-4 md:px-6 py-3 flex justify-between items-center gap-4">
+<!-- Brand & Stambh Emblem -->
+<div class="flex items-center space-x-3">
+<div class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-tertiary-fixed border border-tertiary-container shadow-inner">
+<span class="material-symbols-outlined text-[22px]">account_balance</span>
+</div>
+<div>
+<a class="font-headline-sm text-headline-sm font-semibold tracking-wide text-primary block leading-none" href="/analysis">
+            कानूनसाथी <span class="font-light text-on-surface-variant font-body-md text-body-md">| KanoonSaathi</span>
+</a>
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider block mt-0.5">SOVEREIGN LEGAL ACCESSIBILITY DOCKET</span>
+</div>
+</div>
+<!-- Center Canonical Navigation Cluster -->
+<nav class="hidden lg:flex items-center space-x-1 text-sm font-medium">
+<!-- Canonical Group 1: LEGAL TOOLS -->
+<a class="text-secondary border-b-2 border-secondary pb-1 font-semibold px-2.5 py-1 inline-flex items-center gap-1.5 transition-colors" href="/analysis">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+<span>Legal Intake / Analysis</span>
+</a>
+<a class="text-on-surface-variant font-medium pb-1 px-2.5 py-1 hover:text-secondary hover:bg-surface-container rounded transition-colors duration-150" href="/notice">
+          Notice Generator
+        </a>
+<a class="text-on-surface-variant font-medium pb-1 px-2.5 py-1 hover:text-secondary hover:bg-surface-container rounded transition-colors duration-150" href="/rti">
+          RTI Crafter
+        </a>
+<a class="text-on-surface-variant font-medium pb-1 px-2.5 py-1 hover:text-secondary hover:bg-surface-container rounded transition-colors duration-150" href="/court-process">
+          Court Process
+        </a>
+<a class="text-on-surface-variant font-medium pb-1 px-2.5 py-1 hover:text-secondary hover:bg-surface-container rounded transition-colors duration-150" href="/courts">
+          Find a Court
+        </a>
+<a class="text-on-surface-variant font-medium pb-1 px-2.5 py-1 hover:text-secondary hover:bg-surface-container rounded transition-colors duration-150" href="/legal-aid-locator">
+          Find Free Legal Help
+        </a>
+<!-- Divider -->
+<span class="h-4 w-[1px] bg-outline-variant mx-1"></span>
+<!-- Canonical Group 2: WORKSPACE -->
+<a class="text-on-surface-variant font-medium pb-1 px-2.5 py-1 hover:text-secondary hover:bg-surface-container rounded transition-colors duration-150" href="/legal-dossier">
+          Legal Dossier
+        </a>
+<a class="text-on-surface-variant font-medium pb-1 px-2.5 py-1 hover:text-secondary hover:bg-surface-container rounded transition-colors duration-150" href="/cause-vault">
+          Cause Vault
+        </a>
+</nav>
+<!-- Canonical Right Actions -->
+<div class="flex items-center space-x-2.5">
+<!-- Language Switcher -->
+<button class="px-2.5 py-1 border border-outline-variant rounded font-label-md text-label-md text-primary hover:bg-surface-container transition-colors flex items-center space-x-1" type="button">
+<span class="material-symbols-outlined text-[16px]">translate</span>
+<span>हिन्दी / EN</span>
+</button>
+<!-- Emergency Helpline 15100 -->
+<a class="hidden sm:inline-flex items-center space-x-1.5 px-3 py-1 bg-secondary text-on-secondary rounded text-xs font-semibold hover:bg-on-secondary-fixed-variant transition-colors shadow-sm" href="tel:15100">
+<span class="material-symbols-outlined text-[16px]">emergency</span>
+<span>Emergency Helpline 15100</span>
+</a>
+<!-- Litigant Profile Badge -->
+<div class="pl-2 border-l border-outline-variant flex items-center space-x-2">
+<div class="w-8 h-8 rounded bg-primary-container text-surface flex items-center justify-center font-bold text-xs border border-tertiary-fixed">
+            RS
+          </div>
+<div class="hidden xl:block text-left">
+<span class="block font-label-md text-label-md text-on-surface leading-tight">Rajesh Sharma</span>
+<span class="block font-label-sm text-label-sm text-secondary font-medium leading-none">Litigant DL-8849</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- MAIN EDITORIAL CONTENT CANVAS -->
+<main class="flex-1 w-full max-w-7xl mx-auto px-4 md:px-6 py-6 lg:py-8 space-y-8">
+<!-- HERO & INTAKE HEADER (Bilingual Institutional Banner) -->
+<section class="bg-surface-container-low border border-outline-variant rounded-lg p-6 lg:p-8 relative overflow-hidden shadow-sm">
+<div class="absolute -right-8 -bottom-8 opacity-5 pointer-events-none select-none">
+<span class="material-symbols-outlined text-[240px]">balance</span>
+</div>
+<div class="max-w-3xl space-y-3 relative z-10">
+<div class="inline-flex items-center space-x-2 bg-surface px-3 py-1 rounded border border-outline-variant text-secondary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span>CONSTITUTION OF INDIA • ARTICLE 39A • CITIZEN LEGAL INTAKE</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg md:text-display-lg text-primary tracking-tight">
+          Tell Us What Happened. <br class="hidden sm:block"/>
+<span class="italic font-normal text-on-surface-variant font-headline-md text-headline-md">(अपनी समस्या बताएं)</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          Explain your legal problem in your own words. KanoonSaathi will organize the situation and help you understand possible next steps under Indian legal provisions.
+        </p>
+<!-- Multi-lingual & Mode Badge -->
+<div class="pt-2 flex flex-wrap items-center gap-2 font-label-md text-label-md">
+<span class="bg-surface-container px-3 py-1 rounded text-on-surface flex items-center gap-1.5 border border-outline-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">record_voice_over</span>
+            Supports English • हिन्दी • Hinglish
+          </span>
+<span class="bg-surface-container px-3 py-1 rounded text-on-surface flex items-center gap-1.5 border border-outline-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">keyboard</span>
+            Text Input &amp; Voice Dictation Ready
+          </span>
+<span class="bg-surface-container px-3 py-1 rounded text-on-surface flex items-center gap-1.5 border border-outline-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">security</span>
+            End-to-End Encrypted Litigant Privilege
+          </span>
+</div>
+</div>
+</section>
+<!-- TWO-COLUMN WORK BENCH: 7-PART FORM (LEFT) & LIVE ANALYSIS RESULT STATE (RIGHT) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- LEFT SECTION: 7-PART INTERACTIVE CITIZEN INTAKE FORM (5 Cols) -->
+<section class="lg:col-span-5 bg-surface-container-lowest border border-outline-variant rounded-lg p-5 sm:p-6 shadow-sm space-y-6">
+<!-- Header with Voice Dictation CTA -->
+<div class="border-b border-outline-variant pb-4">
+<div class="flex items-center justify-between mb-3">
+<div>
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">7-Point Structured Docket</span>
+<h2 class="font-title-lg text-title-lg text-primary">Civic Dispute Intake</h2>
+</div>
+<span class="text-xs bg-surface-container-high px-2 py-0.5 rounded font-mono text-on-surface-variant">CIV-2025-DL8849</span>
+</div>
+<!-- Voice Intake CTA -->
+<button class="w-full bg-surface-container hover:bg-surface-container-high border border-outline-variant text-on-surface p-3 rounded-lg flex items-center justify-between transition-all group" type="button">
+<div class="flex items-center space-x-3">
+<div class="w-9 h-9 rounded-full bg-secondary text-on-secondary flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+</div>
+<div class="text-left">
+<p class="font-title-md text-title-md text-primary leading-tight">🎙️ बोलकर बताएं / Voice Dictate</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Hindi, English or colloquial Hinglish</p>
+</div>
+</div>
+<!-- Micro Audio Waveform Visualizer -->
+<div class="flex items-center space-x-1 pr-2">
+<span class="w-1 h-3 bg-secondary rounded-full animate-bounce"></span>
+<span class="w-1 h-6 bg-secondary rounded-full animate-bounce delay-75"></span>
+<span class="w-1 h-4 bg-secondary rounded-full animate-bounce delay-150"></span>
+<span class="w-1 h-2 bg-secondary rounded-full animate-bounce delay-100"></span>
+</div>
+</button>
+</div>
+<!-- The 7 Sequential Fields -->
+<form class="space-y-5" onsubmit="event.preventDefault()">
+<!-- FIELD 1: User's Situation & Plain Words -->
+<div class="space-y-1.5">
+<label class="block font-title-md text-title-md text-primary flex items-center justify-between">
+<span>1. State what happened in everyday language</span>
+<span class="text-xs font-normal text-on-surface-variant">Field 1 of 7</span>
+</label>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Write without fear of legal jargon. Simple facts suffice.</p>
+<div class="relative">
+<textarea class="w-full bg-surface-container-low border border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary-container/20 rounded p-3 text-body-md text-on-surface resize-none leading-relaxed font-body-md" placeholder="Describe the dispute..." rows="4">I rented a 2BHK in Mayur Vihar Phase-1 on an 11-month lease. Vacated with keys handed over on 31 Jan 2025 with zero damages, verified by mutual handover note. Landlord Ramesh Goel refused to return ₹45,000 security deposit, stopped answering calls, and sent abusive WhatsApp messages.</textarea>
+<div class="absolute right-2 bottom-2 text-xs text-on-surface-variant bg-surface px-1.5 py-0.5 rounded border border-outline-variant">
+                52 words • 318 chars
+              </div>
+</div>
+</div>
+<!-- FIELD 2: People Involved / Opposite Party -->
+<div class="space-y-1.5">
+<label class="block font-title-md text-title-md text-primary">
+              2. Parties Involved (Opposite Party &amp; Litigant)
+            </label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+<div class="bg-surface-container-low p-2.5 rounded border border-outline-variant">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">AGGRIEVED LITIGANT</span>
+<input class="w-full bg-transparent font-title-md text-title-md text-primary border-none p-0 focus:ring-0" type="text" value="Rajesh V. Sharma (Tenant)"/>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded border border-outline-variant">
+<span class="font-label-sm text-label-sm text-secondary block">OPPOSITE PARTY (DEFENDANT)</span>
+<input class="w-full bg-transparent font-title-md text-title-md text-on-surface border-none p-0 focus:ring-0" type="text" value="Sh. Ramesh Goel (Landlord/Owner)"/>
+</div>
+</div>
+</div>
+<!-- FIELD 3: What Happened (Core Grievance) -->
+<div class="space-y-1.5">
+<label class="block font-title-md text-title-md text-primary">
+              3. Core Allegation / Primary Grievance
+            </label>
+<div class="bg-surface-container-low p-2.5 rounded border border-outline-variant flex items-center space-x-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">report_problem</span>
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface border-none p-0 focus:ring-0" type="text" value="Breach of Lease Agreement clause 8 &amp; unlawful withholding of refundable caution deposit."/>
+</div>
+</div>
+<!-- FIELD 4: When It Happened -->
+<div class="space-y-1.5">
+<label class="block font-title-md text-title-md text-primary">
+              4. Chronology &amp; Statutory Elapsed Timeline
+            </label>
+<div class="bg-surface-container-low p-2.5 rounded border border-outline-variant flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_today</span>
+<span class="font-body-md text-body-md text-on-surface">Vacated: <strong>31 Jan 2025</strong></span>
+</div>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded">
+                45 Days Elapsed (Past 30-Day Cure Period)
+              </span>
+</div>
+</div>
+<!-- FIELD 5: Location & Jurisdiction -->
+<div class="space-y-1.5">
+<label class="block font-title-md text-title-md text-primary">
+              5. Territorial Location &amp; Police / Tehsil Jurisdiction
+            </label>
+<div class="bg-surface-container-low p-2.5 rounded border border-outline-variant flex items-start space-x-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] mt-0.5">location_on</span>
+<div class="w-full font-body-sm text-body-sm">
+<p class="font-semibold text-primary">Mayur Vihar Phase-1, East Delhi 110091</p>
+<p class="text-on-surface-variant">Sub-Registrar VIII (Preet Vihar) • PS Pandav Nagar Jurisdiction</p>
+</div>
+</div>
+</div>
+<!-- FIELD 6: Documents / Evidence Available -->
+<div class="space-y-1.5">
+<label class="block font-title-md text-title-md text-primary flex justify-between items-center">
+<span>6. Documentary Evidence in Hand</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">4 Captured</span>
+</label>
+<div class="space-y-2">
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low border border-outline-variant text-body-sm">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-medium text-on-surface">11-Month Registered Lease Agreement (Clause 8 Deposit Refund)</span>
+</div>
+<span class="font-mono text-xs text-on-surface-variant">PDF (2.1 MB)</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low border border-outline-variant text-body-sm">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-medium text-on-surface">Bank IMPS UTR Transfer Slip (₹45,000 to Ramesh Goel)</span>
+</div>
+<span class="font-mono text-xs text-on-surface-variant">IMG (640 KB)</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low border border-outline-variant text-body-sm">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-medium text-on-surface">Signed Keys Handover Protocol Note (Zero Damages noted)</span>
+</div>
+<span class="font-mono text-xs text-on-surface-variant">PDF (880 KB)</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low border border-outline-variant text-body-sm">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+<span class="font-medium text-on-surface">WhatsApp Chat &amp; Call Logs (Requires §65B Certificate)</span>
+</div>
+<span class="font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed px-1.5 py-0.5 rounded">Action Req.</span>
+</div>
+</div>
+</div>
+<!-- FIELD 7: Citizen's Desired Outcome -->
+<div class="space-y-1.5">
+<label class="block font-title-md text-title-md text-primary">
+              7. Citizen's Desired Prayer / Relief Sought
+            </label>
+<div class="p-3 rounded bg-surface-container-high border border-outline-variant font-body-sm text-body-sm text-on-surface">
+<p class="font-medium text-primary">Immediate prayer for recovery:</p>
+<ul class="list-disc list-inside space-y-1 text-on-surface-variant mt-1">
+<li>Refund of Principal Deposit: <strong class="text-on-surface">₹45,000/-</strong></li>
+<li>Statutory Commercial Interest: <strong class="text-on-surface">18% p.a. from 01 Feb 2025</strong></li>
+<li>Mental Harassment &amp; Legal Drafting Fees: <strong class="text-on-surface">₹15,000/-</strong></li>
+<li>Unconditional written acknowledgement of vacating status.</li>
+</ul>
+</div>
+</div>
+<!-- Docket Re-Analyze Button -->
+<button class="w-full bg-primary-container hover:bg-primary text-surface py-3 px-4 rounded font-label-lg text-label-lg flex items-center justify-center space-x-2 transition-all shadow-md active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-[20px]">sync</span>
+<span>Update Docket &amp; Re-Run Statutory Mapping</span>
+</button>
+</form>
+</section>
+<!-- RIGHT SECTION: LIVE ANALYSIS RESULT STATE (7 Cols Editorial Layout) -->
+<section class="lg:col-span-7 space-y-6">
+<!-- DISCLAIMER BANNER (Statutory AI Guidance) -->
+<div class="bg-surface-container-high border-l-4 border-secondary p-4 rounded-r-lg flex items-start space-x-3.5 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[24px] mt-0.5 flex-shrink-0" style="font-variation-settings: 'FILL' 1;">gavel</span>
+<div class="space-y-1 text-body-sm">
+<p class="font-title-md text-title-md text-primary">Statutory Guidance Notice</p>
+<p class="text-on-surface-variant leading-relaxed">
+              ⚖️ AI-generated guidance based on Indian jurisprudence — verify important legal information with a qualified advocate or your nearest DLSA legal clinic before judicial filings.
+            </p>
+</div>
+</div>
+<!-- SITUATION SUMMARY & CLASSIFICATION CARD (Tactile Editorial Card) -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 shadow-sm relative overflow-hidden">
+<div class="border-b border-outline-variant pb-4 flex flex-wrap items-center justify-between gap-3">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">LEGAL MATTERS CLASSIFICATION</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Tenancy Dispute &amp; Consumer Unfair Trade Practice</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Civil / Summary Money Recovery Jurisdiction</p>
+</div>
+<!-- Confidence & Urgency Badges -->
+<div class="flex flex-col sm:flex-row gap-2">
+<span class="bg-primary-fixed text-on-primary-fixed font-label-md text-label-md px-3 py-1 rounded inline-flex items-center gap-1 border border-outline-variant">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                94% Statutory Alignment
+              </span>
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant font-label-md text-label-md px-3 py-1 rounded inline-flex items-center gap-1 border border-secondary-container">
+<span class="material-symbols-outlined text-[16px]">hourglass_top</span>
+                Medium Urgency (15-Day Notice Rule)
+              </span>
+</div>
+</div>
+<!-- Procedural Diagnosis Paragraph -->
+<div class="py-4 space-y-2">
+<h4 class="font-title-md text-title-md text-primary">Procedural Standing &amp; Case Theory</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Upon evaluation of the 11-month lease agreement and executed handover note, the withholding of caution money post-vacation constitutes a <strong>breach of contract</strong> under Section 73/74 of the Indian Contract Act, 1872, alongside <strong>deficiency of service</strong> under the Consumer Protection Act, 2019. Because physical custody was returned without encumbrance, the landlord has zero lien over the caution deposit.
+            </p>
+</div>
+<!-- Key Legal Issues & Statutory Invocations (Bento Grid) -->
+<div class="pt-2">
+<h4 class="font-title-md text-title-md text-primary mb-3">Applicable Legal Provisions &amp; Statutes</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+<!-- Card 1: TP Act -->
+<div class="p-3.5 bg-surface-container-low rounded border border-outline-variant space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary font-bold">Transfer of Property Act, 1882</span>
+<span class="text-xs font-mono text-on-surface-variant">Section 106</span>
+</div>
+<p class="font-title-md text-title-md text-primary">Determination of Tenancy &amp; Notice</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Mandatory 15-day statutory cure notice to quit and settle accounts prior to instituting civil action.
+                </p>
+</div>
+<!-- Card 2: Consumer Protection Act -->
+<div class="p-3.5 bg-surface-container-low rounded border border-outline-variant space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary font-bold">Consumer Protection Act, 2019</span>
+<span class="text-xs font-mono text-on-surface-variant">Sec 2(11) &amp; Sec 35</span>
+</div>
+<p class="font-title-md text-title-md text-primary">Deficiency in Housing Service</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Provides swift recovery mechanism via District Consumer Forum with statutory penalties and compensation for harassment.
+                </p>
+</div>
+<!-- Card 3: BNS 2023 -->
+<div class="p-3.5 bg-surface-container-low rounded border border-outline-variant space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary font-bold">Bharatiya Nyaya Sanhita, 2023</span>
+<span class="text-xs font-mono text-on-surface-variant">Sec 316 / Sec 318</span>
+</div>
+<p class="font-title-md text-title-md text-primary">Criminal Breach of Trust &amp; Cheating</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Dishonest misappropriation of entrusted money. Can be invoked in formal police representation if intimidation persists.
+                </p>
+</div>
+<!-- Card 4: BSA / Sec 65B -->
+<div class="p-3.5 bg-surface-container-low rounded border border-outline-variant space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary font-bold">BSA 2023 / Indian Evidence Act</span>
+<span class="text-xs font-mono text-on-surface-variant">Sec 63 / Sec 65B</span>
+</div>
+<p class="font-title-md text-title-md text-primary">Admissibility of Digital Proof</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Electronic evidence mandate. WhatsApp logs and SMS require a self-declaration affidavit for evidentiary validity.
+                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- DOCUMENTS AUDIT: CAPTURED VS MISSING (Archival Checklist) -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 shadow-sm space-y-4">
+<div class="flex items-center justify-between border-b border-outline-variant pb-3">
+<h3 class="font-title-lg text-title-lg text-primary flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary">inventory_2</span>
+<span>Document Audit: Docket Verification</span>
+</h3>
+<span class="font-label-sm text-label-sm bg-surface-container px-2.5 py-1 rounded text-on-surface-variant">Evidence Readiness: 80%</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Captured Documents -->
+<div class="space-y-2">
+<span class="font-label-sm text-label-sm text-on-surface font-bold tracking-wider flex items-center space-x-1">
+<span class="material-symbols-outlined text-[16px] text-green-700" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>CAPTURED IN VAULT (3)</span>
+</span>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface-variant">
+<li class="bg-surface-container-low p-2 rounded flex items-center space-x-2">
+<span class="material-symbols-outlined text-[16px] text-green-700">task_alt</span>
+<span>Registered Lease Agreement (Signed copy)</span>
+</li>
+<li class="bg-surface-container-low p-2 rounded flex items-center space-x-2">
+<span class="material-symbols-outlined text-[16px] text-green-700">task_alt</span>
+<span>Bank IMPS UTR Payment Proof (₹45,000)</span>
+</li>
+<li class="bg-surface-container-low p-2 rounded flex items-center space-x-2">
+<span class="material-symbols-outlined text-[16px] text-green-700">task_alt</span>
+<span>Vacation &amp; Key Handover Protocol receipt</span>
+</li>
+</ul>
+</div>
+<!-- Missing / Required Next -->
+<div class="space-y-2">
+<span class="font-label-sm text-label-sm text-secondary font-bold tracking-wider flex items-center space-x-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">pending_actions</span>
+<span>MISSING MANDATORY COMPLIANCE (1)</span>
+</span>
+<div class="bg-surface-container p-3 rounded border border-outline-variant space-y-2">
+<div class="flex items-start space-x-2">
+<span class="material-symbols-outlined text-secondary text-[20px] flex-shrink-0">warning</span>
+<div>
+<p class="font-title-md text-title-md text-primary">Section 65B Electronic Evidence Affidavit</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                      Required for WhatsApp screenshot admissibility in court. You can generate this affidavit directly in the RTI / Notice drafter.
+                    </p>
+</div>
+</div>
+<button class="text-xs bg-surface text-secondary hover:bg-surface-container-highest px-2 py-1 rounded font-semibold border border-outline-variant flex items-center space-x-1 ml-7" type="button">
+<span>Generate §65B Draft Template</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- RECOMMENDED FORUMS & FREE LEGAL AID (Article 39A Section) -->
+<div class="bg-surface-container-low border border-outline-variant rounded-lg p-6 shadow-sm space-y-4">
+<div class="flex items-center justify-between border-b border-outline-variant pb-3">
+<h3 class="font-title-lg text-title-lg text-primary flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary">account_balance</span>
+<span>Recommended Forums &amp; Free Legal Aid Entitlement</span>
+</h3>
+<span class="font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded font-bold">Free Aid Qualified</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Forum 1 -->
+<div class="bg-surface-container-lowest p-4 rounded border border-outline-variant space-y-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">PRIMARY JURISDICTION FORUM</span>
+<h4 class="font-title-md text-title-md text-primary">District Consumer Commission (DCDRC)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong>East Delhi Bench (Karkardooma / Tis Hazari Courts Complex)</strong>. Consumer route is faster and avoids ad-valorem civil court fees.
+              </p>
+<div class="pt-1 text-xs text-secondary font-semibold flex items-center space-x-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Distance: ~4.2 km from Mayur Vihar</span>
+</div>
+</div>
+<!-- Free Legal Aid Recommendation -->
+<div class="bg-surface-container-lowest p-4 rounded border border-outline-variant space-y-2">
+<span class="font-label-sm text-label-sm text-secondary font-bold">ARTICLE 39A CIVIC ENTITLEMENT</span>
+<h4 class="font-title-md text-title-md text-primary">DLSA East Delhi Legal Aid Clinic</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                You qualify for <strong>free legal counseling and drafting</strong> through Delhi State Legal Services Authority. An empanelled advocate can be assigned at zero cost.
+              </p>
+<div class="pt-1 text-xs text-primary font-semibold flex items-center space-x-1">
+<span class="material-symbols-outlined text-[16px]">support_agent</span>
+<span>Toll-Free Dial: 15100 (Press 2 for DLSA East)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- NEXT STEP ACTION HUB (Direct Cross-Feature Connections) -->
+<div class="bg-surface-container-lowest border-2 border-primary-container rounded-lg p-6 shadow-md space-y-4">
+<div>
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase font-bold">ACTION HUB • RECOMMENDED WORKFLOW</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Execute Your Next Legal Step</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Choose how you want to move forward. All tools inherit this docket automatically.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+<!-- Primary Action 1: Notice Generator -->
+<a class="group bg-primary-container hover:bg-primary text-surface p-4 rounded transition-all shadow-sm flex flex-col justify-between space-y-3" href="/notice">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded bg-surface/10 flex items-center justify-center text-tertiary-fixed">
+<span class="material-symbols-outlined text-[24px]">description</span>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary px-2 py-0.5 rounded text-on-secondary font-bold">Step 1 (Mandatory)</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-surface group-hover:underline">Generate Statutory Notice (/notice)</p>
+<p class="font-body-sm text-body-sm text-primary-fixed opacity-90 mt-1">
+                  Draft a 15-day Section 106 &amp; CPA formal demand notice to Ramesh Goel in legal language.
+                </p>
+</div>
+<div class="inline-flex items-center space-x-1 text-xs font-semibold text-tertiary-fixed group-hover:translate-x-1 transition-transform">
+<span>Open Notice Generator</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</a>
+<!-- Primary Action 2: RTI Crafter -->
+<a class="group bg-surface-container hover:bg-surface-container-high border border-outline-variant p-4 rounded transition-all flex flex-col justify-between space-y-3" href="/rti">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded bg-surface-container-lowest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">assignment</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-highest px-2 py-0.5 rounded text-on-surface">Supporting Proof</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-primary group-hover:text-secondary">Draft RTI Application (/rti)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  Request property tax status &amp; municipal floor sanctioned registry for added leverage.
+                </p>
+</div>
+<div class="inline-flex items-center space-x-1 text-xs font-semibold text-primary group-hover:translate-x-1 transition-transform">
+<span>Launch RTI Drafter</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</a>
+<!-- Primary Action 3: Find a Court -->
+<a class="group bg-surface-container hover:bg-surface-container-high border border-outline-variant p-4 rounded transition-all flex flex-col justify-between space-y-3" href="/courts">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded bg-surface-container-lowest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">location_on</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-highest px-2 py-0.5 rounded text-on-surface">Territorial Forum</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-primary group-hover:text-secondary">Find Nearest Court (/courts)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  Locate DCDRC East Delhi and Tis Hazari Court complex filing counter timings.
+                </p>
+</div>
+<div class="inline-flex items-center space-x-1 text-xs font-semibold text-primary group-hover:translate-x-1 transition-transform">
+<span>View Court Directory</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</a>
+<!-- Primary Action 4: Find Free Legal Help -->
+<a class="group bg-surface-container hover:bg-surface-container-high border border-outline-variant p-4 rounded transition-all flex flex-col justify-between space-y-3" href="/legal-aid-locator">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded bg-surface-container-lowest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">balance</span>
+</div>
+<span class="font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded font-bold">100% Free Service</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-primary group-hover:text-secondary">Find Free Legal Help (/legal-aid-locator)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  Connect with a DLSA-empanelled lawyer or visit the Patparganj legal aid desk.
+                </p>
+</div>
+<div class="inline-flex items-center space-x-1 text-xs font-semibold text-secondary group-hover:translate-x-1 transition-transform">
+<span>Connect with DLSA</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</a>
+</div>
+<!-- Vault & Dossier Secondary Buttons -->
+<div class="pt-3 border-t border-outline-variant flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center space-x-2">
+<a class="px-3 py-2 border border-outline-variant hover:bg-surface-container rounded text-xs font-semibold text-primary inline-flex items-center space-x-1.5 transition-colors" href="/cause-vault">
+<span class="material-symbols-outlined text-[16px]">folder_supervised</span>
+<span>Save to Cause Vault (Vault #DL-8849)</span>
+</a>
+<a class="px-3 py-2 border border-outline-variant hover:bg-surface-container rounded text-xs font-semibold text-primary inline-flex items-center space-x-1.5 transition-colors" href="/legal-dossier">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>Export to Legal Dossier</span>
+</a>
+</div>
+<span class="text-xs text-on-surface-variant font-mono">Status: Draft Verified • Readiness 80%</span>
+</div>
+</div>
+</section>
+</div>
+<!-- ARCHIVAL CITATION BANNER -->
+<section class="bg-surface-container-high rounded p-4 text-center border border-outline-variant">
+<p class="font-headline-sm text-headline-sm text-primary italic">
+        "Justice is not a cloistered virtue; the doors of judicial relief must open equally to every citizen."
+      </p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">
+        Affirmed under Supreme Court of India precedents on Article 39A &amp; Legal Services Authorities Act, 1987.
+      </p>
+</section>
+</main>
+<!-- CANONICAL INSTITUTIONAL FOOTER -->
+<footer class="bg-surface-container-high border-t border-outline-variant mt-12">
+<div class="w-full max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-body-sm text-body-sm">
+<div class="space-y-1 text-center md:text-left">
+<p class="font-headline-sm text-headline-sm font-semibold text-primary">
+          कानूनसाथी | KanoonSaathi Sovereign Portal
+        </p>
+<p class="text-on-surface-variant max-w-2xl font-body-sm text-body-sm leading-relaxed">
+          © 2025 KanoonSaathi Sovereign Legal Portal. In accordance with Legal Services Authorities Act, 1987 &amp; Article 39A of the Constitution of India. NALSA National Tollfree: 15100.
+        </p>
+</div>
+<div class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-label-md font-semibold text-on-surface-variant">
+<a class="hover:text-secondary transition-colors duration-150 underline" href="/court-process">Constitutional Mandate</a>
+<a class="hover:text-secondary transition-colors duration-150 underline" href="/courts">e-Courts Integration</a>
+<a class="hover:text-secondary transition-colors duration-150 underline" href="/notice">BNS/IPC Cross-Reference</a>
+<a class="hover:text-secondary transition-colors duration-150 underline" href="/legal-dossier">Privacy &amp; Privilege</a>
+<a class="hover:text-secondary transition-colors duration-150 underline" href="/cause-vault">Bar Council Compliance</a>
+<a class="hover:text-secondary transition-colors duration-150 underline" href="tel:15100">Grievance Redressal</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NALSA / Free Legal Aid Locator | KanoonSaathi (कानूनसाथी)</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary-fixed": "#ffdbcc",
+            "inverse-surface": "#32302a",
+            "surface-container-lowest": "#ffffff",
+            "on-background": "#1d1c16",
+            "outline": "#75777e",
+            "error": "#ba1a1a",
+            "surface-variant": "#e7e2d9",
+            "surface-dim": "#ded9d1",
+            "background": "#fef9f0",
+            "on-error": "#ffffff",
+            "on-surface-variant": "#45464d",
+            "on-primary": "#ffffff",
+            "on-primary-fixed-variant": "#3a4665",
+            "on-secondary-fixed-variant": "#7b2f00",
+            "secondary": "#a23f00",
+            "tertiary": "#1a1100",
+            "secondary-fixed-dim": "#ffb695",
+            "surface": "#fef9f0",
+            "on-primary-container": "#828eb1",
+            "tertiary-container": "#342500",
+            "on-tertiary-fixed-variant": "#59440e",
+            "on-secondary-container": "#692700",
+            "surface-container-highest": "#e7e2d9",
+            "primary-fixed": "#d9e2ff",
+            "surface-container-low": "#f8f3ea",
+            "on-tertiary": "#ffffff",
+            "on-secondary": "#ffffff",
+            "on-secondary-fixed": "#351000",
+            "on-tertiary-fixed": "#251a00",
+            "tertiary-fixed-dim": "#e2c381",
+            "inverse-on-surface": "#f5f0e7",
+            "primary-fixed-dim": "#b9c6eb",
+            "inverse-primary": "#b9c6eb",
+            "tertiary-fixed": "#ffdf9b",
+            "on-surface": "#1d1c16",
+            "primary": "#04122e",
+            "on-primary-fixed": "#0d1b37",
+            "surface-tint": "#515e7e",
+            "surface-bright": "#fef9f0",
+            "error-container": "#ffdad6",
+            "on-error-container": "#93000a",
+            "surface-container": "#f2ede4",
+            "primary-container": "#1a2744",
+            "surface-container-high": "#ece8df",
+            "on-tertiary-container": "#a68b4f",
+            "outline-variant": "#c5c6ce",
+            "secondary-container": "#ff8345"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "margin": "3rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem",
+            "margin-mobile": "1rem",
+            "gutter": "1.5rem",
+            "margin-tablet": "2rem",
+            "gutter-mobile": "1rem",
+            "space-lg": "1.5rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "title-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Playfair Display"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "display-lg": ["Playfair Display"],
+            "title-md": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Playfair Display"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-sm": ["Playfair Display"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"]
+          },
+          "fontSize": {
+            "title-lg": ["18px", {"lineHeight": "26px", "fontWeight": "700"}],
+            "headline-md": ["26px", {"lineHeight": "34px", "fontWeight": "600"}],
+            "body-sm": ["13px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+            "label-sm": ["10px", {"lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700"}],
+            "body-md": ["15px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "label-lg": ["14px", {"lineHeight": "18px", "letterSpacing": "0.03em", "fontWeight": "600"}],
+            "display-lg": ["52px", {"lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+            "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+            "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+            "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "body-lg": ["18px", {"lineHeight": "30px", "fontWeight": "400"}],
+            "headline-lg": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .ashoka-pattern {
+      background-image: radial-gradient(#c5a869 0.75px, transparent 0.75px), radial-gradient(#c5a869 0.75px, #fef9f0 0.75px);
+      background-size: 24px 24px;
+      background-position: 0 0, 12px 12px;
+      opacity: 0.25;
+    }
+    .vakalat-ribbon {
+      background: repeating-linear-gradient(45deg, #1a2744, #1a2744 12px, #04122e 12px, #04122e 24px);
+    }
+    .archival-border-double {
+      border: 1px solid rgba(197, 168, 105, 0.45);
+      outline: 1px solid rgba(197, 168, 105, 0.25);
+      outline-offset: -4px;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased flex flex-col min-h-screen selection:bg-secondary-fixed selection:text-secondary">
+<!-- CONSTITUTIONAL DIRECTIVE BANNER: ARTICLE 39A -->
+<aside aria-label="Constitutional Mandate" class="bg-primary text-surface-container-lowest text-xs py-1.5 px-4 border-b border-outline-variant/30">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center space-x-2">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary-fixed">DIRECTIVE PRINCIPLES OF STATE POLICY:</span>
+<span class="font-body-sm text-body-sm text-primary-fixed">Article 39A — Equal Justice and Free Legal Aid under Sovereign Guarantee</span>
+</div>
+<div class="flex items-center space-x-4">
+<span class="font-label-sm text-label-sm text-surface-container-highest flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-secondary-fixed">shield</span> Legal Services Authorities Act, 1987
+        </span>
+<span class="hidden sm:inline font-label-sm text-label-sm text-secondary-fixed font-semibold tracking-wide">
+          24×7 TELE-LAW: DIAL 15100 (TOLL-FREE)
+        </span>
+</div>
+</div>
+</aside>
+<!-- TOP APP BAR (Source of Truth: Shared Components JSON) -->
+<header class="bg-surface border-b border-outline-variant shadow-sm sticky top-0 z-40 backdrop-blur-md bg-opacity-95">
+<div class="w-full max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+<!-- Brand Anchor -->
+<div class="flex items-center space-x-3">
+<div class="w-9 h-9 rounded-lg bg-primary-container text-tertiary-fixed flex items-center justify-center border border-tertiary-fixed/30 shadow-inner">
+<span class="material-symbols-outlined text-xl">balance</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm font-semibold tracking-wide text-primary">कानूनसाथी | KanoonSaathi</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Sovereign Judicial Access Portal</span>
+</div>
+</div>
+<!-- Desktop Navigation Links from JSON -->
+<nav aria-label="Main Navigation" class="hidden lg:flex items-center space-x-6">
+<a class="text-on-surface-variant font-medium pb-1 hover:text-secondary transition-colors duration-150" href="#dossier">Legal Dossier</a>
+<a class="text-on-surface-variant font-medium pb-1 hover:text-secondary transition-colors duration-150" href="#notice">Notice Generator</a>
+<a class="text-on-surface-variant font-medium pb-1 hover:text-secondary transition-colors duration-150" href="#rti">RTI Crafter</a>
+<a class="text-on-surface-variant font-medium pb-1 hover:text-secondary transition-colors duration-150" href="#timeline">Court Process</a>
+<!-- NALSA Locator is ACTIVE -->
+<a class="text-secondary border-b-2 border-secondary pb-1 font-semibold flex items-center gap-1" href="#locator">
+<span class="material-symbols-outlined text-sm">location_on</span>
+          NALSA Locator
+        </a>
+<a class="text-on-surface-variant font-medium pb-1 hover:text-secondary transition-colors duration-150" href="#vault">Case Vault</a>
+</nav>
+<!-- Trailing Primary & Secondary Actions -->
+<div class="flex items-center space-x-3">
+<a class="hidden sm:inline-flex items-center space-x-2 bg-secondary text-on-secondary px-3.5 py-1.5 rounded-lg text-xs font-semibold hover:bg-on-secondary-container transition-colors shadow-sm" href="tel:15100">
+<span class="material-symbols-outlined text-base">call</span>
+<span>Emergency Helpline 15100</span>
+</a>
+<button class="border border-outline-variant text-primary px-2.5 py-1 rounded text-xs font-semibold hover:bg-surface-container transition-colors" title="Switch Language" type="button">
+          हिन्दी / EN
+        </button>
+<!-- Trailing JSON Icons -->
+<div class="flex items-center border-l border-outline-variant/60 pl-2 space-x-1 text-on-surface-variant">
+<button class="p-1.5 hover:text-primary transition-colors" title="Nyayalay Docket"><span class="material-symbols-outlined text-lg">gavel</span></button>
+<button class="p-1.5 hover:text-primary transition-colors relative" title="Notifications">
+<span class="material-symbols-outlined text-lg">notifications</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-secondary rounded-full"></span>
+</button>
+<button class="p-1.5 hover:text-primary transition-colors" title="National Legal Repository"><span class="material-symbols-outlined text-lg">account_balance</span></button>
+</div>
+</div>
+</div>
+</header>
+<!-- MAIN CANVAS -->
+<main class="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 py-6 space-y-8">
+<!-- 1. WARM PUBLIC-SERVICE HERO -->
+<section class="relative bg-surface-container-low rounded-xl border border-outline-variant/40 p-6 sm:p-10 overflow-hidden shadow-sm">
+<div class="absolute inset-0 ashoka-pattern pointer-events-none"></div>
+<!-- Vakalat Authenticity Ribbon Strip -->
+<div class="absolute top-0 left-0 right-0 h-1.5 vakalat-ribbon"></div>
+<div class="relative z-10 max-w-3xl space-y-4">
+<div class="inline-flex items-center space-x-2 bg-surface-container-highest px-3 py-1 rounded border border-outline-variant/60">
+<span class="material-symbols-outlined text-secondary text-sm">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Supreme Court of India • NALSA National Network</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg sm:text-4xl text-primary font-semibold tracking-tight">
+          You Don't Have to Face It Alone. <span class="block text-secondary font-normal italic font-headline-md text-headline-md mt-1">(निःशुल्क विधिक सहायता)</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+          Find free government legal aid clinics, DLSA advocates, and Lok Adalat centers under Article 39A of the Constitution of India and Legal Services Authorities Act, 1987.
+        </p>
+<!-- Authority Badges -->
+<div class="pt-2 grid grid-cols-2 sm:grid-cols-4 gap-3">
+<div class="bg-surface p-2.5 rounded-lg border border-outline-variant/50 flex items-center space-x-2">
+<span class="material-symbols-outlined text-secondary text-xl">support_agent</span>
+<div>
+<span class="block font-label-sm text-label-sm text-primary font-bold">NALSA Toll-Free</span>
+<span class="block text-xs text-on-surface-variant">15100 (24x7 Active)</span>
+</div>
+</div>
+<div class="bg-surface p-2.5 rounded-lg border border-outline-variant/50 flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary text-xl">handshake</span>
+<div>
+<span class="block font-label-sm text-label-sm text-primary font-bold">100% Free</span>
+<span class="block text-xs text-on-surface-variant">For Eligible Citizens</span>
+</div>
+</div>
+<div class="bg-surface p-2.5 rounded-lg border border-outline-variant/50 flex items-center space-x-2">
+<span class="material-symbols-outlined text-secondary text-xl">location_city</span>
+<div>
+<span class="block font-label-sm text-label-sm text-primary font-bold">Empanelled Lawyers</span>
+<span class="block text-xs text-on-surface-variant">Across All 36 States/UTs</span>
+</div>
+</div>
+<div class="bg-surface p-2.5 rounded-lg border border-outline-variant/50 flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary text-xl">video_camera_front</span>
+<div>
+<span class="block font-label-sm text-label-sm text-primary font-bold">Tele-Law Video</span>
+<span class="block text-xs text-on-surface-variant">Direct CSC Legal Clinic</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. MULTI-TIER GEOGRAPHIC SEARCH & CASCADING FILTER BAR -->
+<section class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/60 shadow-sm space-y-4">
+<div class="flex flex-col md:flex-row gap-3 items-stretch">
+<!-- Search Input -->
+<div class="relative flex-1">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="w-full pl-11 pr-4 py-3 bg-surface border border-outline-variant rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all" placeholder="Search by City, District, PIN Code or Legal Aid Centre name..." type="text" value="Tis Hazari, Central Delhi"/>
+</div>
+<!-- Cascading Filter Dropdowns -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2 md:w-7/12">
+<!-- State -->
+<div class="relative">
+<label class="sr-only">State</label>
+<select class="w-full py-3 px-3 bg-surface-container-low border border-outline-variant rounded-lg font-body-sm text-body-sm text-on-surface focus:ring-2 focus:ring-primary focus:border-primary">
+<option selected="">NCT of Delhi</option>
+<option>Uttar Pradesh</option>
+<option>Maharashtra</option>
+<option>Bihar</option>
+<option>West Bengal</option>
+<option>Karnataka</option>
+</select>
+</div>
+<!-- District -->
+<div class="relative">
+<label class="sr-only">District</label>
+<select class="w-full py-3 px-3 bg-surface-container-low border border-outline-variant rounded-lg font-body-sm text-body-sm text-on-surface focus:ring-2 focus:ring-primary focus:border-primary">
+<option selected="">Central Delhi / Tis Hazari</option>
+<option>New Delhi / Patiala House</option>
+<option>South Delhi / Saket</option>
+<option>East Delhi / Karkardooma</option>
+<option>North Delhi / Rohini</option>
+<option>South-West / Dwarka</option>
+</select>
+</div>
+<!-- Authority Type -->
+<div class="relative">
+<label class="sr-only">Authority Type</label>
+<select class="w-full py-3 px-3 bg-surface-container-low border border-outline-variant rounded-lg font-body-sm text-body-sm text-on-surface focus:ring-2 focus:ring-primary focus:border-primary">
+<option selected="">All Authorities</option>
+<option>DLSA (District Legal Services)</option>
+<option>Taluk Committee</option>
+<option>Nyaya Seva Kendra</option>
+<option>High Court Legal Services</option>
+</select>
+</div>
+</div>
+<!-- GPS Action -->
+<button class="inline-flex items-center justify-center space-x-2 bg-surface-container-high hover:bg-surface-variant text-primary border border-outline-variant px-4 py-3 rounded-lg font-label-md text-label-md transition-colors whitespace-nowrap" type="button">
+<span class="material-symbols-outlined text-secondary text-lg">my_location</span>
+<span>Use My GPS</span>
+</button>
+</div>
+<!-- Quick Geo Context Line -->
+<div class="flex flex-wrap items-center justify-between text-xs text-on-surface-variant pt-1 border-t border-surface-container">
+<div class="flex items-center space-x-2">
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-600"></span>
+<span>GPS Permission Active: <strong>Tis Hazari Court Complex vicinity (within 3 km)</strong></span>
+</div>
+<div class="flex items-center space-x-4">
+<span>Found <strong>14</strong> Registered Legal Aid Facilitation Counters</span>
+<a class="text-secondary hover:underline" href="#disclaimer">Official Directory Gazette No. 412/DLSA</a>
+</div>
+</div>
+</section>
+<!-- 3. SPLIT-SCREEN LEGAL AID DISCOVERY (RESULTS + INTERACTIVE JUDICIAL MAP) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- LEFT PANE: RESULTS LIST & ACTIVE EXPANDED DOSSIER (7 Cols) -->
+<div class="lg:col-span-7 space-y-4">
+<div class="flex items-center justify-between pb-1">
+<h2 class="font-headline-sm text-headline-sm text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">balance</span>
+            Nearby Statutory Legal Aid Facilities
+          </h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sorted by Distance</span>
+</div>
+<!-- RESULT CARD 1: ACTIVE / SELECTED -->
+<article class="bg-surface-container-lowest rounded-xl border-2 border-secondary p-5 shadow-md relative overflow-hidden transition-all">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="flex items-start justify-between gap-3">
+<div class="space-y-1">
+<div class="flex items-center space-x-2">
+<span class="bg-secondary-fixed text-on-secondary-fixed text-xs px-2 py-0.5 rounded font-label-sm font-semibold">SELECTED CENTRE</span>
+<span class="bg-surface-container-high text-on-surface text-xs px-2 py-0.5 rounded font-label-sm">DLSA Central</span>
+<span class="text-xs text-secondary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">near_me</span> 2.4 km away
+                </span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary pt-1">District Legal Services Authority (DLSA) - Central</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-outline">location_on</span>
+                Tis Hazari Courts Complex, Room No. 18, Ground Floor, Central Delhi, PIN 110054
+              </p>
+</div>
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined">gavel</span>
+</div>
+</div>
+<!-- Services Available Chips -->
+<div class="my-3 flex flex-wrap gap-1.5">
+<span class="bg-surface-container-low text-primary text-xs px-2.5 py-1 rounded border border-outline-variant/60 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-secondary">check_circle</span> Free Advocate Assignment
+            </span>
+<span class="bg-surface-container-low text-primary text-xs px-2.5 py-1 rounded border border-outline-variant/60 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-secondary">check_circle</span> Pre-litigation Lok Adalat Mediation
+            </span>
+<span class="bg-surface-container-low text-primary text-xs px-2.5 py-1 rounded border border-outline-variant/60 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-secondary">check_circle</span> Woman &amp; Child Helpdesk
+            </span>
+</div>
+<!-- ACTIVE EXPANDED DOSSIER BLOCK -->
+<div class="mt-4 pt-4 border-t border-outline-variant/40 bg-surface-container-low -mx-5 -mb-5 p-5 space-y-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+<div class="bg-surface p-3 rounded border border-outline-variant/50 space-y-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block">Office Timings &amp; Intake</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-secondary">schedule</span> Mon – Sat: 10:00 AM – 5:00 PM
+                </p>
+<p class="text-on-surface-variant text-xs">2nd &amp; 4th Saturdays Court Holiday</p>
+</div>
+<div class="bg-surface p-3 rounded border border-outline-variant/50 space-y-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block">Front Desk Secretary / In-Charge</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">person</span> Shri Arun Kumar, DJS
+                </p>
+<p class="text-on-surface-variant text-xs">Secretary, DLSA Central Judicial Division</p>
+</div>
+</div>
+<!-- Step-by-Step Procedure Guide -->
+<div class="bg-surface p-3 rounded border border-outline-variant/50">
+<h4 class="font-title-md text-title-md text-primary mb-2 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary">format_list_numbered</span>
+                How to Request Free Legal Counsel at this Counter:
+              </h4>
+<ol class="space-y-1.5 text-xs text-on-surface font-body-sm pl-2">
+<li class="flex items-start gap-2">
+<span class="font-bold text-secondary font-mono">1.</span>
+<span>Walk into Tis Hazari Room 18 or submit instant application online. No stamp duty or court fee required.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="font-bold text-secondary font-mono">2.</span>
+<span>Produce ID proof &amp; self-declaration affidavit of income (exempt for women, minors, and custody undertrials).</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="font-bold text-secondary font-mono">3.</span>
+<span>Immediate assignment of empanelled Advocate within 24 working hours under DLSA Order Sheet.</span>
+</li>
+</ol>
+</div>
+<!-- Action Buttons Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1">
+<a class="flex items-center justify-center space-x-1.5 bg-primary text-on-primary py-2.5 px-3 rounded text-xs font-semibold hover:bg-primary-container transition-colors" href="tel:15100">
+<span class="material-symbols-outlined text-sm text-tertiary-fixed">call</span>
+<span>Dial 15100</span>
+</a>
+<button class="flex items-center justify-center space-x-1.5 bg-surface text-primary border border-outline py-2.5 px-3 rounded text-xs font-semibold hover:bg-surface-variant transition-colors" type="button">
+<span class="material-symbols-outlined text-sm text-secondary">directions</span>
+<span>Route / Directions</span>
+</button>
+<button class="flex items-center justify-center space-x-1.5 bg-surface text-primary border border-outline py-2.5 px-3 rounded text-xs font-semibold hover:bg-surface-variant transition-colors" type="button">
+<span class="material-symbols-outlined text-sm text-secondary">videocam</span>
+<span>Book Tele-Law</span>
+</button>
+<button class="flex items-center justify-center space-x-1.5 bg-surface text-on-surface-variant border border-outline-variant py-2.5 px-3 rounded text-xs font-medium hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-sm">bookmark</span>
+<span>Save to Vault</span>
+</button>
+</div>
+</div>
+</article>
+<!-- RESULT CARD 2 -->
+<article class="bg-surface-container-lowest rounded-xl border border-outline-variant/60 p-5 shadow-sm hover:border-secondary transition-all cursor-pointer">
+<div class="flex items-start justify-between gap-3">
+<div class="space-y-1">
+<div class="flex items-center space-x-2">
+<span class="bg-surface-container-high text-on-surface text-xs px-2 py-0.5 rounded font-label-sm font-semibold">State Headquarters</span>
+<span class="text-xs text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">near_me</span> 5.8 km away
+                </span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary">Delhi State Legal Services Authority (DSLSA) Headquarters</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-outline">location_on</span>
+                Pre-Fab Building, Patiala House Courts Complex, New Delhi - 110001
+              </p>
+</div>
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+</div>
+<div class="my-3 flex flex-wrap gap-1.5">
+<span class="bg-surface-container-low text-on-surface text-xs px-2 py-0.5 rounded border border-outline-variant/50">High Court Legal Services Committee</span>
+<span class="bg-surface-container-low text-on-surface text-xs px-2 py-0.5 rounded border border-outline-variant/50">POCSO Victim Compensation Cell</span>
+<span class="bg-surface-container-low text-on-surface text-xs px-2 py-0.5 rounded border border-outline-variant/50">Senior Citizen Appellate Cell</span>
+</div>
+<div class="flex items-center justify-between text-xs pt-2 border-t border-surface-container text-on-surface-variant">
+<span>Direct Call: <strong>011-23384781</strong></span>
+<span class="text-secondary font-semibold hover:underline flex items-center gap-0.5">
+              Select Center <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</span>
+</div>
+</article>
+<!-- RESULT CARD 3 -->
+<article class="bg-surface-container-lowest rounded-xl border border-outline-variant/60 p-5 shadow-sm hover:border-secondary transition-all cursor-pointer">
+<div class="flex items-start justify-between gap-3">
+<div class="space-y-1">
+<div class="flex items-center space-x-2">
+<span class="bg-surface-container-high text-on-surface text-xs px-2 py-0.5 rounded font-label-sm font-semibold">Sub-Divisional Committee</span>
+<span class="text-xs text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">near_me</span> 3.1 km away
+                </span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary">Taluk Legal Services Committee &amp; Nyaya Seva Kendra</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-outline">location_on</span>
+                Sub-Divisional Magistrate Complex, Pusa Road, Karol Bagh, Central Delhi - 110005
+              </p>
+</div>
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">home_work</span>
+</div>
+</div>
+<div class="my-3 flex flex-wrap gap-1.5">
+<span class="bg-surface-container-low text-on-surface text-xs px-2 py-0.5 rounded border border-outline-variant/50">Revenue Disputes &amp; Mutation</span>
+<span class="bg-surface-container-low text-on-surface text-xs px-2 py-0.5 rounded border border-outline-variant/50">Pension Assistance Scheme</span>
+<span class="bg-surface-container-low text-on-surface text-xs px-2 py-0.5 rounded border border-outline-variant/50">Labor Cess Redressal</span>
+</div>
+<div class="flex items-center justify-between text-xs pt-2 border-t border-surface-container text-on-surface-variant">
+<span>Direct Call: <strong>011-2572XXXX</strong></span>
+<span class="text-secondary font-semibold hover:underline flex items-center gap-0.5">
+              Select Center <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</span>
+</div>
+</article>
+</div>
+<!-- RIGHT PANE: INTERACTIVE JUDICIAL CARTOGRAPHY (5 Cols) -->
+<div class="lg:col-span-5 sticky top-20 space-y-3">
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/60 overflow-hidden shadow-md flex flex-col h-[580px] relative">
+<!-- Map Header Ribbon -->
+<div class="px-4 py-2.5 bg-surface-container-low border-b border-outline-variant/40 flex items-center justify-between z-10">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-secondary text-sm">map</span>
+<span class="font-label-md text-label-md text-primary font-bold">Judicial Cartography Layer</span>
+</div>
+<span class="text-xs text-on-surface-variant bg-surface px-2 py-0.5 rounded border border-outline-variant/40">Datum: Survey of India WGS-84</span>
+</div>
+<!-- Stylized Parchment Vector Map Container -->
+<div class="flex-1 relative bg-[#FAF6EE] overflow-hidden">
+<!-- Simulated Parchment Cartography Background -->
+<svg class="w-full h-full object-cover opacity-90" viewbox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(197, 168, 105, 0.2)" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="#FBF8F1" height="100%" width="100%"></rect>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+<!-- Stylized River Yamuna -->
+<path d="M 410,0 C 390,120 420,240 370,360 C 350,420 330,500 320,500" fill="none" stroke="#D1DEE8" stroke-linecap="round" stroke-width="26"></path>
+<text fill="#758A99" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" letter-spacing="3" transform="rotate(78 380,240)" x="380" y="240">YAMUNA RIVER</text>
+<!-- Main Roads / Arterials -->
+<path d="M 30,180 L 460,200" fill="none" stroke="#E6DEC9" stroke-width="12"></path>
+<path d="M 30,180 L 460,200" fill="none" stroke="#FFFFFF" stroke-width="6"></path>
+<path d="M 220,20 L 220,480" fill="none" stroke="#E6DEC9" stroke-width="10"></path>
+<path d="M 220,20 L 220,480" fill="none" stroke="#FFFFFF" stroke-width="4"></path>
+<path d="M 80,420 L 360,110" fill="none" stroke="#E6DEC9" stroke-width="8"></path>
+<!-- User Position & Route Path to Tis Hazari -->
+<path d="M 170,310 Q 210,270 235,215" fill="none" stroke="#a23f00" stroke-dasharray="6,4" stroke-width="3"></path>
+<!-- Area Labels -->
+<text fill="#99907D" font-family="'Playfair Display', serif" font-size="11" font-weight="600" x="130" y="110">CIVIL LINES</text>
+<text fill="#99907D" font-family="'Playfair Display', serif" font-size="11" font-weight="600" x="260" y="150">OLD DELHI / KASHMERE GATE</text>
+<text fill="#99907D" font-family="'Playfair Display', serif" font-size="11" font-weight="600" x="70" y="330">KAROL BAGH</text>
+<text fill="#99907D" font-family="'Playfair Display', serif" font-size="11" font-weight="600" x="240" y="380">CONNAUGHT PLACE</text>
+<!-- PIN 1: Tis Hazari DLSA Central (Active Pin with Pulse) -->
+<g transform="translate(235, 205)">
+<!-- Pulse circle -->
+<circle cx="0" cy="0" fill="#a23f00" opacity="0.2" r="22">
+<animate attributename="r" dur="2.5s" repeatcount="indefinite" values="14;28;14"></animate>
+<animate attributename="opacity" dur="2.5s" repeatcount="indefinite" values="0.3;0.05;0.3"></animate>
+</circle>
+<!-- Pin marker -->
+<path d="M 0,0 C -12,-12 -12,-24 0,-36 C 12,-24 12,-12 0,0 Z" fill="#1a2744" stroke="#c5a869" stroke-width="2"></path>
+<circle cx="0" cy="-24" fill="#fef9f0" r="5"></circle>
+</g>
+<!-- PIN 2: Patiala House DSLSA HQ -->
+<g transform="translate(290, 410)">
+<path d="M 0,0 C -10,-10 -10,-20 0,-30 C 10,-20 10,-10 0,0 Z" fill="#04122e" stroke="#c5a869" stroke-width="1.5"></path>
+<circle cx="0" cy="-20" fill="#ffdbcc" r="4"></circle>
+</g>
+<!-- PIN 3: Taluk Committee Karol Bagh -->
+<g transform="translate(130, 290)">
+<path d="M 0,0 C -9,-9 -9,-18 0,-27 C 9,-18 9,-9 0,0 Z" fill="#a23f00" stroke="#fef9f0" stroke-width="1.5"></path>
+<circle cx="0" cy="-18" fill="#fef9f0" r="3.5"></circle>
+</g>
+<!-- User Current Location Dot -->
+<g transform="translate(170, 310)">
+<circle cx="0" cy="0" fill="#0284c7" r="8" stroke="#ffffff" stroke-width="2"></circle>
+<circle cx="0" cy="0" fill="#0284c7" opacity="0.3" r="14"></circle>
+</g>
+</svg>
+<!-- Floating Active Pin Tooltip Overlay -->
+<div class="absolute top-28 left-20 bg-surface text-primary p-3 rounded-lg border-2 border-secondary shadow-xl max-w-xs pointer-events-none z-20">
+<div class="flex items-center space-x-1 text-xs text-secondary font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm">flag</span> Tis Hazari Court Room 18
+              </div>
+<div class="font-title-md text-title-md text-primary mt-0.5">DLSA Central Facility</div>
+<div class="text-xs text-on-surface-variant flex items-center justify-between mt-1 gap-2">
+<span>Direct Legal Aid Intake</span>
+<span class="font-bold text-secondary">2.4 km (8 mins via Rani Jhansi Rd)</span>
+</div>
+</div>
+<!-- Floating Map Controls -->
+<div class="absolute right-3 top-3 flex flex-col space-y-1.5 z-20">
+<button class="w-8 h-8 bg-surface border border-outline-variant rounded shadow flex items-center justify-center hover:bg-surface-variant text-primary" title="Zoom In">
+<span class="material-symbols-outlined text-base">add</span>
+</button>
+<button class="w-8 h-8 bg-surface border border-outline-variant rounded shadow flex items-center justify-center hover:bg-surface-variant text-primary" title="Zoom Out">
+<span class="material-symbols-outlined text-base">remove</span>
+</button>
+<button class="w-8 h-8 bg-surface border border-outline-variant rounded shadow flex items-center justify-center hover:bg-surface-variant text-primary" title="Re-Center Location">
+<span class="material-symbols-outlined text-base">my_location</span>
+</button>
+</div>
+<!-- Legend Overlay -->
+<div class="absolute bottom-3 left-3 right-3 bg-surface/95 backdrop-blur-sm p-2.5 rounded-lg border border-outline-variant/60 text-xs text-on-surface flex flex-wrap items-center justify-between gap-2 z-20">
+<div class="flex items-center space-x-3">
+<div class="flex items-center space-x-1">
+<span class="inline-block w-3 h-3 rounded-full bg-primary-container border border-tertiary-fixed"></span>
+<span class="text-xs">DLSA Court Unit</span>
+</div>
+<div class="flex items-center space-x-1">
+<span class="inline-block w-3 h-3 rounded-full bg-secondary"></span>
+<span class="text-xs">Nyay Seva Kendra</span>
+</div>
+<div class="flex items-center space-x-1">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-[#0284c7]"></span>
+<span class="text-xs">Your Location</span>
+</div>
+</div>
+<button class="text-xs text-secondary font-semibold hover:underline">Toggle Court Registry Pins</button>
+</div>
+</div>
+</div>
+<!-- Reference Archival Notice -->
+<div class="p-3 bg-surface-container-low border border-outline-variant/40 rounded-lg text-xs text-on-surface-variant flex items-center justify-between">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary">verified_user</span>
+            Geo-verified by Delhi State Legal Services Authority Registry 2025.
+          </span>
+<a class="font-bold text-primary hover:underline" href="#helpline">Download Offline PDF</a>
+</div>
+</div>
+</section>
+<!-- 4. WHO CAN GET FREE LEGAL AID? (SECTION 12 STATUTORY ELIGIBILITY) -->
+<section class="bg-surface-container-low rounded-xl border border-outline-variant/60 p-6 sm:p-8 space-y-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-outline-variant/40 pb-4">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold block mb-1">STATUTORY RIGHT • धारा 12 विधिक सेवा प्राधिकरण अधिनियम</span>
+<h2 class="font-headline-md text-headline-md text-primary font-semibold">
+            Who Can Get Free Legal Aid? <span class="text-on-surface-variant font-normal text-xl">(विधिक सहायता की पात्रता)</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+            Section 12 of the Legal Services Authorities Act, 1987 specifies citizens entitled to free legal counsel, court fee exemption, and docket representation.
+          </p>
+</div>
+<div class="bg-surface-container-highest px-3.5 py-2 rounded-lg border border-outline-variant/80 text-xs">
+<span class="text-outline block font-medium">Income Exemption Cap:</span>
+<span class="font-bold text-primary text-sm">₹3,00,000 / year (Delhi)</span>
+<span class="text-[11px] text-on-surface-variant block">Categorical exemptions bypass income limits.</span>
+</div>
+</div>
+<!-- Eligibility Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+<!-- Category 1 -->
+<div class="bg-surface p-4 rounded-lg border border-outline-variant/50 space-y-2">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">family_restroom</span>
+</div>
+<span class="bg-surface-container-highest text-secondary text-[11px] font-bold px-2 py-0.5 rounded">NO INCOME CEILING</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-bold">Women &amp; Children</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            All women and minors are entitled to completely free legal services in civil, matrimonial, POCSO, and criminal proceedings regardless of financial earnings.
+          </p>
+</div>
+<!-- Category 2 -->
+<div class="bg-surface p-4 rounded-lg border border-outline-variant/50 space-y-2">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">diversity_3</span>
+</div>
+<span class="bg-surface-container-highest text-secondary text-[11px] font-bold px-2 py-0.5 rounded">UNIVERSAL AID</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-bold">SC / ST Communities</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Members of Scheduled Castes and Scheduled Tribes receive state-funded legal aid and trial counsel representation automatically under Section 12(a).
+          </p>
+</div>
+<!-- Category 3 -->
+<div class="bg-surface p-4 rounded-lg border border-outline-variant/50 space-y-2">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded bg-surface-container-highest text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">engineering</span>
+</div>
+<span class="bg-surface-container-highest text-primary text-[11px] font-bold px-2 py-0.5 rounded">SECTION 12(c)</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-bold">Industrial Laborers &amp; Workmen</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Factory laborers, daily-wage construction workers, gig economy delivery partners, and domestic workers disputing wages or unfair dismissal.
+          </p>
+</div>
+<!-- Category 4 -->
+<div class="bg-surface p-4 rounded-lg border border-outline-variant/50 space-y-2">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded bg-surface-container-highest text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">accessible</span>
+</div>
+<span class="bg-surface-container-highest text-primary text-[11px] font-bold px-2 py-0.5 rounded">SECTION 12(d)</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-bold">Persons with Disabilities</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Litigants with physical, sensory, or mental disabilities as defined in the Rights of Persons with Disabilities Act, 2016.
+          </p>
+</div>
+<!-- Category 5 -->
+<div class="bg-surface p-4 rounded-lg border border-outline-variant/50 space-y-2">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded bg-surface-container-highest text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">emergency</span>
+</div>
+<span class="bg-surface-container-highest text-secondary text-[11px] font-bold px-2 py-0.5 rounded">HUMANITARIAN</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-bold">Trafficking &amp; Disaster Victims</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Survivors of human trafficking, caste violence, communal riots, industrial chemical disasters, floods, and natural calamities.
+          </p>
+</div>
+<!-- Category 6 -->
+<div class="bg-surface p-4 rounded-lg border border-outline-variant/50 space-y-2">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">lock</span>
+</div>
+<span class="bg-surface-container-highest text-secondary text-[11px] font-bold px-2 py-0.5 rounded">MANDATORY BAIL COUNSEL</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-bold">Persons in Custody / Undertrials</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Every undertrial detained in judicial lockup or prison has a constitutional right to an immediate DLSA jail-visiting defense advocate.
+          </p>
+</div>
+</div>
+<!-- INTERACTIVE INSTANT ELIGIBILITY CHECKER -->
+<div class="mt-6 bg-surface-container-lowest p-5 rounded-xl border border-secondary/40 shadow-sm">
+<div class="flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="space-y-1">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-secondary">fact_check</span>
+<h3 class="font-title-lg text-title-lg text-primary">Instant Eligibility Checker (त्वरित पात्रता जांच)</h3>
+</div>
+<p class="text-xs text-on-surface-variant">Check your eligibility in 10 seconds under the 2025 National Legal Services Rules.</p>
+</div>
+<!-- Interactive Questions Widget -->
+<div class="flex flex-wrap items-center gap-3 w-full md:w-auto">
+<label class="text-xs flex items-center space-x-1.5 bg-surface-container-low px-3 py-2 rounded border border-outline-variant/60 cursor-pointer">
+<input checked="" class="rounded border-outline text-primary focus:ring-0" type="checkbox"/>
+<span class="text-on-surface font-medium">Woman, Minor, or In Custody?</span>
+</label>
+<select class="text-xs bg-surface-container-low px-3 py-2 rounded border border-outline-variant/60 text-on-surface">
+<option>General Category</option>
+<option>SC / ST Caste</option>
+<option>OBC (Non-Creamy)</option>
+<option>Differently Abled</option>
+</select>
+<select class="text-xs bg-surface-container-low px-3 py-2 rounded border border-outline-variant/60 text-on-surface">
+<option>Income Under ₹3 Lakh/yr</option>
+<option>Income Over ₹3 Lakh/yr</option>
+</select>
+<div class="bg-emerald-100 text-emerald-900 border border-emerald-300 px-3 py-2 rounded text-xs font-bold flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-sm text-emerald-700">check_circle</span>
+<span>ELIGIBLE: 100% Free Counsel Guaranteed</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INFORMATIVE INSTITUTIONAL NOTICE BLOCK -->
+<div class="archival-border-double p-5 bg-surface-container-low rounded text-xs text-on-surface-variant flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div class="flex items-start space-x-3">
+<span class="material-symbols-outlined text-secondary text-2xl shrink-0">local_police</span>
+<div>
+<strong class="text-primary font-body-md text-body-md block">Zero Fees Warning / कोई शुल्क न दें:</strong>
+<span>Empanelled DLSA advocates are remunerated directly by the Government of India. Demand of any fees, notary charges, or bribes by any assigned counsel constitutes a criminal violation under IPC/BNS. Report immediately to 15100.</span>
+</div>
+</div>
+<a class="shrink-0 bg-primary text-on-primary px-4 py-2 rounded font-semibold text-xs hover:bg-primary-container transition-colors" href="tel:15100">
+        NALSA Vigilance Desk
+      </a>
+</div>
+</main>
+<!-- UNIVERSAL FOOTER (Source of Truth: Shared Components JSON) -->
+<footer class="bg-surface-container-high border-t border-outline-variant mt-12">
+<div class="w-full max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+<!-- Brand & Copyright -->
+<div class="space-y-1 text-center md:text-left">
+<div class="font-headline-sm text-headline-sm font-semibold text-primary">कानूनसाथी | KanoonSaathi</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl">
+          © 2025 KanoonSaathi Sovereign Legal Portal. In accordance with Legal Services Authorities Act, 1987 &amp; Article 39A of the Constitution of India. NALSA National Tollfree: 15100.
+        </p>
+</div>
+<!-- Institutional Links from JSON -->
+<nav aria-label="Institutional Links" class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-xs">
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150 underline" href="#mandate">Constitutional Mandate</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150 underline" href="#ecourts">e-Courts Integration</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150 underline" href="#bns">BNS/IPC Cross-Reference</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150 underline" href="#privacy">Privacy &amp; Privilege</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150 underline" href="#bar-council">Bar Council Compliance</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150 underline" href="#grievance">Grievance Redressal</a>
+</nav>
+</div>
+</footer>
+<!-- PERSISTENT PROTOTYPE SWITCHER DOCK -->
+<aside aria-label="Prototype Switcher Dock" class="fixed bottom-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-4 py-2 rounded-full shadow-2xl border border-tertiary-fixed/40 flex items-center space-x-3 text-xs z-50 backdrop-blur-md bg-opacity-95">
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
+<span class="text-primary-fixed font-semibold tracking-wide">Route: /legal-aid</span>
+<span class="text-outline-variant">|</span>
+<button class="hover:text-secondary-fixed transition-colors flex items-center gap-1" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+<span class="material-symbols-outlined text-sm">arrow_upward</span> Back to Search
+    </button>
+<span class="text-outline-variant">|</span>
+<a class="text-secondary-fixed font-bold hover:underline flex items-center gap-1" href="tel:15100">
+<span class="material-symbols-outlined text-sm">phone_in_talk</span> Tele-Law 15100
+    </a>
+</aside>
+</body></html>

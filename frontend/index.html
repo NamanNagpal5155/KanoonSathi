@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>कानूनसाथी | KanoonSaathi - Sovereign Legal Aid Platform</title>
+  
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            saffron: '#a23f00',
+            'saffron-light': '#ffdbcc',
+            navy: '#04122e',
+            'navy-container': '#1a2744',
+            gold: '#e2c381',
+            parchment: '#fef9f0',
+            'parchment-dark': '#f2ede4',
+            'parchment-border': '#ded9d1'
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+      vertical-align: middle;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      height: 6px;
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background-color: #ded9d1;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="h-full flex flex-col bg-parchment text-navy font-sans antialiased overflow-hidden">
+
+  <!-- TOP SOVEREIGN HEADER & SCREEN SELECTOR -->
+  <header class="bg-navy text-white px-4 py-2.5 z-40 shadow-md border-b border-gold/30 flex-shrink-0">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-3">
+      
+      <!-- Brand & Seal -->
+      <div class="flex items-center space-x-3 w-full lg:w-auto justify-between lg:justify-start">
+        <div class="flex items-center space-x-3">
+          <div class="w-8 h-8 rounded-full bg-navy-container text-gold border border-gold flex items-center justify-center shadow-inner">
+            <span class="material-symbols-outlined text-[19px]">balance</span>
+          </div>
+          <div>
+            <div class="flex items-center space-x-2">
+              <span class="font-serif font-bold text-base tracking-wide text-parchment">कानूनसाथी</span>
+              <span class="text-xs text-gold/80 font-semibold uppercase tracking-wider">KanoonSaathi</span>
+              <span class="text-[10px] bg-saffron/80 text-white px-2 py-0.5 rounded font-mono">Art. 39A</span>
+            </div>
+            <p class="text-[11px] text-white/60">Constitutional Sovereign Legal Aid Suite • NALSA Tele-Law 15100</p>
+          </div>
+        </div>
+
+        <!-- Quick Directory Trigger (Mobile) -->
+        <button id="mobile-menu-btn" class="lg:hidden p-1.5 rounded-lg bg-navy-container text-gold border border-gold/40">
+          <span class="material-symbols-outlined text-xl">menu</span>
+        </button>
+      </div>
+
+      <!-- Screen Dropdown & Direct Switcher -->
+      <div class="flex items-center flex-wrap gap-2 w-full lg:w-auto justify-center">
+        <label for="screen-select" class="text-xs font-semibold text-gold hidden sm:inline flex items-center">
+          <span class="material-symbols-outlined text-sm mr-1">dashboard</span>
+          Active Screen:
+        </label>
+        <select id="screen-select" class="bg-navy-container text-white text-xs font-medium border border-gold/40 rounded-lg px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-gold max-w-[280px] sm:max-w-[340px]">
+          <optgroup label="🏛️ Authentication & Portals">
+            <option value="kanoonsaathi_sovereign_legal_portal">Sovereign Legal Portal (Auth Hub)</option>
+            <option value="kanoonsaathi_citizen_authentication_verification_suite">Citizen Verification Suite</option>
+            <option value="kanoonsaathi_citizen_legal_workspace_saved_courts_1">Citizen Legal Workspace & Saved Courts</option>
+          </optgroup>
+          <optgroup label="⚖️ Courts & Dossiers">
+            <option value="kanoonsaathi_find_a_court">Find a Court Near You</option>
+            <option value="kanoonsaathi_how_court_process_works_court_process">How Court Process Works</option>
+            <option value="kanoonsaathi_legal_situation_analysis_analysis">Legal Situation Analysis</option>
+            <option value="kanoonsaathi_cause_vault_cause_vault">Cause Vault (Court Records)</option>
+            <option value="kanoonsaathi_legal_dossier_legal_dossier">Legal Dossier Case File</option>
+          </optgroup>
+          <optgroup label="🤝 Legal Aid & RTI Crafter">
+            <option value="kanoonsaathi_nalsa_free_legal_aid_locator_legal_aid">NALSA Free Legal Aid Locator</option>
+            <option value="kanoonsaathi_find_free_legal_help_legal_aid_locator">Find Free Legal Help Locator</option>
+            <option value="kanoonsaathi_rti_crafter_rti_1">RTI Crafter (Application Builder v1)</option>
+            <option value="kanoonsaathi_rti_crafter_rti_2">RTI Crafter (Alternate Layout v2)</option>
+            <option value="kanoonsaathi_mobile_citizen_legal_aid_suite_notice_courts_vault">Mobile Citizen Legal Aid Suite</option>
+          </optgroup>
+        </select>
+
+        <!-- Viewport Size Controls -->
+        <div class="flex items-center bg-navy-container rounded-lg p-0.5 border border-gold/30">
+          <button id="view-desktop" title="Desktop View" class="px-2 py-1 rounded text-gold bg-gold/20 text-xs font-medium flex items-center transition">
+            <span class="material-symbols-outlined text-[16px]">desktop_windows</span>
+          </button>
+          <button id="view-tablet" title="Tablet View (768px)" class="px-2 py-1 rounded text-white/70 hover:text-gold text-xs font-medium flex items-center transition">
+            <span class="material-symbols-outlined text-[16px]">tablet</span>
+          </button>
+          <button id="view-mobile" title="Mobile View (390px)" class="px-2 py-1 rounded text-white/70 hover:text-gold text-xs font-medium flex items-center transition">
+            <span class="material-symbols-outlined text-[16px]">smartphone</span>
+          </button>
+        </div>
+
+        <!-- Popout Button -->
+        <a id="popout-link" href="/kanoonsaathi_sovereign_legal_portal/code.html" target="_blank" title="Open standalone in new tab" class="p-1.5 rounded-lg bg-gold/20 hover:bg-gold/30 text-gold border border-gold/40 flex items-center text-xs font-semibold px-2 transition">
+          <span class="material-symbols-outlined text-[16px] mr-1">open_in_new</span>
+          <span class="hidden sm:inline">Direct View</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- QUICK TABS BAR -->
+  <nav class="bg-parchment-dark border-b border-parchment-border px-3 py-1.5 overflow-x-auto custom-scrollbar flex-shrink-0 flex items-center space-x-1.5">
+    <button class="nav-tab text-xs px-3 py-1 rounded-full whitespace-nowrap font-medium transition bg-navy text-white shadow-sm" data-target="kanoonsaathi_sovereign_legal_portal">🏛️ Sovereign Portal</button>
+    <button class="nav-tab text-xs px-3 py-1 rounded-full whitespace-nowrap font-medium transition bg-parchment text-navy/80 hover:bg-gold/20" data-target="kanoonsaathi_citizen_authentication_verification_suite">🔐 Citizen Verification</button>
+    <button class="nav-tab text-xs px-3 py-1 rounded-full whitespace-nowrap font-medium transition bg-parchment text-navy/80 hover:bg-gold/20" data-target="kanoonsaathi_citizen_legal_workspace_saved_courts_1">📋 Citizen Workspace</button>
+    <button class="nav-tab text-xs px-3 py-1 rounded-full whitespace-nowrap font-medium transition bg-parchment text-navy/80 hover:bg-gold/20" data-target="kanoonsaathi_find_a_court">📍 Find a Court</button>
+    <button class="nav-tab text-xs px-3 py-1 rounded-full whitespace-nowrap font-medium transition bg-parchment text-navy/80 hover:bg-gold/20" data-target="kanoonsaathi_how_court_process_works_court_process">⚖️ Court Process</button>
+    <button class="nav-tab text-xs px-3 py-1 rounded-full whitespace-nowrap font-medium transition bg-parchment text-navy/80 hover:bg-gold/20" data-target="kanoonsaathi_legal_situation_analysis_analysis">🔍 Situation Analysis</button>
+    <button class="nav-tab text-xs px-3 py-1 rounded-full whitespace-nowrap font-medium transition bg-parchment text-navy/80 hover:bg-gold/20" data-target="kanoonsaathi_cause_vault_cause_vault">🗂️ Cause Vault</button>
+    <button class="nav-tab text-xs px-3 py-1 rounded-full whitespace-nowrap font-medium transition bg-parchment text-navy/80 hover:bg-gold/20" data-target="kanoonsaathi_legal_dossier_legal_dossier">📑 Legal Dossier</button>
+    <button class="nav-tab text-xs px-3 py-1 rounded-full whitespace-nowrap font-medium transition bg-parchment text-navy/80 hover:bg-gold/20" data-target="kanoonsaathi_nalsa_free_legal_aid_locator_legal_aid">🤝 NALSA Legal Aid</button>
+    <button class="nav-tab text-xs px-3 py-1 rounded-full whitespace-nowrap font-medium transition bg-parchment text-navy/80 hover:bg-gold/20" data-target="kanoonsaathi_find_free_legal_help_legal_aid_locator">🩺 Free Legal Help</button>
+    <button class="nav-tab text-xs px-3 py-1 rounded-full whitespace-nowrap font-medium transition bg-parchment text-navy/80 hover:bg-gold/20" data-target="kanoonsaathi_rti_crafter_rti_1">✍️ RTI Crafter</button>
+    <button class="nav-tab text-xs px-3 py-1 rounded-full whitespace-nowrap font-medium transition bg-parchment text-navy/80 hover:bg-gold/20" data-target="kanoonsaathi_mobile_citizen_legal_aid_suite_notice_courts_vault">📱 Mobile Aid Suite</button>
+  </nav>
+
+  <!-- MAIN PREVIEW CONTAINER -->
+  <main class="flex-1 bg-parchment/60 flex items-center justify-center p-0 md:p-2 overflow-hidden">
+    <div id="frame-wrapper" class="w-full h-full bg-white md:rounded-lg shadow-xl overflow-hidden border border-parchment-border transition-all duration-300 flex flex-col">
+      <iframe id="screen-frame" src="/kanoonsaathi_sovereign_legal_portal/code.html" class="w-full h-full border-0 flex-1"></iframe>
+    </div>
+  </main>
+
+  <script>
+    const screenSelect = document.getElementById('screen-select');
+    const screenFrame = document.getElementById('screen-frame');
+    const popoutLink = document.getElementById('popout-link');
+    const frameWrapper = document.getElementById('frame-wrapper');
+    const navTabs = document.querySelectorAll('.nav-tab');
+
+    const viewDesktop = document.getElementById('view-desktop');
+    const viewTablet = document.getElementById('view-tablet');
+    const viewMobile = document.getElementById('view-mobile');
+
+    function loadScreen(screenId) {
+      if (!screenId) return;
+      const targetUrl = `/${screenId}/code.html`;
+      screenFrame.src = targetUrl;
+      popoutLink.href = targetUrl;
+      screenSelect.value = screenId;
+      window.location.hash = screenId;
+
+      // Update tabs styling
+      navTabs.forEach(tab => {
+        if (tab.dataset.target === screenId) {
+          tab.classList.add('bg-navy', 'text-white', 'shadow-sm');
+          tab.classList.remove('bg-parchment', 'text-navy/80');
+          tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        } else {
+          tab.classList.remove('bg-navy', 'text-white', 'shadow-sm');
+          tab.classList.add('bg-parchment', 'text-navy/80');
+        }
+      });
+    }
+
+    screenSelect.addEventListener('change', (e) => {
+      loadScreen(e.target.value);
+    });
+
+    navTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        loadScreen(tab.dataset.target);
+      });
+    });
+
+    // Viewport switcher
+    function setViewport(mode) {
+      [viewDesktop, viewTablet, viewMobile].forEach(btn => {
+        btn.classList.remove('text-gold', 'bg-gold/20');
+        btn.classList.add('text-white/70');
+      });
+
+      if (mode === 'desktop') {
+        viewDesktop.classList.add('text-gold', 'bg-gold/20');
+        frameWrapper.style.maxWidth = '100%';
+        frameWrapper.style.width = '100%';
+      } else if (mode === 'tablet') {
+        viewTablet.classList.add('text-gold', 'bg-gold/20');
+        frameWrapper.style.maxWidth = '768px';
+        frameWrapper.style.width = '768px';
+      } else if (mode === 'mobile') {
+        viewMobile.classList.add('text-gold', 'bg-gold/20');
+        frameWrapper.style.maxWidth = '390px';
+        frameWrapper.style.width = '390px';
+      }
+    }
+
+    viewDesktop.addEventListener('click', () => setViewport('desktop'));
+    viewTablet.addEventListener('click', () => setViewport('tablet'));
+    viewMobile.addEventListener('click', () => setViewport('mobile'));
+
+    // Check hash on load
+    window.addEventListener('load', () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash && [...screenSelect.options].some(opt => opt.value === hash)) {
+        loadScreen(hash);
+      }
+    });
+  </script>
+</body>
+</html>
